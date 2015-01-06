@@ -1,25 +1,224 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simon UI Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H24-9Y-wUJ">
+                                <rect key="frame" x="107" y="28" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUp-ey-erg" userLabel="Circle Container View">
+                                <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqe-vR-f7i">
+                                        <rect key="frame" x="130" y="130" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="TEx-T2-MkM"/>
+                                            <constraint firstAttribute="width" constant="60" id="vHv-04-Lzs"/>
+                                            <constraint firstAttribute="width" constant="80" id="vSB-kw-tkI"/>
+                                        </constraints>
+                                        <state key="normal" image="AddSample.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="vSB-kw-tkI"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="addSamplePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CSo-q2-4jP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="qqe-vR-f7i" secondAttribute="centerY" id="iE0-ex-pOL"/>
+                                    <constraint firstAttribute="centerX" secondItem="qqe-vR-f7i" secondAttribute="centerX" id="nAK-dO-vWN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="fUp-ey-erg" secondAttribute="bottom" constant="124" id="0j3-Lz-0cF"/>
+                            <constraint firstItem="fUp-ey-erg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="4N3-X6-hQH"/>
+                            <constraint firstAttribute="trailing" secondItem="fUp-ey-erg" secondAttribute="trailing" id="9r3-oL-3g1"/>
+                            <constraint firstItem="fUp-ey-erg" firstAttribute="top" secondItem="H24-9Y-wUJ" secondAttribute="bottom" constant="75" id="R1v-5d-Esr"/>
+                            <constraint firstItem="fUp-ey-erg" firstAttribute="centerX" secondItem="H24-9Y-wUJ" secondAttribute="centerX" id="WQT-qy-96c"/>
+                            <constraint firstItem="fUp-ey-erg" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="fA0-Yl-u34"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="addSampleButton" destination="qqe-vR-f7i" id="Ckj-nE-46Y"/>
+                        <outlet property="circleContainerView" destination="fUp-ey-erg" id="iOK-Bw-11J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="472" y="350"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="60j-oB-r0b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XkO-WD-FfN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9gP-7p-CG2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aSE-Cj-Bnu" kind="relationship" relationship="rootViewController" id="W9I-S8-CNd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycU-ag-K1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="350"/>
+        </scene>
+        <!--Pick a Sample-->
+        <scene sceneID="G8s-SH-Nfy">
+            <objects>
+                <collectionViewController id="nXw-7q-SnB" customClass="SamplePickerCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="aHm-WR-ajR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jGC-vj-Hn6">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sampleCell" id="VGR-sb-0ye">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-Ld-RX3" customClass="SamplePreviewSelectView">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="1" green="0.1805731656" blue="0.25746253520000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="customSize" width="80" height="100"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="nXw-7q-SnB" id="VR8-Qt-E4Y"/>
+                            <outlet property="delegate" destination="nXw-7q-SnB" id="uEq-Dh-MSH"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Rfx-WV-euX"/>
+                        <barButtonItem title="Press and hold to preview" id="vBm-B6-yp4">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ZoX-qU-A8N"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Pick a Sample" id="f40-5e-iUP">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="y2D-56-Sjg">
+                            <connections>
+                                <action selector="cancelPressed:" destination="nXw-7q-SnB" id="b9v-Ne-c5t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugQ-gk-MaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316" y="350"/>
+        </scene>
+        <!--Pick a Sample-->
+        <scene sceneID="FDQ-A5-dVU">
+            <objects>
+                <tableViewController id="aSE-Cj-Bnu" customClass="SamplePickerTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="I03-K8-6Lw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="sampleCell" textLabel="zW4-RU-KTW" detailTextLabel="R7h-I9-BsJ" style="IBUITableViewCellStyleValue1" id="Vl1-4G-9cW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vl1-4G-9cW" id="hEf-7J-yiW">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sample 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zW4-RU-KTW">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Already Added" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R7h-I9-BsJ">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="aSE-Cj-Bnu" id="b7S-lZ-9P6"/>
+                            <outlet property="delegate" destination="aSE-Cj-Bnu" id="BB7-Dj-1T8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pick a Sample" id="u6B-Om-ZXu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oCt-md-SU4">
+                            <connections>
+                                <action selector="cancelPressed:" destination="aSE-Cj-Bnu" id="fpL-Ro-CtF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ze2-9u-bHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2181" y="350"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r2O-aW-9Xk">
+            <objects>
+                <navigationController storyboardIdentifier="samplePickerNavigationController" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="AxM-9P-pv6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1AF-ue-5Fz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="d1V-AM-on7">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="nXw-7q-SnB" kind="relationship" relationship="rootViewController" id="ewo-bq-j6A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQP-R9-AzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="350"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AddSample.png" width="224" height="226"/>
+    </resources>
 </document>
