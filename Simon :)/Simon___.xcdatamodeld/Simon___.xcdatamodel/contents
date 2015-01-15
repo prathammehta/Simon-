@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6735" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Sample" representedClassName="Sample" syncable="YES">
+        <attribute name="blueColor" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="greenColor" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="idNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="redColor" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="volume" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="songs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Song" inverseName="samples" inverseEntity="Song" syncable="YES"/>
+    </entity>
+    <entity name="Song" representedClassName="Song" syncable="YES">
+        <attribute name="idNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="samples" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sample" inverseName="songs" inverseEntity="Sample" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Song" positionX="-353" positionY="17" width="128" height="88"/>
+        <element name="Sample" positionX="-54" positionY="-9" width="128" height="148"/>
+    </elements>
 </model>

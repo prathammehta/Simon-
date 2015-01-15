@@ -10,7 +10,7 @@
 #import "UIImage+ImageEffects.h"
 #import "UIView+Screenshot.h"
 
-@interface ViewController ()
+@interface ViewController () <UINavigationControllerDelegate>
 
 @property (nonatomic, strong) NewInstrumentPickerView *picker;
 @property (nonatomic, strong) UIImageView *blurredView;

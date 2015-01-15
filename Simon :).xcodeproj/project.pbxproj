@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420C0A101A6615610049788C /* Bpm127_Aged_E_PL02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A031A6615610049788C /* Bpm127_Aged_E_PL02.wav */; };
+		420C0A111A6615610049788C /* Bpm127_Crushed_E_PL02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A041A6615610049788C /* Bpm127_Crushed_E_PL02.wav */; };
+		420C0A121A6615610049788C /* Bpm127_Eastern_E_PL03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A051A6615610049788C /* Bpm127_Eastern_E_PL03.wav */; };
+		420C0A131A6615610049788C /* Bpm127_Grimy_E_PL02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A061A6615610049788C /* Bpm127_Grimy_E_PL02.wav */; };
+		420C0A141A6615610049788C /* Bpm127_Polar_E_PL01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A071A6615610049788C /* Bpm127_Polar_E_PL01.wav */; };
+		420C0A151A6615610049788C /* Bpm127_Punky_C_PL01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A081A6615610049788C /* Bpm127_Punky_C_PL01.wav */; };
+		420C0A161A6615610049788C /* Bpm127_Ringer_E_PL01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A091A6615610049788C /* Bpm127_Ringer_E_PL01.wav */; };
+		420C0A171A6615610049788C /* Bpm127_Sawn_E_PL01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A0A1A6615610049788C /* Bpm127_Sawn_E_PL01.wav */; };
+		420C0A181A6615610049788C /* Bpm127_Sawn_E_PL02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A0B1A6615610049788C /* Bpm127_Sawn_E_PL02.wav */; };
+		420C0A191A6615610049788C /* Bpm127_Synthetic_E_PL01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A0C1A6615610049788C /* Bpm127_Synthetic_E_PL01.wav */; };
+		420C0A1A1A6615610049788C /* Bpm127_Talking_E_PL02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A0D1A6615610049788C /* Bpm127_Talking_E_PL02.wav */; };
+		420C0A1B1A6615610049788C /* Bpm127_Tangent_E_PL01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A0E1A6615610049788C /* Bpm127_Tangent_E_PL01.wav */; };
+		420C0A1C1A6615610049788C /* Bpm127_Trapeze_E_PL02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 420C0A0F1A6615610049788C /* Bpm127_Trapeze_E_PL02.wav */; };
 		421551AD1A41FE8100910BB6 /* SamplePickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421551AC1A41FE8100910BB6 /* SamplePickerTableViewController.m */; };
 		421551B01A42044C00910BB6 /* SampleCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 421551AF1A42044C00910BB6 /* SampleCircle.m */; };
 		421593C31A4318B900197E20 /* EFCircularSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 421593C01A4318B900197E20 /* EFCircularSlider.m */; };
@@ -21,6 +34,8 @@
 		426162A21A40A34C00AC7094 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426162A01A40A34C00AC7094 /* LaunchScreen.xib */; };
 		426162AE1A40A34D00AC7094 /* Simon___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 426162AD1A40A34D00AC7094 /* Simon___Tests.m */; };
 		426162B81A40C08100AC7094 /* AddSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 426162B71A40C08100AC7094 /* AddSample.png */; };
+		42B409721A5CFB560048F12F /* Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B409711A5CFB560048F12F /* Sample.m */; };
+		42B409751A5CFB570048F12F /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B409741A5CFB570048F12F /* Song.m */; };
 		42C087851A4D362000BB4BE9 /* SamplePickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C087841A4D362000BB4BE9 /* SamplePickerCollectionViewController.m */; };
 		42C087891A4D364B00BB4BE9 /* SamplePreviewSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C087881A4D364B00BB4BE9 /* SamplePreviewSelectView.m */; };
 		42C0878D1A4D45B700BB4BE9 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C0878B1A4D45B700BB4BE9 /* pause.png */; };
@@ -55,78 +70,6 @@
 		42E567A41A440C6E00DD5580 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E5678D1A440C6E00DD5580 /* TPCircularBuffer+AudioBufferList.c */; };
 		42E567A51A440C6E00DD5580 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E5678F1A440C6E00DD5580 /* TPCircularBuffer.c */; };
 		42E567A81A440C9000DD5580 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E567A71A440C9000DD5580 /* Singleton.m */; };
-		42E567F21A4434EC00DD5580 /* 70s Ballad Piano 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567AA1A4434EC00DD5580 /* 70s Ballad Piano 01.caf */; };
-		42E567F31A4434EC00DD5580 /* 70s Ballad Piano 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567AB1A4434EC00DD5580 /* 70s Ballad Piano 02.caf */; };
-		42E567F41A4434EC00DD5580 /* 80s Dance Bass Synth 06.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567AC1A4434EC00DD5580 /* 80s Dance Bass Synth 06.caf */; };
-		42E567F51A4434EC00DD5580 /* 80s Dance Bass Synth 07.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567AD1A4434EC00DD5580 /* 80s Dance Bass Synth 07.caf */; };
-		42E567F61A4434EC00DD5580 /* 80s Dance Pad 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567AE1A4434EC00DD5580 /* 80s Dance Pad 01.caf */; };
-		42E567F71A4434EC00DD5580 /* 80s Pop Synthesizer 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567AF1A4434EC00DD5580 /* 80s Pop Synthesizer 01.caf */; };
-		42E567F81A4434EC00DD5580 /* Acoustic Noodling 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567B01A4434EC00DD5580 /* Acoustic Noodling 01.caf */; };
-		42E567F91A4434EC00DD5580 /* Acoustic Noodling 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567B11A4434EC00DD5580 /* Acoustic Noodling 02.caf */; };
-		42E567FA1A4434EC00DD5580 /* Acoustic Noodling 03.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567B21A4434EC00DD5580 /* Acoustic Noodling 03.caf */; };
-		42E567FB1A4434EC00DD5580 /* Acoustic Picking 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567B31A4434EC00DD5580 /* Acoustic Picking 02.caf */; };
-		42E567FC1A4434EC00DD5580 /* Acoustic Picking 03.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567B41A4434EC00DD5580 /* Acoustic Picking 03.caf */; };
-		42E567FD1A4434EC00DD5580 /* Acoustic Picking 04.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567B51A4434EC00DD5580 /* Acoustic Picking 04.caf */; };
-		42E567FE1A4434EC00DD5580 /* Acoustic Picking 06.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567B61A4434EC00DD5580 /* Acoustic Picking 06.caf */; };
-		42E567FF1A4434EC00DD5580 /* Acoustic Picking 07.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567B71A4434EC00DD5580 /* Acoustic Picking 07.caf */; };
-		42E568001A4434EC00DD5580 /* Acoustic Picking 08.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567B81A4434EC00DD5580 /* Acoustic Picking 08.caf */; };
-		42E568011A4434EC00DD5580 /* Acoustic Picking 09.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567B91A4434EC00DD5580 /* Acoustic Picking 09.caf */; };
-		42E568021A4434EC00DD5580 /* Acoustic Picking 18.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567BA1A4434EC00DD5580 /* Acoustic Picking 18.caf */; };
-		42E568031A4434EC00DD5580 /* Acoustic Slide 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567BB1A4434EC00DD5580 /* Acoustic Slide 02.caf */; };
-		42E568041A4434EC00DD5580 /* Acoustic Slide 06.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567BC1A4434EC00DD5580 /* Acoustic Slide 06.caf */; };
-		42E568051A4434EC00DD5580 /* Acoustic Vamp 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567BD1A4434EC00DD5580 /* Acoustic Vamp 01.caf */; };
-		42E568061A4434EC00DD5580 /* Acoustic Vamp 04.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567BE1A4434EC00DD5580 /* Acoustic Vamp 04.caf */; };
-		42E568071A4434EC00DD5580 /* Alternative Rock Bass 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567BF1A4434EC00DD5580 /* Alternative Rock Bass 01.caf */; };
-		42E568081A4434EC00DD5580 /* Alternative Rock Bass 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567C01A4434EC00DD5580 /* Alternative Rock Bass 02.caf */; };
-		42E568091A4434EC00DD5580 /* Alternative Rock Bass 03.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567C11A4434EC00DD5580 /* Alternative Rock Bass 03.caf */; };
-		42E5680A1A4434EC00DD5580 /* Alternative Rock Bass 04.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567C21A4434EC00DD5580 /* Alternative Rock Bass 04.caf */; };
-		42E5680B1A4434EC00DD5580 /* Asian Gamelan 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567C31A4434EC00DD5580 /* Asian Gamelan 01.caf */; };
-		42E5680C1A4434EC00DD5580 /* Blip Synth 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567C41A4434EC00DD5580 /* Blip Synth 01.caf */; };
-		42E5680D1A4434EC00DD5580 /* Blue Jazz Organ Riff 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567C51A4434EC00DD5580 /* Blue Jazz Organ Riff 01.caf */; };
-		42E5680E1A4434EC00DD5580 /* Blue Jazz Organ Riff 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567C61A4434EC00DD5580 /* Blue Jazz Organ Riff 02.caf */; };
-		42E5680F1A4434EC00DD5580 /* Blue Jazz Organ Riff 03.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567C71A4434EC00DD5580 /* Blue Jazz Organ Riff 03.caf */; };
-		42E568101A4434EC00DD5580 /* Blue Jazz Organ Riff 04.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567C81A4434EC00DD5580 /* Blue Jazz Organ Riff 04.caf */; };
-		42E568111A4434EC00DD5580 /* Blue Jazz Organ Riff 06.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567C91A4434EC00DD5580 /* Blue Jazz Organ Riff 06.caf */; };
-		42E568121A4434EC00DD5580 /* Blue Jazz Organ Riff 07.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567CA1A4434EC00DD5580 /* Blue Jazz Organ Riff 07.caf */; };
-		42E568131A4434EC00DD5580 /* Blue Jazz Piano 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567CB1A4434EC00DD5580 /* Blue Jazz Piano 01.caf */; };
-		42E568141A4434EC00DD5580 /* Blue Jazz Piano 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567CC1A4434EC00DD5580 /* Blue Jazz Piano 02.caf */; };
-		42E568151A4434EC00DD5580 /* Blues Guitar 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567CD1A4434EC00DD5580 /* Blues Guitar 01.caf */; };
-		42E568161A4434EC00DD5580 /* Blues Guitar 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567CE1A4434EC00DD5580 /* Blues Guitar 02.caf */; };
-		42E568171A4434EC00DD5580 /* Blues Guitar 03.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567CF1A4434EC00DD5580 /* Blues Guitar 03.caf */; };
-		42E568181A4434EC00DD5580 /* Blues Harmonica 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567D01A4434EC00DD5580 /* Blues Harmonica 02.caf */; };
-		42E568191A4434EC00DD5580 /* Blues Harmonica 03.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567D11A4434EC00DD5580 /* Blues Harmonica 03.caf */; };
-		42E5681A1A4434EC00DD5580 /* Blues Harmonica 06.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567D21A4434EC00DD5580 /* Blues Harmonica 06.caf */; };
-		42E5681B1A4434EC00DD5580 /* Blues Harmonica 08.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567D31A4434EC00DD5580 /* Blues Harmonica 08.caf */; };
-		42E5681C1A4434EC00DD5580 /* Blues Harmonica 10.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567D41A4434EC00DD5580 /* Blues Harmonica 10.caf */; };
-		42E5681D1A4434EC00DD5580 /* Bongo Groove 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567D51A4434EC00DD5580 /* Bongo Groove 01.caf */; };
-		42E5681E1A4434EC00DD5580 /* Bongo Groove 05.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567D61A4434EC00DD5580 /* Bongo Groove 05.caf */; };
-		42E5681F1A4434EC00DD5580 /* Ceramic Drum 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567D71A4434EC00DD5580 /* Ceramic Drum 01.caf */; };
-		42E568201A4434EC00DD5580 /* Chunky Metal Guitar 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567D81A4434EC00DD5580 /* Chunky Metal Guitar 01.caf */; };
-		42E568211A4434EC00DD5580 /* Classic Rock Guitar 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567D91A4434EC00DD5580 /* Classic Rock Guitar 01.caf */; };
-		42E568221A4434EC00DD5580 /* Classic Rock Guitar 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567DA1A4434EC00DD5580 /* Classic Rock Guitar 02.caf */; };
-		42E568231A4434EC00DD5580 /* Classic Rock Organ 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567DB1A4434EC00DD5580 /* Classic Rock Organ 01.caf */; };
-		42E568241A4434EC00DD5580 /* Classic Rock Organ 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567DC1A4434EC00DD5580 /* Classic Rock Organ 02.caf */; };
-		42E568251A4434EC00DD5580 /* Classic Rock Piano 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567DD1A4434EC00DD5580 /* Classic Rock Piano 01.caf */; };
-		42E568261A4434EC00DD5580 /* Classic Rock Piano 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567DE1A4434EC00DD5580 /* Classic Rock Piano 02.caf */; };
-		42E568271A4434EC00DD5580 /* Classic Rock Piano 03.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567DF1A4434EC00DD5580 /* Classic Rock Piano 03.caf */; };
-		42E568281A4434EC00DD5580 /* Classic Rock Piano 04.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567E01A4434EC00DD5580 /* Classic Rock Piano 04.caf */; };
-		42E568291A4434EC00DD5580 /* Classic Rock Piano 05.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567E11A4434EC00DD5580 /* Classic Rock Piano 05.caf */; };
-		42E5682A1A4434EC00DD5580 /* Classic Rock Piano 06.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567E21A4434EC00DD5580 /* Classic Rock Piano 06.caf */; };
-		42E5682B1A4434EC00DD5580 /* Classic Rock Steel 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567E31A4434EC00DD5580 /* Classic Rock Steel 01.caf */; };
-		42E5682C1A4434EC00DD5580 /* Classic Rock Steel 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567E41A4434EC00DD5580 /* Classic Rock Steel 02.caf */; };
-		42E5682D1A4434EC00DD5580 /* Classic Rock Steel 03.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567E51A4434EC00DD5580 /* Classic Rock Steel 03.caf */; };
-		42E5682E1A4434EC00DD5580 /* Classic Rock Steel 04.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567E61A4434EC00DD5580 /* Classic Rock Steel 04.caf */; };
-		42E5682F1A4434EC00DD5580 /* Classic Rock Steel 05.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567E71A4434EC00DD5580 /* Classic Rock Steel 05.caf */; };
-		42E568301A4434EC00DD5580 /* Clave 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567E81A4434EC00DD5580 /* Clave 01.caf */; };
-		42E568311A4434EC00DD5580 /* Clave 02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567E91A4434EC00DD5580 /* Clave 02.caf */; };
-		42E568321A4434EC00DD5580 /* Clean Electric Guitar 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567EA1A4434EC00DD5580 /* Clean Electric Guitar 01.caf */; };
-		42E568331A4434EC00DD5580 /* Club Dance Beat 005.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567EB1A4434EC00DD5580 /* Club Dance Beat 005.caf */; };
-		42E568341A4434EC00DD5580 /* Club Dance Beat 006.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567EC1A4434EC00DD5580 /* Club Dance Beat 006.caf */; };
-		42E568351A4434EC00DD5580 /* Club Dance Beat 007.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567ED1A4434EC00DD5580 /* Club Dance Beat 007.caf */; };
-		42E568361A4434EC00DD5580 /* Club Dance Beat 009.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567EE1A4434EC00DD5580 /* Club Dance Beat 009.caf */; };
-		42E568371A4434EC00DD5580 /* Club Dance Beat 030.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567EF1A4434EC00DD5580 /* Club Dance Beat 030.caf */; };
-		42E568381A4434EC00DD5580 /* Club Dance Beat 038.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567F01A4434EC00DD5580 /* Club Dance Beat 038.caf */; };
-		42E568391A4434EC00DD5580 /* Club Dance Beat 047.caf in Resources */ = {isa = PBXBuildFile; fileRef = 42E567F11A4434EC00DD5580 /* Club Dance Beat 047.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +83,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		420C0A031A6615610049788C /* Bpm127_Aged_E_PL02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Aged_E_PL02.wav; path = ../../Bpm127_Aged_E_PL02.wav; sourceTree = "<group>"; };
+		420C0A041A6615610049788C /* Bpm127_Crushed_E_PL02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Crushed_E_PL02.wav; path = ../../Bpm127_Crushed_E_PL02.wav; sourceTree = "<group>"; };
+		420C0A051A6615610049788C /* Bpm127_Eastern_E_PL03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Eastern_E_PL03.wav; path = ../../Bpm127_Eastern_E_PL03.wav; sourceTree = "<group>"; };
+		420C0A061A6615610049788C /* Bpm127_Grimy_E_PL02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Grimy_E_PL02.wav; path = ../../Bpm127_Grimy_E_PL02.wav; sourceTree = "<group>"; };
+		420C0A071A6615610049788C /* Bpm127_Polar_E_PL01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Polar_E_PL01.wav; path = ../../Bpm127_Polar_E_PL01.wav; sourceTree = "<group>"; };
+		420C0A081A6615610049788C /* Bpm127_Punky_C_PL01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Punky_C_PL01.wav; path = ../../Bpm127_Punky_C_PL01.wav; sourceTree = "<group>"; };
+		420C0A091A6615610049788C /* Bpm127_Ringer_E_PL01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Ringer_E_PL01.wav; path = ../../Bpm127_Ringer_E_PL01.wav; sourceTree = "<group>"; };
+		420C0A0A1A6615610049788C /* Bpm127_Sawn_E_PL01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Sawn_E_PL01.wav; path = ../../Bpm127_Sawn_E_PL01.wav; sourceTree = "<group>"; };
+		420C0A0B1A6615610049788C /* Bpm127_Sawn_E_PL02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Sawn_E_PL02.wav; path = ../../Bpm127_Sawn_E_PL02.wav; sourceTree = "<group>"; };
+		420C0A0C1A6615610049788C /* Bpm127_Synthetic_E_PL01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Synthetic_E_PL01.wav; path = ../../Bpm127_Synthetic_E_PL01.wav; sourceTree = "<group>"; };
+		420C0A0D1A6615610049788C /* Bpm127_Talking_E_PL02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Talking_E_PL02.wav; path = ../../Bpm127_Talking_E_PL02.wav; sourceTree = "<group>"; };
+		420C0A0E1A6615610049788C /* Bpm127_Tangent_E_PL01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Tangent_E_PL01.wav; path = ../../Bpm127_Tangent_E_PL01.wav; sourceTree = "<group>"; };
+		420C0A0F1A6615610049788C /* Bpm127_Trapeze_E_PL02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bpm127_Trapeze_E_PL02.wav; path = ../../Bpm127_Trapeze_E_PL02.wav; sourceTree = "<group>"; };
 		421551AB1A41FE8100910BB6 /* SamplePickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplePickerTableViewController.h; sourceTree = "<group>"; };
 		421551AC1A41FE8100910BB6 /* SamplePickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplePickerTableViewController.m; sourceTree = "<group>"; };
 		421551AE1A42044C00910BB6 /* SampleCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleCircle.h; sourceTree = "<group>"; };
@@ -164,6 +120,10 @@
 		426162AC1A40A34D00AC7094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		426162AD1A40A34D00AC7094 /* Simon___Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Simon___Tests.m"; sourceTree = "<group>"; };
 		426162B71A40C08100AC7094 /* AddSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddSample.png; sourceTree = "<group>"; };
+		42B409701A5CFB560048F12F /* Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample.h; sourceTree = "<group>"; };
+		42B409711A5CFB560048F12F /* Sample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sample.m; sourceTree = "<group>"; };
+		42B409731A5CFB570048F12F /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		42B409741A5CFB570048F12F /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 		42C087831A4D362000BB4BE9 /* SamplePickerCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplePickerCollectionViewController.h; sourceTree = "<group>"; };
 		42C087841A4D362000BB4BE9 /* SamplePickerCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplePickerCollectionViewController.m; sourceTree = "<group>"; };
 		42C087871A4D364B00BB4BE9 /* SamplePreviewSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplePreviewSelectView.h; sourceTree = "<group>"; };
@@ -225,78 +185,6 @@
 		42E567931A440C6E00DD5580 /* TheAmazingAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheAmazingAudioEngine.h; sourceTree = "<group>"; };
 		42E567A61A440C9000DD5580 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		42E567A71A440C9000DD5580 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
-		42E567AA1A4434EC00DD5580 /* 70s Ballad Piano 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "70s Ballad Piano 01.caf"; sourceTree = "<group>"; };
-		42E567AB1A4434EC00DD5580 /* 70s Ballad Piano 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "70s Ballad Piano 02.caf"; sourceTree = "<group>"; };
-		42E567AC1A4434EC00DD5580 /* 80s Dance Bass Synth 06.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "80s Dance Bass Synth 06.caf"; sourceTree = "<group>"; };
-		42E567AD1A4434EC00DD5580 /* 80s Dance Bass Synth 07.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "80s Dance Bass Synth 07.caf"; sourceTree = "<group>"; };
-		42E567AE1A4434EC00DD5580 /* 80s Dance Pad 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "80s Dance Pad 01.caf"; sourceTree = "<group>"; };
-		42E567AF1A4434EC00DD5580 /* 80s Pop Synthesizer 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "80s Pop Synthesizer 01.caf"; sourceTree = "<group>"; };
-		42E567B01A4434EC00DD5580 /* Acoustic Noodling 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Noodling 01.caf"; sourceTree = "<group>"; };
-		42E567B11A4434EC00DD5580 /* Acoustic Noodling 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Noodling 02.caf"; sourceTree = "<group>"; };
-		42E567B21A4434EC00DD5580 /* Acoustic Noodling 03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Noodling 03.caf"; sourceTree = "<group>"; };
-		42E567B31A4434EC00DD5580 /* Acoustic Picking 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Picking 02.caf"; sourceTree = "<group>"; };
-		42E567B41A4434EC00DD5580 /* Acoustic Picking 03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Picking 03.caf"; sourceTree = "<group>"; };
-		42E567B51A4434EC00DD5580 /* Acoustic Picking 04.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Picking 04.caf"; sourceTree = "<group>"; };
-		42E567B61A4434EC00DD5580 /* Acoustic Picking 06.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Picking 06.caf"; sourceTree = "<group>"; };
-		42E567B71A4434EC00DD5580 /* Acoustic Picking 07.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Picking 07.caf"; sourceTree = "<group>"; };
-		42E567B81A4434EC00DD5580 /* Acoustic Picking 08.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Picking 08.caf"; sourceTree = "<group>"; };
-		42E567B91A4434EC00DD5580 /* Acoustic Picking 09.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Picking 09.caf"; sourceTree = "<group>"; };
-		42E567BA1A4434EC00DD5580 /* Acoustic Picking 18.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Picking 18.caf"; sourceTree = "<group>"; };
-		42E567BB1A4434EC00DD5580 /* Acoustic Slide 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Slide 02.caf"; sourceTree = "<group>"; };
-		42E567BC1A4434EC00DD5580 /* Acoustic Slide 06.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Slide 06.caf"; sourceTree = "<group>"; };
-		42E567BD1A4434EC00DD5580 /* Acoustic Vamp 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Vamp 01.caf"; sourceTree = "<group>"; };
-		42E567BE1A4434EC00DD5580 /* Acoustic Vamp 04.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Vamp 04.caf"; sourceTree = "<group>"; };
-		42E567BF1A4434EC00DD5580 /* Alternative Rock Bass 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alternative Rock Bass 01.caf"; sourceTree = "<group>"; };
-		42E567C01A4434EC00DD5580 /* Alternative Rock Bass 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alternative Rock Bass 02.caf"; sourceTree = "<group>"; };
-		42E567C11A4434EC00DD5580 /* Alternative Rock Bass 03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alternative Rock Bass 03.caf"; sourceTree = "<group>"; };
-		42E567C21A4434EC00DD5580 /* Alternative Rock Bass 04.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alternative Rock Bass 04.caf"; sourceTree = "<group>"; };
-		42E567C31A4434EC00DD5580 /* Asian Gamelan 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Asian Gamelan 01.caf"; sourceTree = "<group>"; };
-		42E567C41A4434EC00DD5580 /* Blip Synth 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blip Synth 01.caf"; sourceTree = "<group>"; };
-		42E567C51A4434EC00DD5580 /* Blue Jazz Organ Riff 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blue Jazz Organ Riff 01.caf"; sourceTree = "<group>"; };
-		42E567C61A4434EC00DD5580 /* Blue Jazz Organ Riff 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blue Jazz Organ Riff 02.caf"; sourceTree = "<group>"; };
-		42E567C71A4434EC00DD5580 /* Blue Jazz Organ Riff 03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blue Jazz Organ Riff 03.caf"; sourceTree = "<group>"; };
-		42E567C81A4434EC00DD5580 /* Blue Jazz Organ Riff 04.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blue Jazz Organ Riff 04.caf"; sourceTree = "<group>"; };
-		42E567C91A4434EC00DD5580 /* Blue Jazz Organ Riff 06.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blue Jazz Organ Riff 06.caf"; sourceTree = "<group>"; };
-		42E567CA1A4434EC00DD5580 /* Blue Jazz Organ Riff 07.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blue Jazz Organ Riff 07.caf"; sourceTree = "<group>"; };
-		42E567CB1A4434EC00DD5580 /* Blue Jazz Piano 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blue Jazz Piano 01.caf"; sourceTree = "<group>"; };
-		42E567CC1A4434EC00DD5580 /* Blue Jazz Piano 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blue Jazz Piano 02.caf"; sourceTree = "<group>"; };
-		42E567CD1A4434EC00DD5580 /* Blues Guitar 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blues Guitar 01.caf"; sourceTree = "<group>"; };
-		42E567CE1A4434EC00DD5580 /* Blues Guitar 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blues Guitar 02.caf"; sourceTree = "<group>"; };
-		42E567CF1A4434EC00DD5580 /* Blues Guitar 03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blues Guitar 03.caf"; sourceTree = "<group>"; };
-		42E567D01A4434EC00DD5580 /* Blues Harmonica 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blues Harmonica 02.caf"; sourceTree = "<group>"; };
-		42E567D11A4434EC00DD5580 /* Blues Harmonica 03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blues Harmonica 03.caf"; sourceTree = "<group>"; };
-		42E567D21A4434EC00DD5580 /* Blues Harmonica 06.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blues Harmonica 06.caf"; sourceTree = "<group>"; };
-		42E567D31A4434EC00DD5580 /* Blues Harmonica 08.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blues Harmonica 08.caf"; sourceTree = "<group>"; };
-		42E567D41A4434EC00DD5580 /* Blues Harmonica 10.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blues Harmonica 10.caf"; sourceTree = "<group>"; };
-		42E567D51A4434EC00DD5580 /* Bongo Groove 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bongo Groove 01.caf"; sourceTree = "<group>"; };
-		42E567D61A4434EC00DD5580 /* Bongo Groove 05.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bongo Groove 05.caf"; sourceTree = "<group>"; };
-		42E567D71A4434EC00DD5580 /* Ceramic Drum 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ceramic Drum 01.caf"; sourceTree = "<group>"; };
-		42E567D81A4434EC00DD5580 /* Chunky Metal Guitar 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chunky Metal Guitar 01.caf"; sourceTree = "<group>"; };
-		42E567D91A4434EC00DD5580 /* Classic Rock Guitar 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Guitar 01.caf"; sourceTree = "<group>"; };
-		42E567DA1A4434EC00DD5580 /* Classic Rock Guitar 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Guitar 02.caf"; sourceTree = "<group>"; };
-		42E567DB1A4434EC00DD5580 /* Classic Rock Organ 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Organ 01.caf"; sourceTree = "<group>"; };
-		42E567DC1A4434EC00DD5580 /* Classic Rock Organ 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Organ 02.caf"; sourceTree = "<group>"; };
-		42E567DD1A4434EC00DD5580 /* Classic Rock Piano 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Piano 01.caf"; sourceTree = "<group>"; };
-		42E567DE1A4434EC00DD5580 /* Classic Rock Piano 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Piano 02.caf"; sourceTree = "<group>"; };
-		42E567DF1A4434EC00DD5580 /* Classic Rock Piano 03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Piano 03.caf"; sourceTree = "<group>"; };
-		42E567E01A4434EC00DD5580 /* Classic Rock Piano 04.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Piano 04.caf"; sourceTree = "<group>"; };
-		42E567E11A4434EC00DD5580 /* Classic Rock Piano 05.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Piano 05.caf"; sourceTree = "<group>"; };
-		42E567E21A4434EC00DD5580 /* Classic Rock Piano 06.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Piano 06.caf"; sourceTree = "<group>"; };
-		42E567E31A4434EC00DD5580 /* Classic Rock Steel 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Steel 01.caf"; sourceTree = "<group>"; };
-		42E567E41A4434EC00DD5580 /* Classic Rock Steel 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Steel 02.caf"; sourceTree = "<group>"; };
-		42E567E51A4434EC00DD5580 /* Classic Rock Steel 03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Steel 03.caf"; sourceTree = "<group>"; };
-		42E567E61A4434EC00DD5580 /* Classic Rock Steel 04.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Steel 04.caf"; sourceTree = "<group>"; };
-		42E567E71A4434EC00DD5580 /* Classic Rock Steel 05.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Classic Rock Steel 05.caf"; sourceTree = "<group>"; };
-		42E567E81A4434EC00DD5580 /* Clave 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Clave 01.caf"; sourceTree = "<group>"; };
-		42E567E91A4434EC00DD5580 /* Clave 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Clave 02.caf"; sourceTree = "<group>"; };
-		42E567EA1A4434EC00DD5580 /* Clean Electric Guitar 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Clean Electric Guitar 01.caf"; sourceTree = "<group>"; };
-		42E567EB1A4434EC00DD5580 /* Club Dance Beat 005.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Club Dance Beat 005.caf"; sourceTree = "<group>"; };
-		42E567EC1A4434EC00DD5580 /* Club Dance Beat 006.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Club Dance Beat 006.caf"; sourceTree = "<group>"; };
-		42E567ED1A4434EC00DD5580 /* Club Dance Beat 007.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Club Dance Beat 007.caf"; sourceTree = "<group>"; };
-		42E567EE1A4434EC00DD5580 /* Club Dance Beat 009.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Club Dance Beat 009.caf"; sourceTree = "<group>"; };
-		42E567EF1A4434EC00DD5580 /* Club Dance Beat 030.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Club Dance Beat 030.caf"; sourceTree = "<group>"; };
-		42E567F01A4434EC00DD5580 /* Club Dance Beat 038.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Club Dance Beat 038.caf"; sourceTree = "<group>"; };
-		42E567F11A4434EC00DD5580 /* Club Dance Beat 047.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Club Dance Beat 047.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,13 +237,14 @@
 		4261628D1A40A34C00AC7094 /* Simon :) */ = {
 			isa = PBXGroup;
 			children = (
+				4261629B1A40A34C00AC7094 /* Main.storyboard */,
 				42E567A61A440C9000DD5580 /* Singleton.h */,
 				42E567A71A440C9000DD5580 /* Singleton.m */,
 				426162981A40A34C00AC7094 /* ViewController.h */,
 				426162991A40A34C00AC7094 /* ViewController.m */,
 				421551AE1A42044C00910BB6 /* SampleCircle.h */,
 				421551AF1A42044C00910BB6 /* SampleCircle.m */,
-				4261629B1A40A34C00AC7094 /* Main.storyboard */,
+				42B4096F1A5CF8F90048F12F /* Core Data */,
 				42C087861A4D362900BB4BE9 /* Sample Picker Collection View */,
 				42C0878A1A4D366500BB4BE9 /* Sample Picker Table View */,
 				42DBA4331A4BCBF1004870F8 /* New Instrument */,
@@ -377,15 +266,7 @@
 				42DBA4431A4BD924004870F8 /* UIView+Screenshot.h */,
 				42DBA4441A4BD924004870F8 /* UIView+Screenshot.m */,
 				4261629E1A40A34C00AC7094 /* Images.xcassets */,
-				42DBA4461A4BE041004870F8 /* trumpet.png */,
-				42DBA4471A4BE041004870F8 /* harmonica.png */,
-				42DBA4481A4BE041004870F8 /* sitar.png */,
-				42DBA4491A4BE041004870F8 /* violin.png */,
-				42DBA43A1A4BD139004870F8 /* guitar.png */,
-				42DBA43B1A4BD139004870F8 /* piano.png */,
-				42DBA43C1A4BD139004870F8 /* drum.png */,
 				426162A01A40A34C00AC7094 /* LaunchScreen.xib */,
-				426162951A40A34C00AC7094 /* Simon___.xcdatamodeld */,
 				422C10D51A428F7700B0A54B /* delete.png */,
 				426162B71A40C08100AC7094 /* AddSample.png */,
 				426162921A40A34C00AC7094 /* AppDelegate.h */,
@@ -411,6 +292,46 @@
 				426162AC1A40A34D00AC7094 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42B4096E1A5CF8DD0048F12F /* Music Images */ = {
+			isa = PBXGroup;
+			children = (
+				42DBA4461A4BE041004870F8 /* trumpet.png */,
+				42DBA4471A4BE041004870F8 /* harmonica.png */,
+				42DBA4481A4BE041004870F8 /* sitar.png */,
+				420C0A031A6615610049788C /* Bpm127_Aged_E_PL02.wav */,
+				420C0A041A6615610049788C /* Bpm127_Crushed_E_PL02.wav */,
+				420C0A051A6615610049788C /* Bpm127_Eastern_E_PL03.wav */,
+				420C0A061A6615610049788C /* Bpm127_Grimy_E_PL02.wav */,
+				420C0A071A6615610049788C /* Bpm127_Polar_E_PL01.wav */,
+				420C0A081A6615610049788C /* Bpm127_Punky_C_PL01.wav */,
+				420C0A091A6615610049788C /* Bpm127_Ringer_E_PL01.wav */,
+				420C0A0A1A6615610049788C /* Bpm127_Sawn_E_PL01.wav */,
+				420C0A0B1A6615610049788C /* Bpm127_Sawn_E_PL02.wav */,
+				420C0A0C1A6615610049788C /* Bpm127_Synthetic_E_PL01.wav */,
+				420C0A0D1A6615610049788C /* Bpm127_Talking_E_PL02.wav */,
+				420C0A0E1A6615610049788C /* Bpm127_Tangent_E_PL01.wav */,
+				420C0A0F1A6615610049788C /* Bpm127_Trapeze_E_PL02.wav */,
+				42DBA4491A4BE041004870F8 /* violin.png */,
+				42DBA43A1A4BD139004870F8 /* guitar.png */,
+				42DBA43B1A4BD139004870F8 /* piano.png */,
+				42DBA43C1A4BD139004870F8 /* drum.png */,
+			);
+			name = "Music Images";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		42B4096F1A5CF8F90048F12F /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				426162951A40A34C00AC7094 /* Simon___.xcdatamodeld */,
+				42B409731A5CFB570048F12F /* Song.h */,
+				42B409741A5CFB570048F12F /* Song.m */,
+				42B409701A5CFB560048F12F /* Sample.h */,
+				42B409711A5CFB560048F12F /* Sample.m */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 		42C087861A4D362900BB4BE9 /* Sample Picker Collection View */ = {
@@ -516,78 +437,7 @@
 		42E567A91A4434EC00DD5580 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
-				42E567AA1A4434EC00DD5580 /* 70s Ballad Piano 01.caf */,
-				42E567AB1A4434EC00DD5580 /* 70s Ballad Piano 02.caf */,
-				42E567AC1A4434EC00DD5580 /* 80s Dance Bass Synth 06.caf */,
-				42E567AD1A4434EC00DD5580 /* 80s Dance Bass Synth 07.caf */,
-				42E567AE1A4434EC00DD5580 /* 80s Dance Pad 01.caf */,
-				42E567AF1A4434EC00DD5580 /* 80s Pop Synthesizer 01.caf */,
-				42E567B01A4434EC00DD5580 /* Acoustic Noodling 01.caf */,
-				42E567B11A4434EC00DD5580 /* Acoustic Noodling 02.caf */,
-				42E567B21A4434EC00DD5580 /* Acoustic Noodling 03.caf */,
-				42E567B31A4434EC00DD5580 /* Acoustic Picking 02.caf */,
-				42E567B41A4434EC00DD5580 /* Acoustic Picking 03.caf */,
-				42E567B51A4434EC00DD5580 /* Acoustic Picking 04.caf */,
-				42E567B61A4434EC00DD5580 /* Acoustic Picking 06.caf */,
-				42E567B71A4434EC00DD5580 /* Acoustic Picking 07.caf */,
-				42E567B81A4434EC00DD5580 /* Acoustic Picking 08.caf */,
-				42E567B91A4434EC00DD5580 /* Acoustic Picking 09.caf */,
-				42E567BA1A4434EC00DD5580 /* Acoustic Picking 18.caf */,
-				42E567BB1A4434EC00DD5580 /* Acoustic Slide 02.caf */,
-				42E567BC1A4434EC00DD5580 /* Acoustic Slide 06.caf */,
-				42E567BD1A4434EC00DD5580 /* Acoustic Vamp 01.caf */,
-				42E567BE1A4434EC00DD5580 /* Acoustic Vamp 04.caf */,
-				42E567BF1A4434EC00DD5580 /* Alternative Rock Bass 01.caf */,
-				42E567C01A4434EC00DD5580 /* Alternative Rock Bass 02.caf */,
-				42E567C11A4434EC00DD5580 /* Alternative Rock Bass 03.caf */,
-				42E567C21A4434EC00DD5580 /* Alternative Rock Bass 04.caf */,
-				42E567C31A4434EC00DD5580 /* Asian Gamelan 01.caf */,
-				42E567C41A4434EC00DD5580 /* Blip Synth 01.caf */,
-				42E567C51A4434EC00DD5580 /* Blue Jazz Organ Riff 01.caf */,
-				42E567C61A4434EC00DD5580 /* Blue Jazz Organ Riff 02.caf */,
-				42E567C71A4434EC00DD5580 /* Blue Jazz Organ Riff 03.caf */,
-				42E567C81A4434EC00DD5580 /* Blue Jazz Organ Riff 04.caf */,
-				42E567C91A4434EC00DD5580 /* Blue Jazz Organ Riff 06.caf */,
-				42E567CA1A4434EC00DD5580 /* Blue Jazz Organ Riff 07.caf */,
-				42E567CB1A4434EC00DD5580 /* Blue Jazz Piano 01.caf */,
-				42E567CC1A4434EC00DD5580 /* Blue Jazz Piano 02.caf */,
-				42E567CD1A4434EC00DD5580 /* Blues Guitar 01.caf */,
-				42E567CE1A4434EC00DD5580 /* Blues Guitar 02.caf */,
-				42E567CF1A4434EC00DD5580 /* Blues Guitar 03.caf */,
-				42E567D01A4434EC00DD5580 /* Blues Harmonica 02.caf */,
-				42E567D11A4434EC00DD5580 /* Blues Harmonica 03.caf */,
-				42E567D21A4434EC00DD5580 /* Blues Harmonica 06.caf */,
-				42E567D31A4434EC00DD5580 /* Blues Harmonica 08.caf */,
-				42E567D41A4434EC00DD5580 /* Blues Harmonica 10.caf */,
-				42E567D51A4434EC00DD5580 /* Bongo Groove 01.caf */,
-				42E567D61A4434EC00DD5580 /* Bongo Groove 05.caf */,
-				42E567D71A4434EC00DD5580 /* Ceramic Drum 01.caf */,
-				42E567D81A4434EC00DD5580 /* Chunky Metal Guitar 01.caf */,
-				42E567D91A4434EC00DD5580 /* Classic Rock Guitar 01.caf */,
-				42E567DA1A4434EC00DD5580 /* Classic Rock Guitar 02.caf */,
-				42E567DB1A4434EC00DD5580 /* Classic Rock Organ 01.caf */,
-				42E567DC1A4434EC00DD5580 /* Classic Rock Organ 02.caf */,
-				42E567DD1A4434EC00DD5580 /* Classic Rock Piano 01.caf */,
-				42E567DE1A4434EC00DD5580 /* Classic Rock Piano 02.caf */,
-				42E567DF1A4434EC00DD5580 /* Classic Rock Piano 03.caf */,
-				42E567E01A4434EC00DD5580 /* Classic Rock Piano 04.caf */,
-				42E567E11A4434EC00DD5580 /* Classic Rock Piano 05.caf */,
-				42E567E21A4434EC00DD5580 /* Classic Rock Piano 06.caf */,
-				42E567E31A4434EC00DD5580 /* Classic Rock Steel 01.caf */,
-				42E567E41A4434EC00DD5580 /* Classic Rock Steel 02.caf */,
-				42E567E51A4434EC00DD5580 /* Classic Rock Steel 03.caf */,
-				42E567E61A4434EC00DD5580 /* Classic Rock Steel 04.caf */,
-				42E567E71A4434EC00DD5580 /* Classic Rock Steel 05.caf */,
-				42E567E81A4434EC00DD5580 /* Clave 01.caf */,
-				42E567E91A4434EC00DD5580 /* Clave 02.caf */,
-				42E567EA1A4434EC00DD5580 /* Clean Electric Guitar 01.caf */,
-				42E567EB1A4434EC00DD5580 /* Club Dance Beat 005.caf */,
-				42E567EC1A4434EC00DD5580 /* Club Dance Beat 006.caf */,
-				42E567ED1A4434EC00DD5580 /* Club Dance Beat 007.caf */,
-				42E567EE1A4434EC00DD5580 /* Club Dance Beat 009.caf */,
-				42E567EF1A4434EC00DD5580 /* Club Dance Beat 030.caf */,
-				42E567F01A4434EC00DD5580 /* Club Dance Beat 038.caf */,
-				42E567F11A4434EC00DD5580 /* Club Dance Beat 047.caf */,
+				42B4096E1A5CF8DD0048F12F /* Music Images */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -641,9 +491,11 @@
 				TargetAttributes = {
 					4261628A1A40A34C00AC7094 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = RV68FXHFU7;
 					};
 					426162A61A40A34C00AC7094 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = RV68FXHFU7;
 						TestTargetID = 4261628A1A40A34C00AC7094;
 					};
 				};
@@ -672,92 +524,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42E567F91A4434EC00DD5580 /* Acoustic Noodling 02.caf in Resources */,
-				42E5682C1A4434EC00DD5580 /* Classic Rock Steel 02.caf in Resources */,
-				42E568081A4434EC00DD5580 /* Alternative Rock Bass 02.caf in Resources */,
-				42E568011A4434EC00DD5580 /* Acoustic Picking 09.caf in Resources */,
 				4261629D1A40A34C00AC7094 /* Main.storyboard in Resources */,
-				42E567FC1A4434EC00DD5580 /* Acoustic Picking 03.caf in Resources */,
-				42E568281A4434EC00DD5580 /* Classic Rock Piano 04.caf in Resources */,
 				42DBA43F1A4BD139004870F8 /* drum.png in Resources */,
+				420C0A1B1A6615610049788C /* Bpm127_Tangent_E_PL01.wav in Resources */,
+				420C0A191A6615610049788C /* Bpm127_Synthetic_E_PL01.wav in Resources */,
 				426162A21A40A34C00AC7094 /* LaunchScreen.xib in Resources */,
-				42E568141A4434EC00DD5580 /* Blue Jazz Piano 02.caf in Resources */,
-				42E568131A4434EC00DD5580 /* Blue Jazz Piano 01.caf in Resources */,
-				42E568071A4434EC00DD5580 /* Alternative Rock Bass 01.caf in Resources */,
-				42E5680C1A4434EC00DD5580 /* Blip Synth 01.caf in Resources */,
-				42E567FD1A4434EC00DD5580 /* Acoustic Picking 04.caf in Resources */,
-				42E5680B1A4434EC00DD5580 /* Asian Gamelan 01.caf in Resources */,
-				42E5681C1A4434EC00DD5580 /* Blues Harmonica 10.caf in Resources */,
-				42E568361A4434EC00DD5580 /* Club Dance Beat 009.caf in Resources */,
-				42E568351A4434EC00DD5580 /* Club Dance Beat 007.caf in Resources */,
+				420C0A1A1A6615610049788C /* Bpm127_Talking_E_PL02.wav in Resources */,
 				4261629F1A40A34C00AC7094 /* Images.xcassets in Resources */,
-				42E568181A4434EC00DD5580 /* Blues Harmonica 02.caf in Resources */,
-				42E568391A4434EC00DD5580 /* Club Dance Beat 047.caf in Resources */,
-				42E568381A4434EC00DD5580 /* Club Dance Beat 038.caf in Resources */,
-				42E568271A4434EC00DD5580 /* Classic Rock Piano 03.caf in Resources */,
-				42E568191A4434EC00DD5580 /* Blues Harmonica 03.caf in Resources */,
-				42E568151A4434EC00DD5580 /* Blues Guitar 01.caf in Resources */,
-				42E568301A4434EC00DD5580 /* Clave 01.caf in Resources */,
 				42DBA44B1A4BE041004870F8 /* harmonica.png in Resources */,
-				42E5682B1A4434EC00DD5580 /* Classic Rock Steel 01.caf in Resources */,
-				42E568041A4434EC00DD5580 /* Acoustic Slide 06.caf in Resources */,
-				42E568371A4434EC00DD5580 /* Club Dance Beat 030.caf in Resources */,
-				42E5680D1A4434EC00DD5580 /* Blue Jazz Organ Riff 01.caf in Resources */,
-				42E568161A4434EC00DD5580 /* Blues Guitar 02.caf in Resources */,
-				42E567F21A4434EC00DD5580 /* 70s Ballad Piano 01.caf in Resources */,
-				42E568051A4434EC00DD5580 /* Acoustic Vamp 01.caf in Resources */,
-				42E5680F1A4434EC00DD5580 /* Blue Jazz Organ Riff 03.caf in Resources */,
-				42E5682A1A4434EC00DD5580 /* Classic Rock Piano 06.caf in Resources */,
-				42E5681E1A4434EC00DD5580 /* Bongo Groove 05.caf in Resources */,
-				42E568111A4434EC00DD5580 /* Blue Jazz Organ Riff 06.caf in Resources */,
-				42E568001A4434EC00DD5580 /* Acoustic Picking 08.caf in Resources */,
-				42E567FE1A4434EC00DD5580 /* Acoustic Picking 06.caf in Resources */,
-				42E568241A4434EC00DD5580 /* Classic Rock Organ 02.caf in Resources */,
-				42E568291A4434EC00DD5580 /* Classic Rock Piano 05.caf in Resources */,
-				42E568321A4434EC00DD5580 /* Clean Electric Guitar 01.caf in Resources */,
-				42E568091A4434EC00DD5580 /* Alternative Rock Bass 03.caf in Resources */,
-				42E568201A4434EC00DD5580 /* Chunky Metal Guitar 01.caf in Resources */,
 				422C10D61A428F7700B0A54B /* delete.png in Resources */,
-				42E567FA1A4434EC00DD5580 /* Acoustic Noodling 03.caf in Resources */,
-				42E5680E1A4434EC00DD5580 /* Blue Jazz Organ Riff 02.caf in Resources */,
-				42E5682F1A4434EC00DD5580 /* Classic Rock Steel 05.caf in Resources */,
-				42E568261A4434EC00DD5580 /* Classic Rock Piano 02.caf in Resources */,
-				42E567F71A4434EC00DD5580 /* 80s Pop Synthesizer 01.caf in Resources */,
-				42E5682D1A4434EC00DD5580 /* Classic Rock Steel 03.caf in Resources */,
-				42E567F81A4434EC00DD5580 /* Acoustic Noodling 01.caf in Resources */,
-				42E5682E1A4434EC00DD5580 /* Classic Rock Steel 04.caf in Resources */,
-				42E5681A1A4434EC00DD5580 /* Blues Harmonica 06.caf in Resources */,
 				42DBA43D1A4BD139004870F8 /* guitar.png in Resources */,
-				42E568121A4434EC00DD5580 /* Blue Jazz Organ Riff 07.caf in Resources */,
-				42E568331A4434EC00DD5580 /* Club Dance Beat 005.caf in Resources */,
-				42E568101A4434EC00DD5580 /* Blue Jazz Organ Riff 04.caf in Resources */,
-				42E568171A4434EC00DD5580 /* Blues Guitar 03.caf in Resources */,
-				42E567F51A4434EC00DD5580 /* 80s Dance Bass Synth 07.caf in Resources */,
+				420C0A1C1A6615610049788C /* Bpm127_Trapeze_E_PL02.wav in Resources */,
 				426162B81A40C08100AC7094 /* AddSample.png in Resources */,
+				420C0A161A6615610049788C /* Bpm127_Ringer_E_PL01.wav in Resources */,
 				42DBA44C1A4BE041004870F8 /* sitar.png in Resources */,
-				42E568031A4434EC00DD5580 /* Acoustic Slide 02.caf in Resources */,
-				42E568251A4434EC00DD5580 /* Classic Rock Piano 01.caf in Resources */,
-				42E5681F1A4434EC00DD5580 /* Ceramic Drum 01.caf in Resources */,
-				42E5681D1A4434EC00DD5580 /* Bongo Groove 01.caf in Resources */,
-				42E568021A4434EC00DD5580 /* Acoustic Picking 18.caf in Resources */,
-				42E568311A4434EC00DD5580 /* Clave 02.caf in Resources */,
-				42E568231A4434EC00DD5580 /* Classic Rock Organ 01.caf in Resources */,
-				42E5680A1A4434EC00DD5580 /* Alternative Rock Bass 04.caf in Resources */,
-				42E567F41A4434EC00DD5580 /* 80s Dance Bass Synth 06.caf in Resources */,
 				42DBA43E1A4BD139004870F8 /* piano.png in Resources */,
-				42E567FF1A4434EC00DD5580 /* Acoustic Picking 07.caf in Resources */,
 				42DBA44D1A4BE041004870F8 /* violin.png in Resources */,
-				42E567F61A4434EC00DD5580 /* 80s Dance Pad 01.caf in Resources */,
-				42E5681B1A4434EC00DD5580 /* Blues Harmonica 08.caf in Resources */,
-				42E568341A4434EC00DD5580 /* Club Dance Beat 006.caf in Resources */,
-				42E568061A4434EC00DD5580 /* Acoustic Vamp 04.caf in Resources */,
+				420C0A121A6615610049788C /* Bpm127_Eastern_E_PL03.wav in Resources */,
+				420C0A151A6615610049788C /* Bpm127_Punky_C_PL01.wav in Resources */,
+				420C0A141A6615610049788C /* Bpm127_Polar_E_PL01.wav in Resources */,
 				42C0878E1A4D45B700BB4BE9 /* play.png in Resources */,
-				42E567FB1A4434EC00DD5580 /* Acoustic Picking 02.caf in Resources */,
-				42E567F31A4434EC00DD5580 /* 70s Ballad Piano 02.caf in Resources */,
-				42E568211A4434EC00DD5580 /* Classic Rock Guitar 01.caf in Resources */,
+				420C0A111A6615610049788C /* Bpm127_Crushed_E_PL02.wav in Resources */,
 				42C0878D1A4D45B700BB4BE9 /* pause.png in Resources */,
 				42DBA44A1A4BE041004870F8 /* trumpet.png in Resources */,
-				42E568221A4434EC00DD5580 /* Classic Rock Guitar 02.caf in Resources */,
+				420C0A131A6615610049788C /* Bpm127_Grimy_E_PL02.wav in Resources */,
+				420C0A101A6615610049788C /* Bpm127_Aged_E_PL02.wav in Resources */,
+				420C0A171A6615610049788C /* Bpm127_Sawn_E_PL01.wav in Resources */,
+				420C0A181A6615610049788C /* Bpm127_Sawn_E_PL02.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B409751A5CFB570048F12F /* Song.m in Sources */,
 				426162941A40A34C00AC7094 /* AppDelegate.m in Sources */,
 				421593C41A4318B900197E20 /* EFCircularTrig.m in Sources */,
 				42E5679A1A440C6E00DD5580 /* AEAudioUnitFilter.m in Sources */,
@@ -798,6 +592,7 @@
 				42E5679B1A440C6E00DD5580 /* AEBlockAudioReceiver.m in Sources */,
 				42E567961A440C6E00DD5580 /* AEAudioFileLoaderOperation.m in Sources */,
 				42E567981A440C6E00DD5580 /* AEAudioFileWriter.m in Sources */,
+				42B409721A5CFB560048F12F /* Sample.m in Sources */,
 				42E567A51A440C6E00DD5580 /* TPCircularBuffer.c in Sources */,
 				42E567991A440C6E00DD5580 /* AEAudioUnitChannel.m in Sources */,
 				4261629A1A40A34C00AC7094 /* ViewController.m in Sources */,
@@ -886,6 +681,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "227431cf-7a24-483e-a851-0f84ff0a7fa4";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -920,6 +716,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "227431cf-7a24-483e-a851-0f84ff0a7fa4";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -929,11 +726,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Simon :)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "227431cf-7a24-483e-a851-0f84ff0a7fa4";
 			};
 			name = Debug;
 		};
@@ -941,11 +740,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Simon :)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "227431cf-7a24-483e-a851-0f84ff0a7fa4";
 			};
 			name = Release;
 		};
@@ -953,6 +754,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -964,6 +767,7 @@
 				INFOPLIST_FILE = "Simon :)Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simon :).app/Simon :)";
 			};
 			name = Debug;
@@ -972,6 +776,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -979,6 +785,7 @@
 				INFOPLIST_FILE = "Simon :)Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simon :).app/Simon :)";
 			};
 			name = Release;
