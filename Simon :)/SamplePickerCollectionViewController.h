@@ -14,5 +14,7 @@
 
 @property (nonatomic, strong) NSMutableArray *audioSamples;
 @property (nonatomic, strong) NSMutableArray *namesOfSelectedSamples;
+@property (nonatomic, strong) NSString *filterString;
+
 
 @end
