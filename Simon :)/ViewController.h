@@ -10,6 +10,7 @@
 #import "SampleCircle.h"
 #import "TheAmazingAudioEngine.h"
 #import "Singleton.h"
+#import "Song+Operations.h"
 #import "NewInstrumentPickerView.h"
 
 @interface ViewController : UIViewController
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *addSampleButton;
 @property (nonatomic, strong) NSMutableArray *sampleCircles; //Of SampleCircles
 @property (weak, nonatomic) IBOutlet UIView *circleContainerView;
+@property (nonatomic, strong) Song *song;
 
 @end
 

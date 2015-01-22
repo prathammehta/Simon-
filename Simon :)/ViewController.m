@@ -10,6 +10,7 @@
 #import "UIImage+ImageEffects.h"
 #import "UIView+Screenshot.h"
 
+
 @interface ViewController () <UINavigationControllerDelegate>
 
 @property (nonatomic, strong) NewInstrumentPickerView *picker;
@@ -34,6 +35,18 @@
                                              selector:@selector(insturmentCategoryTapped:)
                                                  name:@"insturmentCategoryTapped"
                                                object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    
 }
 
 - (NSMutableArray *)sampleCircles
@@ -77,12 +90,6 @@
         [_dismissMenuButton addTarget:self action:@selector(removeMenu) forControlEvents:UIControlEventTouchUpInside];
     }
     return _dismissMenuButton;
-}
-
-- (void) viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    //[self startInitialAnimations];
 }
 
 - (void) startInitialAnimations
