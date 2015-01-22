@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSMutableArray *sampleCircles; //Of SampleCircles
 @property (weak, nonatomic) IBOutlet UIView *circleContainerView;
 @property (nonatomic, strong) Song *song;
+@property (nonatomic) BOOL didAppearFromNav;
 
 @end
 

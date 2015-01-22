@@ -9,6 +9,7 @@
 #import "SongsViewTableController.h"
 #import "AppDelegate.h"
 #import "Song+Operations.h"
+#import "ViewController.h"
 
 @interface SongsViewTableController ()
 
@@ -48,6 +49,16 @@
     [Song insertSongWithName:[NSString stringWithFormat:@"Song %lu",(unsigned long)self.fetchedResultsController.fetchedObjects.count+1]
                  withContext:self.context];
     [self.context save:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"songSelected"])
+    {
+        ViewController *viewController = (ViewController *)segue.destinationViewController;
+        viewController.didAppearFromNav = YES;
+        [viewController performSelector:@selector(setSong:) withObject:[self.fetchedResultsController objectAtIndexPath:[self.tableView indexPathForSelectedRow]]];
+    }
 }
 
 @end

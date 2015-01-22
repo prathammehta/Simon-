@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "UIImage+ImageEffects.h"
 #import "UIView+Screenshot.h"
+#import "Sample+Operations.h"
+#import "AppDelegate.h"
 
 
 @interface ViewController () <UINavigationControllerDelegate>
@@ -16,6 +18,7 @@
 @property (nonatomic, strong) NewInstrumentPickerView *picker;
 @property (nonatomic, strong) UIImageView *blurredView;
 @property (nonatomic, strong) UIButton *dismissMenuButton;
+
 
 @end
 
@@ -40,13 +43,73 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
+    NSManagedObjectContext *context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+    
+    self.song.samples = nil;
+    [context save:nil];
+    
+    
+    for(AEAudioFilePlayer *player in [Singleton sharedInstance].audioFilePlayers)
+    {
+        NSString *name = [player.url.absoluteString stringByDeletingPathExtension];
+        
+        [Sample insertSampleWithName:name
+                        withRedColor:0
+                      withGreenColor:0
+                          withVolume:0
+                              toSong:self.song
+                         withContext:context];
+    }
+    
+    [Singleton sharedInstance].audioFilePlayers = nil;
+    [[[Singleton sharedInstance] audioController] removeChannels:[[Singleton sharedInstance] audioController].channels];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    
+    if(self.didAppearFromNav)
+    {
+        self.didAppearFromNav = NO;
+        
+        for(Sample *sample in self.song.samples)
+        {
+            NSString *name = sample.name;
+            
+            NSLog(@"File required: %@",name);
+            
+            
+            NSURL *url = [[NSBundle mainBundle] URLForResource:name
+                                                 withExtension:@"wav"];
+            
+            NSLog(@"URL Required: %@",url);
+            
+            NSError *error;
+            
+            AEAudioFilePlayer *player = [AEAudioFilePlayer audioFilePlayerWithURL:url
+                                                                  audioController:[Singleton sharedInstance].audioController
+                                                                            error:&error];
+            player.loop = YES;
+            
+            if(error)
+            {
+                NSLog(@"The error is %@",error);
+            }
+            else
+            {
+                [[Singleton sharedInstance].audioFilePlayers addObject:player];
+                NSLog(@"Number of tracks playing: %ld",(long)[Singleton sharedInstance].audioFilePlayers.count);
+            }
+            
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"sampleAdded" object:nil];
+            }];
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"resumeMusic" object:nil];
+        }
+    }
 }
 
 - (NSMutableArray *)sampleCircles
