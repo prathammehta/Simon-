@@ -38,32 +38,39 @@
                                              selector:@selector(insturmentCategoryTapped:)
                                                  name:@"insturmentCategoryTapped"
                                                object:nil];
+    
+
 }
 
-- (void)viewWillDisappear:(BOOL)animated
+-(void) viewWillDisappear:(BOOL)animated
 {
-    [super viewWillDisappear:animated];
-    
-    NSManagedObjectContext *context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
-    
-    self.song.samples = nil;
-    [context save:nil];
-    
-    
-    for(AEAudioFilePlayer *player in [Singleton sharedInstance].audioFilePlayers)
-    {
-        NSString *name = [player.url.absoluteString stringByDeletingPathExtension];
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
         
-        [Sample insertSampleWithName:name
-                        withRedColor:0
-                      withGreenColor:0
-                          withVolume:0
-                              toSong:self.song
-                         withContext:context];
+        NSManagedObjectContext *context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+        
+        self.song.samples = nil;
+        
+        [context save:nil];
+        
+        
+        for(AEAudioFilePlayer *player in [Singleton sharedInstance].audioFilePlayers)
+        {
+            
+            
+            [Sample insertSampleWithName:player.url.lastPathComponent
+                            withRedColor:0
+                          withGreenColor:0
+                              withVolume:0
+                                  toSong:self.song
+                             withContext:context];
+        }
+        
+        [Singleton sharedInstance].audioFilePlayers = nil;
+        [[[Singleton sharedInstance] audioController] removeChannels:[[Singleton sharedInstance] audioController].channels];
+        
+        [self.navigationController popViewControllerAnimated:NO];
     }
-    
-    [Singleton sharedInstance].audioFilePlayers = nil;
-    [[[Singleton sharedInstance] audioController] removeChannels:[[Singleton sharedInstance] audioController].channels];
+    [super viewWillDisappear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -78,11 +85,17 @@
         {
             NSString *name = sample.name;
             
+            
+            
+            name = [name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            name = [name stringByReplacingOccurrencesOfString:@"25" withString:@""];
+            
             NSLog(@"File required: %@",name);
             
-            
-            NSURL *url = [[NSBundle mainBundle] URLForResource:name
+            NSURL *url = [[NSBundle mainBundle] URLForResource:[name stringByDeletingPathExtension]
                                                  withExtension:@"wav"];
+            
+            
             
             NSLog(@"URL Required: %@",url);
             
@@ -101,6 +114,7 @@
             {
                 [[Singleton sharedInstance].audioFilePlayers addObject:player];
                 NSLog(@"Number of tracks playing: %ld",(long)[Singleton sharedInstance].audioFilePlayers.count);
+                [self addNewCircle];
             }
             
             [self.presentingViewController dismissViewControllerAnimated:YES completion:^{

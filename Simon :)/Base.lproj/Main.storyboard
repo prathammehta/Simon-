@@ -62,7 +62,6 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="addSampleButton" destination="qqe-vR-f7i" id="Ckj-nE-46Y"/>
@@ -71,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1371" y="350"/>
+            <point key="canvasLocation" x="1339" y="350"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="60j-oB-r0b">
@@ -90,7 +89,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycU-ag-K1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2546" y="350"/>
+            <point key="canvasLocation" x="2640" y="350"/>
         </scene>
         <!--Pick a Sample-->
         <scene sceneID="G8s-SH-Nfy">
@@ -195,7 +194,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ze2-9u-bHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2993" y="350"/>
+            <point key="canvasLocation" x="3087" y="350"/>
         </scene>
         <!--Songs-->
         <scene sceneID="Shb-nt-DI8">

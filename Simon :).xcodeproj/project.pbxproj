@@ -54,16 +54,16 @@
 		42E567A41A440C6E00DD5580 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E5678D1A440C6E00DD5580 /* TPCircularBuffer+AudioBufferList.c */; };
 		42E567A51A440C6E00DD5580 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E5678F1A440C6E00DD5580 /* TPCircularBuffer.c */; };
 		42E567A81A440C9000DD5580 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E567A71A440C9000DD5580 /* Singleton.m */; };
-		42E754611A6C1D3200DF13B2 /* HH_92_KIT_D_DRUMS_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E754571A6C1D3200DF13B2 /* HH_92_KIT_D_DRUMS_01.wav */; };
-		42E754621A6C1D3200DF13B2 /* HH_96_DRAMADY_DRUMS.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E754581A6C1D3200DF13B2 /* HH_96_DRAMADY_DRUMS.wav */; };
-		42E754631A6C1D3200DF13B2 /* HH_96_FRENCH_DRUMS.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E754591A6C1D3200DF13B2 /* HH_96_FRENCH_DRUMS.wav */; };
-		42E754641A6C1D3200DF13B2 /* HH_96_HORN_LP_040_TNR_DRY_G - original.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545A1A6C1D3200DF13B2 /* HH_96_HORN_LP_040_TNR_DRY_G - original.wav */; };
-		42E754651A6C1D3200DF13B2 /* HH_96_HORN_LP_040_TNR_DRY_G.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545B1A6C1D3200DF13B2 /* HH_96_HORN_LP_040_TNR_DRY_G.wav */; };
-		42E754661A6C1D3200DF13B2 /* HH_96_HORN_LP_042_TNR_DRY_G.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545C1A6C1D3200DF13B2 /* HH_96_HORN_LP_042_TNR_DRY_G.wav */; };
-		42E754671A6C1D3200DF13B2 /* HH_96_HORN_LP_043_TNR_DRY_G.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545D1A6C1D3200DF13B2 /* HH_96_HORN_LP_043_TNR_DRY_G.wav */; };
-		42E754681A6C1D3200DF13B2 /* HH_96_HORN_LP_086_TNR_DRY_G.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545E1A6C1D3200DF13B2 /* HH_96_HORN_LP_086_TNR_DRY_G.wav */; };
-		42E754691A6C1D3200DF13B2 /* HH_96_SCOOTER_DRUMS.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545F1A6C1D3200DF13B2 /* HH_96_SCOOTER_DRUMS.wav */; };
-		42E7546A1A6C1D3200DF13B2 /* HH_97_KIT_I_DRUMS_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E754601A6C1D3200DF13B2 /* HH_97_KIT_I_DRUMS_.wav */; };
+		42E754611A6C1D3200DF13B2 /* DRUM01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E754571A6C1D3200DF13B2 /* DRUM01.wav */; };
+		42E754621A6C1D3200DF13B2 /* DRUM02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E754581A6C1D3200DF13B2 /* DRUM02.wav */; };
+		42E754631A6C1D3200DF13B2 /* DRUM03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E754591A6C1D3200DF13B2 /* DRUM03.wav */; };
+		42E754641A6C1D3200DF13B2 /* HORN01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545A1A6C1D3200DF13B2 /* HORN01.wav */; };
+		42E754651A6C1D3200DF13B2 /* HORN02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545B1A6C1D3200DF13B2 /* HORN02.wav */; };
+		42E754661A6C1D3200DF13B2 /* HORN03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545C1A6C1D3200DF13B2 /* HORN03.wav */; };
+		42E754671A6C1D3200DF13B2 /* HORN04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545D1A6C1D3200DF13B2 /* HORN04.wav */; };
+		42E754681A6C1D3200DF13B2 /* HORN05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545E1A6C1D3200DF13B2 /* HORN05.wav */; };
+		42E754691A6C1D3200DF13B2 /* SCOOTERDRUMS.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545F1A6C1D3200DF13B2 /* SCOOTERDRUMS.wav */; };
+		42E7546A1A6C1D3200DF13B2 /* KITDRUMS_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E754601A6C1D3200DF13B2 /* KITDRUMS_.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,16 +167,16 @@
 		42E567931A440C6E00DD5580 /* TheAmazingAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheAmazingAudioEngine.h; sourceTree = "<group>"; };
 		42E567A61A440C9000DD5580 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		42E567A71A440C9000DD5580 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
-		42E754571A6C1D3200DF13B2 /* HH_92_KIT_D_DRUMS_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HH_92_KIT_D_DRUMS_01.wav; sourceTree = "<group>"; };
-		42E754581A6C1D3200DF13B2 /* HH_96_DRAMADY_DRUMS.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HH_96_DRAMADY_DRUMS.wav; sourceTree = "<group>"; };
-		42E754591A6C1D3200DF13B2 /* HH_96_FRENCH_DRUMS.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HH_96_FRENCH_DRUMS.wav; sourceTree = "<group>"; };
-		42E7545A1A6C1D3200DF13B2 /* HH_96_HORN_LP_040_TNR_DRY_G - original.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "HH_96_HORN_LP_040_TNR_DRY_G - original.wav"; sourceTree = "<group>"; };
-		42E7545B1A6C1D3200DF13B2 /* HH_96_HORN_LP_040_TNR_DRY_G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HH_96_HORN_LP_040_TNR_DRY_G.wav; sourceTree = "<group>"; };
-		42E7545C1A6C1D3200DF13B2 /* HH_96_HORN_LP_042_TNR_DRY_G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HH_96_HORN_LP_042_TNR_DRY_G.wav; sourceTree = "<group>"; };
-		42E7545D1A6C1D3200DF13B2 /* HH_96_HORN_LP_043_TNR_DRY_G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HH_96_HORN_LP_043_TNR_DRY_G.wav; sourceTree = "<group>"; };
-		42E7545E1A6C1D3200DF13B2 /* HH_96_HORN_LP_086_TNR_DRY_G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HH_96_HORN_LP_086_TNR_DRY_G.wav; sourceTree = "<group>"; };
-		42E7545F1A6C1D3200DF13B2 /* HH_96_SCOOTER_DRUMS.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HH_96_SCOOTER_DRUMS.wav; sourceTree = "<group>"; };
-		42E754601A6C1D3200DF13B2 /* HH_97_KIT_I_DRUMS_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HH_97_KIT_I_DRUMS_.wav; sourceTree = "<group>"; };
+		42E754571A6C1D3200DF13B2 /* DRUM01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DRUM01.wav; sourceTree = "<group>"; };
+		42E754581A6C1D3200DF13B2 /* DRUM02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DRUM02.wav; sourceTree = "<group>"; };
+		42E754591A6C1D3200DF13B2 /* DRUM03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DRUM03.wav; sourceTree = "<group>"; };
+		42E7545A1A6C1D3200DF13B2 /* HORN01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HORN01.wav; sourceTree = "<group>"; };
+		42E7545B1A6C1D3200DF13B2 /* HORN02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HORN02.wav; sourceTree = "<group>"; };
+		42E7545C1A6C1D3200DF13B2 /* HORN03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HORN03.wav; sourceTree = "<group>"; };
+		42E7545D1A6C1D3200DF13B2 /* HORN04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HORN04.wav; sourceTree = "<group>"; };
+		42E7545E1A6C1D3200DF13B2 /* HORN05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HORN05.wav; sourceTree = "<group>"; };
+		42E7545F1A6C1D3200DF13B2 /* SCOOTERDRUMS.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SCOOTERDRUMS.wav; sourceTree = "<group>"; };
+		42E754601A6C1D3200DF13B2 /* KITDRUMS_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = KITDRUMS_.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,16 +409,16 @@
 		42E754561A6C1D3200DF13B2 /* Loops */ = {
 			isa = PBXGroup;
 			children = (
-				42E754571A6C1D3200DF13B2 /* HH_92_KIT_D_DRUMS_01.wav */,
-				42E754581A6C1D3200DF13B2 /* HH_96_DRAMADY_DRUMS.wav */,
-				42E754591A6C1D3200DF13B2 /* HH_96_FRENCH_DRUMS.wav */,
-				42E7545A1A6C1D3200DF13B2 /* HH_96_HORN_LP_040_TNR_DRY_G - original.wav */,
-				42E7545B1A6C1D3200DF13B2 /* HH_96_HORN_LP_040_TNR_DRY_G.wav */,
-				42E7545C1A6C1D3200DF13B2 /* HH_96_HORN_LP_042_TNR_DRY_G.wav */,
-				42E7545D1A6C1D3200DF13B2 /* HH_96_HORN_LP_043_TNR_DRY_G.wav */,
-				42E7545E1A6C1D3200DF13B2 /* HH_96_HORN_LP_086_TNR_DRY_G.wav */,
-				42E7545F1A6C1D3200DF13B2 /* HH_96_SCOOTER_DRUMS.wav */,
-				42E754601A6C1D3200DF13B2 /* HH_97_KIT_I_DRUMS_.wav */,
+				42E754571A6C1D3200DF13B2 /* DRUM01.wav */,
+				42E754581A6C1D3200DF13B2 /* DRUM02.wav */,
+				42E754591A6C1D3200DF13B2 /* DRUM03.wav */,
+				42E7545A1A6C1D3200DF13B2 /* HORN01.wav */,
+				42E7545B1A6C1D3200DF13B2 /* HORN02.wav */,
+				42E7545C1A6C1D3200DF13B2 /* HORN03.wav */,
+				42E7545D1A6C1D3200DF13B2 /* HORN04.wav */,
+				42E7545E1A6C1D3200DF13B2 /* HORN05.wav */,
+				42E7545F1A6C1D3200DF13B2 /* SCOOTERDRUMS.wav */,
+				42E754601A6C1D3200DF13B2 /* KITDRUMS_.wav */,
 			);
 			path = Loops;
 			sourceTree = "<group>";
@@ -506,22 +506,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				4261629D1A40A34C00AC7094 /* Main.storyboard in Resources */,
-				42E754671A6C1D3200DF13B2 /* HH_96_HORN_LP_043_TNR_DRY_G.wav in Resources */,
+				42E754671A6C1D3200DF13B2 /* HORN04.wav in Resources */,
 				426162A21A40A34C00AC7094 /* LaunchScreen.xib in Resources */,
-				42E7546A1A6C1D3200DF13B2 /* HH_97_KIT_I_DRUMS_.wav in Resources */,
-				42E754661A6C1D3200DF13B2 /* HH_96_HORN_LP_042_TNR_DRY_G.wav in Resources */,
-				42E754611A6C1D3200DF13B2 /* HH_92_KIT_D_DRUMS_01.wav in Resources */,
-				42E754621A6C1D3200DF13B2 /* HH_96_DRAMADY_DRUMS.wav in Resources */,
+				42E7546A1A6C1D3200DF13B2 /* KITDRUMS_.wav in Resources */,
+				42E754661A6C1D3200DF13B2 /* HORN03.wav in Resources */,
+				42E754611A6C1D3200DF13B2 /* DRUM01.wav in Resources */,
+				42E754621A6C1D3200DF13B2 /* DRUM02.wav in Resources */,
 				4261629F1A40A34C00AC7094 /* Images.xcassets in Resources */,
-				42E754681A6C1D3200DF13B2 /* HH_96_HORN_LP_086_TNR_DRY_G.wav in Resources */,
-				42E754631A6C1D3200DF13B2 /* HH_96_FRENCH_DRUMS.wav in Resources */,
-				42E754691A6C1D3200DF13B2 /* HH_96_SCOOTER_DRUMS.wav in Resources */,
+				42E754681A6C1D3200DF13B2 /* HORN05.wav in Resources */,
+				42E754631A6C1D3200DF13B2 /* DRUM03.wav in Resources */,
+				42E754691A6C1D3200DF13B2 /* SCOOTERDRUMS.wav in Resources */,
 				422C10D61A428F7700B0A54B /* delete.png in Resources */,
 				426162B81A40C08100AC7094 /* AddSample.png in Resources */,
-				42E754651A6C1D3200DF13B2 /* HH_96_HORN_LP_040_TNR_DRY_G.wav in Resources */,
+				42E754651A6C1D3200DF13B2 /* HORN02.wav in Resources */,
 				42C0878E1A4D45B700BB4BE9 /* play.png in Resources */,
 				42C0878D1A4D45B700BB4BE9 /* pause.png in Resources */,
-				42E754641A6C1D3200DF13B2 /* HH_96_HORN_LP_040_TNR_DRY_G - original.wav in Resources */,
+				42E754641A6C1D3200DF13B2 /* HORN01.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

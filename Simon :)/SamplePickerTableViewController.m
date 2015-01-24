@@ -116,7 +116,7 @@
     }
     
     NSString *name = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
-    NSLog(@"File selected: %@",name);
+    //NSLog(@"File selected: %@",name);
 
     
     NSURL *url = [[NSBundle mainBundle] URLForResource:name
@@ -135,7 +135,7 @@
     else
     {
         [shared.audioFilePlayers addObject:player];
-        NSLog(@"Number of tracks playing: %ld",(long)shared.audioFilePlayers.count);
+        //NSLog(@"Number of tracks playing: %ld",(long)shared.audioFilePlayers.count);
     }
     
     [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
@@ -155,7 +155,7 @@
     }
     
     NSString *name = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
-    NSLog(@"File selected: %@",name);
+    //NSLog(@"File selected: %@",name);
     
     NSURL *url = [[NSBundle mainBundle] URLForResource:name
                                          withExtension:@"wav"];

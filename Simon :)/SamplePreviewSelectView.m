@@ -79,7 +79,7 @@
         [shared.audioController removeChannels:shared.audioController.channels];
         
         NSString *name = self.name;
-        NSLog(@"File selected: %@",name);
+        //NSLog(@"File selected: %@",name);
         
         NSURL *url = [[NSBundle mainBundle] URLForResource:name
                                              withExtension:@"wav"];
@@ -93,7 +93,7 @@
     }
     else if(recognizer.state == UIGestureRecognizerStateEnded)
     {
-        NSLog(@"Stop playing music");
+        //NSLog(@"Stop playing music");
         
         [shared.audioController removeChannels:shared.audioController.channels];
     }

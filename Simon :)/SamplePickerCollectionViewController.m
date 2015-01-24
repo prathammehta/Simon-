@@ -139,7 +139,7 @@ static NSString * const reuseIdentifier = @"sampleCell";
     SamplePreviewSelectView *view = (SamplePreviewSelectView *)[cell.contentView viewWithTag:1];
     NSString *name = view.name;
     
-    NSLog(@"File selected: %@",name);
+    //NSLog(@"File selected: %@",name);
     
     
     NSURL *url = [[NSBundle mainBundle] URLForResource:name
@@ -158,7 +158,7 @@ static NSString * const reuseIdentifier = @"sampleCell";
     else
     {
         [shared.audioFilePlayers addObject:player];
-        NSLog(@"Number of tracks playing: %ld",(long)shared.audioFilePlayers.count);
+        //NSLog(@"Number of tracks playing: %ld",(long)shared.audioFilePlayers.count);
     }
     
     [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
