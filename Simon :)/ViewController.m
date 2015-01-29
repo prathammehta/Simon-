@@ -31,6 +31,7 @@
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNewCircle) name:@"sampleAdded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(insertSampleIntoDatabase:) name:@"sampleAdded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeCircle:) name:@"deletePressed" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resumeMusic) name:@"resumeMusic" object:nil];
     
@@ -46,24 +47,24 @@
 {
     if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
         
-        NSManagedObjectContext *context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+//        NSManagedObjectContext *context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+//        
+//        self.song.samples = nil;
+//        
+//        [context save:nil];
+//        
         
-        self.song.samples = nil;
-        
-        [context save:nil];
-        
-        
-        for(AEAudioFilePlayer *player in [Singleton sharedInstance].audioFilePlayers)
-        {
-            
-            
-            [Sample insertSampleWithName:player.url.lastPathComponent
-                            withRedColor:0
-                          withGreenColor:0
-                              withVolume:0
-                                  toSong:self.song
-                             withContext:context];
-        }
+//        for(AEAudioFilePlayer *player in [Singleton sharedInstance].audioFilePlayers)
+//        {
+//            
+//            
+//            [Sample insertSampleWithName:player.url.lastPathComponent
+//                            withRedColor:0
+//                          withGreenColor:0
+//                              withVolume:0
+//                                  toSong:self.song
+//                             withContext:context];
+//        }
         
         [Singleton sharedInstance].audioFilePlayers = nil;
         [[[Singleton sharedInstance] audioController] removeChannels:[[Singleton sharedInstance] audioController].channels];
@@ -193,7 +194,6 @@
 
 - (void) addNewCircle
 {
-    
     SampleCircle *circle = [[SampleCircle alloc] initWithFrame:CGRectZero];
     
     [self.sampleCircles addObject:circle];
@@ -231,8 +231,25 @@
                      completion:nil];
     
     [self.circleContainerView sendSubviewToBack:circle];
+}
+
+- (void) insertSampleIntoDatabase:(NSNotification *)notification
+{
+    AEAudioFilePlayer *player = notification.object;
+    
+    NSManagedObjectContext *context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
     
     
+    [Sample insertSampleWithName:player.url.lastPathComponent
+                    withRedColor:0
+                  withGreenColor:0
+                      withVolume:0
+                          toSong:self.song
+                     withContext:context];
+    
+    NSLog(@"Sample added: %@",player.url.lastPathComponent);
+    
+    [context save:nil];
 }
 
 - (void) removeCircle:(NSNotification *)notification
@@ -241,12 +258,27 @@
     
     SampleCircle *circle = notification.object;
     
+    NSManagedObjectContext *context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+
+
+    NSFetchRequest *reqest = [NSFetchRequest fetchRequestWithEntityName:@"Sample"];
+    reqest.predicate = [NSPredicate predicateWithFormat:@"name == %@",circle.audioFileName];
+    
+    NSArray *results = [context executeFetchRequest:reqest error:nil];
+    
+    [context deleteObject:results.firstObject];
+    
+    [context save:nil];
+    
+    NSLog(@"Object to be deleted: %@",results);
+    
     [self.sampleCircles removeObject:circle];
     
     for(SampleCircle *circle in self.sampleCircles)
     {
         circle.sampleNumber = [self.sampleCircles indexOfObject:circle];
     }
+
     
     [UIView animateWithDuration:0.2
                           delay:0
@@ -258,6 +290,7 @@
                      completion:^(BOOL success){
                          [circle removeFromSuperview];
                      }];
+    
     [self redrawSampleCircles];
 }
 

@@ -7,6 +7,9 @@
 //
 
 #import "SamplePickerCollectionViewController.h"
+#import "AppDelegate.h"
+#import "Sample+Operations.h"
+#import "ViewController.h"
 
 @interface SamplePickerCollectionViewController ()
 
@@ -163,8 +166,9 @@ static NSString * const reuseIdentifier = @"sampleCell";
     
     [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
         [[NSNotificationCenter defaultCenter] postNotificationName:@"resumeMusic" object:nil];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"sampleAdded" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"sampleAdded" object:player];
     }];
+    
 }
 
 - (IBAction)cancelPressed:(UIBarButtonItem *)sender

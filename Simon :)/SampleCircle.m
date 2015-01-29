@@ -63,9 +63,9 @@
     [self.path fill];
     
     self.deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(self.bounds.size.width/2-10,
-                                                                     self.bounds.size.height - 25,
-                                                                     20,
-                                                                     20)];
+                                                                   self.bounds.size.height - 25,
+                                                                   20,
+                                                                   20)];
     
     [self.deleteButton setImage:[UIImage imageNamed:@"delete.png"] forState:UIControlStateNormal];
     self.deleteButton.alpha = 0.5;
@@ -73,6 +73,11 @@
     
     [self addSubview:self.slider];
     [self addSubview:self.deleteButton];
+    
+    Singleton *shared = [Singleton sharedInstance];
+    AEAudioFilePlayer *player = [shared.audioFilePlayers objectAtIndex:self.sampleNumber];
+    
+    self.audioFileName = player.url.lastPathComponent;
     
     if(self.currentValue != 0) self.slider.currentValue = self.currentValue;
 }

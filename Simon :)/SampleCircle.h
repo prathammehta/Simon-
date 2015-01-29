@@ -19,5 +19,7 @@
 @property (nonatomic, strong) EFCircularSlider *slider;
 @property (nonatomic) float currentValue;
 @property (nonatomic) NSInteger sampleNumber;
+@property (nonatomic, strong) NSString *audioFileName;
+
 
 @end
