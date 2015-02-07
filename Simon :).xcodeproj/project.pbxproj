@@ -241,8 +241,6 @@
 				426162991A40A34C00AC7094 /* ViewController.m */,
 				421551AE1A42044C00910BB6 /* SampleCircle.h */,
 				421551AF1A42044C00910BB6 /* SampleCircle.m */,
-				422ABA511A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.h */,
-				422ABA521A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m */,
 				42B4096F1A5CF8F90048F12F /* Core Data */,
 				42C087861A4D362900BB4BE9 /* Sample Picker Collection View */,
 				42C0878A1A4D366500BB4BE9 /* Sample Picker Table View */,
@@ -295,6 +293,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4270115E1A86123F007387C6 /* Inline Sample Picker */ = {
+			isa = PBXGroup;
+			children = (
+				422ABA511A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.h */,
+				422ABA521A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m */,
+			);
+			name = "Inline Sample Picker";
+			sourceTree = "<group>";
+		};
 		42B4096F1A5CF8F90048F12F /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +325,7 @@
 				42C087841A4D362000BB4BE9 /* SamplePickerCollectionViewController.m */,
 				42C087871A4D364B00BB4BE9 /* SamplePreviewSelectView.h */,
 				42C087881A4D364B00BB4BE9 /* SamplePreviewSelectView.m */,
+				4270115E1A86123F007387C6 /* Inline Sample Picker */,
 			);
 			name = "Sample Picker Collection View";
 			sourceTree = "<group>";

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Singleton.h"
+#import "SamplePreviewSelectView.h"
 
 @interface InlineSamplePickerCollectionViewController : UICollectionViewController
 
