@@ -11,7 +11,6 @@
 		421551B01A42044C00910BB6 /* SampleCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 421551AF1A42044C00910BB6 /* SampleCircle.m */; };
 		421593C31A4318B900197E20 /* EFCircularSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 421593C01A4318B900197E20 /* EFCircularSlider.m */; };
 		421593C41A4318B900197E20 /* EFCircularTrig.m in Sources */ = {isa = PBXBuildFile; fileRef = 421593C21A4318B900197E20 /* EFCircularTrig.m */; };
-		422ABA531A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 422ABA521A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m */; };
 		422C10D61A428F7700B0A54B /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 422C10D51A428F7700B0A54B /* delete.png */; };
 		426162911A40A34C00AC7094 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 426162901A40A34C00AC7094 /* main.m */; };
 		426162941A40A34C00AC7094 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 426162931A40A34C00AC7094 /* AppDelegate.m */; };
@@ -86,8 +85,6 @@
 		421593C01A4318B900197E20 /* EFCircularSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFCircularSlider.m; sourceTree = "<group>"; };
 		421593C11A4318B900197E20 /* EFCircularTrig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFCircularTrig.h; sourceTree = "<group>"; };
 		421593C21A4318B900197E20 /* EFCircularTrig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFCircularTrig.m; sourceTree = "<group>"; };
-		422ABA511A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InlineSamplePickerCollectionViewController.h; sourceTree = "<group>"; };
-		422ABA521A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InlineSamplePickerCollectionViewController.m; sourceTree = "<group>"; };
 		422C10D51A428F7700B0A54B /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		4261628B1A40A34C00AC7094 /* Simon :).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simon :).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4261628F1A40A34C00AC7094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -293,15 +290,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4270115E1A86123F007387C6 /* Inline Sample Picker */ = {
-			isa = PBXGroup;
-			children = (
-				422ABA511A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.h */,
-				422ABA521A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m */,
-			);
-			name = "Inline Sample Picker";
-			sourceTree = "<group>";
-		};
 		42B4096F1A5CF8F90048F12F /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,7 +313,6 @@
 				42C087841A4D362000BB4BE9 /* SamplePickerCollectionViewController.m */,
 				42C087871A4D364B00BB4BE9 /* SamplePreviewSelectView.h */,
 				42C087881A4D364B00BB4BE9 /* SamplePreviewSelectView.m */,
-				4270115E1A86123F007387C6 /* Inline Sample Picker */,
 			);
 			name = "Sample Picker Collection View";
 			sourceTree = "<group>";
@@ -577,7 +564,6 @@
 				42E567A31A440C6E00DD5580 /* README.markdown in Sources */,
 				42E567941A440C6E00DD5580 /* AEAudioController+Audiobus.m in Sources */,
 				42E5679B1A440C6E00DD5580 /* AEBlockAudioReceiver.m in Sources */,
-				422ABA531A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m in Sources */,
 				42E567961A440C6E00DD5580 /* AEAudioFileLoaderOperation.m in Sources */,
 				42E567981A440C6E00DD5580 /* AEAudioFileWriter.m in Sources */,
 				42E567A51A440C6E00DD5580 /* TPCircularBuffer.c in Sources */,
