@@ -35,6 +35,12 @@
 		42DBA4391A4BCCE8004870F8 /* NewInstrumentPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DBA4381A4BCCE8004870F8 /* NewInstrumentPickerView.m */; };
 		42DBA4421A4BD8CE004870F8 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DBA4411A4BD8CE004870F8 /* UIImage+ImageEffects.m */; };
 		42DBA4451A4BD924004870F8 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DBA4441A4BD924004870F8 /* UIView+Screenshot.m */; };
+		42E2430E1A8891BA0074D6A5 /* All.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42E243081A8891BA0074D6A5 /* All.mp3 */; };
+		42E2430F1A8891BA0074D6A5 /* Bass.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42E243091A8891BA0074D6A5 /* Bass.mp3 */; };
+		42E243101A8891BA0074D6A5 /* Beat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42E2430A1A8891BA0074D6A5 /* Beat.mp3 */; };
+		42E243111A8891BA0074D6A5 /* Clav.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42E2430B1A8891BA0074D6A5 /* Clav.mp3 */; };
+		42E243121A8891BA0074D6A5 /* Guitar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42E2430C1A8891BA0074D6A5 /* Guitar.mp3 */; };
+		42E243131A8891BA0074D6A5 /* Voices.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42E2430D1A8891BA0074D6A5 /* Voices.mp3 */; };
 		42E567941A440C6E00DD5580 /* AEAudioController+Audiobus.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E5676C1A440C6E00DD5580 /* AEAudioController+Audiobus.m */; };
 		42E567951A440C6E00DD5580 /* AEAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E5676F1A440C6E00DD5580 /* AEAudioController.m */; };
 		42E567961A440C6E00DD5580 /* AEAudioFileLoaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E567711A440C6E00DD5580 /* AEAudioFileLoaderOperation.m */; };
@@ -54,16 +60,6 @@
 		42E567A41A440C6E00DD5580 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E5678D1A440C6E00DD5580 /* TPCircularBuffer+AudioBufferList.c */; };
 		42E567A51A440C6E00DD5580 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E5678F1A440C6E00DD5580 /* TPCircularBuffer.c */; };
 		42E567A81A440C9000DD5580 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E567A71A440C9000DD5580 /* Singleton.m */; };
-		42E754611A6C1D3200DF13B2 /* DRUM01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E754571A6C1D3200DF13B2 /* DRUM01.wav */; };
-		42E754621A6C1D3200DF13B2 /* DRUM02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E754581A6C1D3200DF13B2 /* DRUM02.wav */; };
-		42E754631A6C1D3200DF13B2 /* DRUM03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E754591A6C1D3200DF13B2 /* DRUM03.wav */; };
-		42E754641A6C1D3200DF13B2 /* HORN01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545A1A6C1D3200DF13B2 /* HORN01.wav */; };
-		42E754651A6C1D3200DF13B2 /* HORN02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545B1A6C1D3200DF13B2 /* HORN02.wav */; };
-		42E754661A6C1D3200DF13B2 /* HORN03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545C1A6C1D3200DF13B2 /* HORN03.wav */; };
-		42E754671A6C1D3200DF13B2 /* HORN04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545D1A6C1D3200DF13B2 /* HORN04.wav */; };
-		42E754681A6C1D3200DF13B2 /* HORN05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545E1A6C1D3200DF13B2 /* HORN05.wav */; };
-		42E754691A6C1D3200DF13B2 /* SCOOTERDRUMS.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E7545F1A6C1D3200DF13B2 /* SCOOTERDRUMS.wav */; };
-		42E7546A1A6C1D3200DF13B2 /* KITDRUMS_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42E754601A6C1D3200DF13B2 /* KITDRUMS_.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +123,12 @@
 		42DBA4411A4BD8CE004870F8 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		42DBA4431A4BD924004870F8 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
 		42DBA4441A4BD924004870F8 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
+		42E243081A8891BA0074D6A5 /* All.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = All.mp3; sourceTree = "<group>"; };
+		42E243091A8891BA0074D6A5 /* Bass.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bass.mp3; sourceTree = "<group>"; };
+		42E2430A1A8891BA0074D6A5 /* Beat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beat.mp3; sourceTree = "<group>"; };
+		42E2430B1A8891BA0074D6A5 /* Clav.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Clav.mp3; sourceTree = "<group>"; };
+		42E2430C1A8891BA0074D6A5 /* Guitar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Guitar.mp3; sourceTree = "<group>"; };
+		42E2430D1A8891BA0074D6A5 /* Voices.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Voices.mp3; sourceTree = "<group>"; };
 		42E5676B1A440C6E00DD5580 /* AEAudioController+Audiobus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AEAudioController+Audiobus.h"; sourceTree = "<group>"; };
 		42E5676C1A440C6E00DD5580 /* AEAudioController+Audiobus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AEAudioController+Audiobus.m"; sourceTree = "<group>"; };
 		42E5676D1A440C6E00DD5580 /* AEAudioController+AudiobusStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AEAudioController+AudiobusStub.h"; sourceTree = "<group>"; };
@@ -167,16 +169,6 @@
 		42E567931A440C6E00DD5580 /* TheAmazingAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheAmazingAudioEngine.h; sourceTree = "<group>"; };
 		42E567A61A440C9000DD5580 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		42E567A71A440C9000DD5580 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
-		42E754571A6C1D3200DF13B2 /* DRUM01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DRUM01.wav; sourceTree = "<group>"; };
-		42E754581A6C1D3200DF13B2 /* DRUM02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DRUM02.wav; sourceTree = "<group>"; };
-		42E754591A6C1D3200DF13B2 /* DRUM03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DRUM03.wav; sourceTree = "<group>"; };
-		42E7545A1A6C1D3200DF13B2 /* HORN01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HORN01.wav; sourceTree = "<group>"; };
-		42E7545B1A6C1D3200DF13B2 /* HORN02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HORN02.wav; sourceTree = "<group>"; };
-		42E7545C1A6C1D3200DF13B2 /* HORN03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HORN03.wav; sourceTree = "<group>"; };
-		42E7545D1A6C1D3200DF13B2 /* HORN04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HORN04.wav; sourceTree = "<group>"; };
-		42E7545E1A6C1D3200DF13B2 /* HORN05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HORN05.wav; sourceTree = "<group>"; };
-		42E7545F1A6C1D3200DF13B2 /* SCOOTERDRUMS.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SCOOTERDRUMS.wav; sourceTree = "<group>"; };
-		42E754601A6C1D3200DF13B2 /* KITDRUMS_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = KITDRUMS_.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,16 +401,12 @@
 		42E754561A6C1D3200DF13B2 /* Loops */ = {
 			isa = PBXGroup;
 			children = (
-				42E754571A6C1D3200DF13B2 /* DRUM01.wav */,
-				42E754581A6C1D3200DF13B2 /* DRUM02.wav */,
-				42E754591A6C1D3200DF13B2 /* DRUM03.wav */,
-				42E7545A1A6C1D3200DF13B2 /* HORN01.wav */,
-				42E7545B1A6C1D3200DF13B2 /* HORN02.wav */,
-				42E7545C1A6C1D3200DF13B2 /* HORN03.wav */,
-				42E7545D1A6C1D3200DF13B2 /* HORN04.wav */,
-				42E7545E1A6C1D3200DF13B2 /* HORN05.wav */,
-				42E7545F1A6C1D3200DF13B2 /* SCOOTERDRUMS.wav */,
-				42E754601A6C1D3200DF13B2 /* KITDRUMS_.wav */,
+				42E243081A8891BA0074D6A5 /* All.mp3 */,
+				42E243091A8891BA0074D6A5 /* Bass.mp3 */,
+				42E2430A1A8891BA0074D6A5 /* Beat.mp3 */,
+				42E2430B1A8891BA0074D6A5 /* Clav.mp3 */,
+				42E2430C1A8891BA0074D6A5 /* Guitar.mp3 */,
+				42E2430D1A8891BA0074D6A5 /* Voices.mp3 */,
 			);
 			path = Loops;
 			sourceTree = "<group>";
@@ -506,22 +494,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4261629D1A40A34C00AC7094 /* Main.storyboard in Resources */,
-				42E754671A6C1D3200DF13B2 /* HORN04.wav in Resources */,
+				42E2430F1A8891BA0074D6A5 /* Bass.mp3 in Resources */,
+				42E243131A8891BA0074D6A5 /* Voices.mp3 in Resources */,
 				426162A21A40A34C00AC7094 /* LaunchScreen.xib in Resources */,
-				42E7546A1A6C1D3200DF13B2 /* KITDRUMS_.wav in Resources */,
-				42E754661A6C1D3200DF13B2 /* HORN03.wav in Resources */,
-				42E754611A6C1D3200DF13B2 /* DRUM01.wav in Resources */,
-				42E754621A6C1D3200DF13B2 /* DRUM02.wav in Resources */,
 				4261629F1A40A34C00AC7094 /* Images.xcassets in Resources */,
-				42E754681A6C1D3200DF13B2 /* HORN05.wav in Resources */,
-				42E754631A6C1D3200DF13B2 /* DRUM03.wav in Resources */,
-				42E754691A6C1D3200DF13B2 /* SCOOTERDRUMS.wav in Resources */,
 				422C10D61A428F7700B0A54B /* delete.png in Resources */,
+				42E243121A8891BA0074D6A5 /* Guitar.mp3 in Resources */,
 				426162B81A40C08100AC7094 /* AddSample.png in Resources */,
-				42E754651A6C1D3200DF13B2 /* HORN02.wav in Resources */,
+				42E2430E1A8891BA0074D6A5 /* All.mp3 in Resources */,
 				42C0878E1A4D45B700BB4BE9 /* play.png in Resources */,
+				42E243111A8891BA0074D6A5 /* Clav.mp3 in Resources */,
 				42C0878D1A4D45B700BB4BE9 /* pause.png in Resources */,
-				42E754641A6C1D3200DF13B2 /* HORN01.wav in Resources */,
+				42E243101A8891BA0074D6A5 /* Beat.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

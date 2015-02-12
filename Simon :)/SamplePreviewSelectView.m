@@ -82,7 +82,7 @@
         //NSLog(@"File selected: %@",name);
         
         NSURL *url = [[NSBundle mainBundle] URLForResource:name
-                                             withExtension:@"wav"];
+                                             withExtension:@"mp3"];
         NSError *error;
         
         self.testPlayer = [AEAudioFilePlayer audioFilePlayerWithURL:url
