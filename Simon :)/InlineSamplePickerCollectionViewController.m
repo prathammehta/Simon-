@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSMutableArray *audioSamples;
 @property (nonatomic, strong) NSMutableArray *namesOfSelectedSamples;
+@property (nonatomic, strong) NSMutableArray *namesOfSamplesToShow;
 
 @end
 
@@ -37,11 +38,19 @@ static NSString * const reuseIdentifier = @"inlineSampleCell";
             [self.audioSamples addObject:fileName];
         }
     }
-    
-    [self getNameOfSelectedSamples];
 }
 
-- (void) getNameOfSelectedSamples
+- (NSMutableArray *)namesOfSamplesToShow
+{
+    _namesOfSamplesToShow = self.audioSamples;
+    [_namesOfSamplesToShow removeObjectsInArray:self.namesOfSelectedSamples];
+
+    NSLog(@"Number of samples to show: %@",_namesOfSamplesToShow);
+    
+    return _namesOfSelectedSamples;
+}
+
+- (NSMutableArray *)namesOfSelectedSamples
 {
     Singleton *shared = [Singleton sharedInstance];
     
@@ -51,6 +60,8 @@ static NSString * const reuseIdentifier = @"inlineSampleCell";
         NSString *name = [url lastPathComponent];
         [self.namesOfSelectedSamples addObject:name];
     }
+    
+    return _namesOfSelectedSamples;
 }
 
 
@@ -62,15 +73,19 @@ static NSString * const reuseIdentifier = @"inlineSampleCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.audioSamples.count;
+    NSInteger numberOfCells = self.audioSamples.count - self.namesOfSelectedSamples.count;
+    return numberOfCells;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
     SamplePreviewSelectView *view = (SamplePreviewSelectView *)[cell.contentView viewWithTag:1];
+    
     view.name = [[self.audioSamples objectAtIndex:indexPath.row] stringByDeletingPathExtension];
     view.color = [UIColor colorWithRed:0.82 green:0.40 blue:0.24 alpha:1.0];
+    
     [view setNeedsDisplay];
     
     if([self.namesOfSelectedSamples containsObject:view.name])
@@ -83,6 +98,14 @@ static NSString * const reuseIdentifier = @"inlineSampleCell";
     }
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [collectionView scrollToItemAtIndexPath:indexPath
+                           atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
+                                   animated:YES];
+    
 }
 
 
