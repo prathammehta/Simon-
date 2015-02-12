@@ -94,7 +94,7 @@
             NSLog(@"File required: %@",name);
             
             NSURL *url = [[NSBundle mainBundle] URLForResource:[name stringByDeletingPathExtension]
-                                                 withExtension:@"mp3"];
+                                                 withExtension:@"wav"];
             
             
             
