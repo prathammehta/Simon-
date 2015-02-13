@@ -32,7 +32,7 @@ static NSString * const reuseIdentifier = @"sampleCell";
     
     for(NSString *fileName in allFiles)
     {
-        if([fileName hasSuffix:@".wav"])
+        if([fileName hasSuffix:@".mp3"])
         {
             [self.audioSamples addObject:fileName];
         }
@@ -146,7 +146,7 @@ static NSString * const reuseIdentifier = @"sampleCell";
     
     
     NSURL *url = [[NSBundle mainBundle] URLForResource:name
-                                         withExtension:@"wav"];
+                                         withExtension:@"mp3"];
     NSError *error;
     
     AEAudioFilePlayer *player = [AEAudioFilePlayer audioFilePlayerWithURL:url

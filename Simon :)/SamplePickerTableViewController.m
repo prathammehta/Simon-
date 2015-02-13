@@ -36,7 +36,7 @@
     
     for(NSString *fileName in allFiles)
     {
-        if([fileName hasSuffix:@".wav"])
+        if([fileName hasSuffix:@".mp3"])
         {
             [self.audioSamples addObject:fileName];
         }
@@ -120,7 +120,7 @@
 
     
     NSURL *url = [[NSBundle mainBundle] URLForResource:name
-                                         withExtension:@"wav"];
+                                         withExtension:@"mp3"];
     NSError *error;
     
     AEAudioFilePlayer *player = [AEAudioFilePlayer audioFilePlayerWithURL:url
@@ -158,7 +158,7 @@
     //NSLog(@"File selected: %@",name);
     
     NSURL *url = [[NSBundle mainBundle] URLForResource:name
-                                         withExtension:@"wav"];
+                                         withExtension:@"mp3"];
     NSError *error;
     
     self.testPlayer = [AEAudioFilePlayer audioFilePlayerWithURL:url

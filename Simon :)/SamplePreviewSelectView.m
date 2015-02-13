@@ -76,13 +76,13 @@
     
     if(recognizer.state == UIGestureRecognizerStateBegan)
     {
-        [shared.audioController removeChannels:shared.audioController.channels];
+        //[shared.audioController removeChannels:shared.audioController.channels];
         
         NSString *name = self.name;
         //NSLog(@"File selected: %@",name);
         
         NSURL *url = [[NSBundle mainBundle] URLForResource:name
-                                             withExtension:@"wav"];
+                                             withExtension:@"mp3"];
         NSError *error;
         
         self.testPlayer = [AEAudioFilePlayer audioFilePlayerWithURL:url
@@ -95,7 +95,7 @@
     {
         //NSLog(@"Stop playing music");
         
-        [shared.audioController removeChannels:shared.audioController.channels];
+        [shared.audioController removeChannels:@[self.testPlayer]];
     }
 
     [self addGestureRecognizer:self.longPressGesture];

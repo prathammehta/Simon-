@@ -32,7 +32,7 @@ static NSString * const reuseIdentifier = @"inlineSampleCell";
     
     for(NSString *fileName in allFiles)
     {
-        if([fileName hasSuffix:@".wav"])
+        if([fileName hasSuffix:@".mp3"])
         {
             [self.audioSamples addObject:fileName];
         }
@@ -73,18 +73,62 @@ static NSString * const reuseIdentifier = @"inlineSampleCell";
     view.color = [UIColor colorWithRed:0.82 green:0.40 blue:0.24 alpha:1.0];
     [view setNeedsDisplay];
     
-    if([self.namesOfSelectedSamples containsObject:view.name])
+    if([self.namesOfSelectedSamples containsObject:[self.audioSamples objectAtIndex:indexPath.row]])
     {
-        view.alpha = 0.5;
+        cell.alpha = 0.5;
     }
     else
     {
-        view.alpha = 1.0;
+        cell.alpha = 1.0;
     }
-    
     return cell;
 }
 
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if([self.namesOfSelectedSamples containsObject:[self.audioSamples objectAtIndex:indexPath.row]])
+        return NO;
+    else
+        return YES;
+}
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    Singleton *shared = [Singleton sharedInstance];
+    
+    [shared.audioController removeChannels:shared.audioController.channels];
+    
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    SamplePreviewSelectView *view = (SamplePreviewSelectView *)[cell.contentView viewWithTag:1];
+    NSString *name = view.name;
+    
+    //NSLog(@"File selected: %@",name);
+    
+    
+    NSURL *url = [[NSBundle mainBundle] URLForResource:name
+                                         withExtension:@"mp3"];
+    NSError *error;
+    
+    AEAudioFilePlayer *player = [AEAudioFilePlayer audioFilePlayerWithURL:url
+                                                          audioController:shared.audioController
+                                                                    error:&error];
+    player.loop = YES;
+    
+    if(error)
+    {
+        NSLog(@"%@",error);
+    }
+    else
+    {
+        [shared.audioFilePlayers addObject:player];
+        //NSLog(@"Number of tracks playing: %ld",(long)shared.audioFilePlayers.count);
+    }
+    
+    
+//    [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"resumeMusic" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"sampleAdded" object:player];
+//    }];
+}
 
 @end
