@@ -13,6 +13,8 @@
 
 + (Singleton *) sharedInstance;
 
++ (NSString *) getPackNameForNumber:(NSInteger)n;
+
 @property (nonatomic, strong) AEAudioController *audioController;
 @property (nonatomic, strong) NSMutableArray *audioFilePlayers;
 

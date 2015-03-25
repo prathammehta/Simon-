@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Song+Operations.h"
 #import "ViewController.h"
+#import "Sample.h"
 
 @interface SongsViewTableController ()
 
@@ -31,7 +32,6 @@
                                                                         managedObjectContext:self.context
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
-    
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -59,6 +59,43 @@
         viewController.didAppearFromNav = YES;
         [viewController performSelector:@selector(setSong:) withObject:[self.fetchedResultsController objectAtIndexPath:[self.tableView indexPathForSelectedRow]]];
     }
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Delete song: %@",((Song *)[self.fetchedResultsController objectAtIndexPath:indexPath]).name);
+    Song *song = (Song *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    for(Sample *sample in song.samples)
+    {
+        [self.context deleteObject:sample];
+        [self.context save:nil];
+    }
+    
+    [self.context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+    
+//    if([self.tableView numberOfRowsInSection:0]==0)
+//    {
+//        [self.tableView setEditing:NO];
+//    }
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL response){
+        NSLog(@"Recording permission: %d",response);
+    }];
+}
+
+- (IBAction)editPressed:(UIBarButtonItem *)sender
+{
+    [self.tableView setEditing:!self.tableView.editing];
 }
 
 @end

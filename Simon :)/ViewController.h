@@ -12,6 +12,7 @@
 #import "Singleton.h"
 #import "Song+Operations.h"
 #import "NewInstrumentPickerView.h"
+#import "AKPickerView.h"
 
 @interface ViewController : UIViewController
 
@@ -20,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UIView *circleContainerView;
 @property (nonatomic, strong) Song *song;
 @property (nonatomic) BOOL didAppearFromNav;
+@property (weak, nonatomic) IBOutlet UIView *inlinePickerView;
+@property (weak, nonatomic) IBOutlet AKPickerView *packPicker;
 
 @end
 

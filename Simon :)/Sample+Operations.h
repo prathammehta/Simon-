@@ -15,6 +15,7 @@
                  withRedColor:(float) red
                withGreenColor:(float) green
                    withVolume:(float) volume
+              withOrderNumber:(NSInteger) orderNumber
                        toSong:(Song *) song
                   withContext:(NSManagedObjectContext *)context;
 

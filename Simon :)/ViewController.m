@@ -13,12 +13,12 @@
 #import "AppDelegate.h"
 
 
-@interface ViewController () <UINavigationControllerDelegate>
+@interface ViewController () <UINavigationControllerDelegate, AKPickerViewDelegate>
 
 @property (nonatomic, strong) NewInstrumentPickerView *picker;
 @property (nonatomic, strong) UIImageView *blurredView;
 @property (nonatomic, strong) UIButton *dismissMenuButton;
-
+@property (nonatomic) BOOL chromeShown;
 
 @end
 
@@ -28,19 +28,49 @@
 {
     [super viewDidLoad];
     [self setupShadows];
-    
+    self.chromeShown = YES;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNewCircle) name:@"sampleAdded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(insertSampleIntoDatabase:) name:@"sampleAdded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeCircle:) name:@"deletePressed" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resumeMusic) name:@"resumeMusic" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopMusic) name:@"stopMusic" object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(insturmentCategoryTapped:)
                                                  name:@"insturmentCategoryTapped"
                                                object:nil];
     
+    self.packPicker.delegate = self;
+    self.packPicker.interitemSpacing = 20;
+}
 
+- (NSUInteger)numberOfItemsInPickerView:(AKPickerView *)pickerView
+{
+    return 8;
+}
+
+- (NSString *)pickerView:(AKPickerView *)pickerView titleForItem:(NSInteger)item
+{
+    switch (item)
+    {
+            case 0: return @"Modern Rock";
+            case 1: return @"Fonky";
+            case 2: return @"Heavy Rock";
+            case 3: return @"Dream Hip Hop";
+            case 4: return @"West Coast";
+            case 5: return @"Movie Mood";
+            case 6: return @"French Techno";
+            case 7: return @"Trip Hop";
+    }
+    
+    return nil;
+}
+
+- (void)pickerView:(AKPickerView *)pickerView didSelectItem:(NSInteger)item
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"packPickerTapped"
+                                                        object:[NSNumber numberWithInteger:item]];
 }
 
 -(void) viewWillDisappear:(BOOL)animated
@@ -74,6 +104,48 @@
     [super viewWillDisappear:animated];
 }
 
+-  (void) hideShowChrome
+{
+    if(self.chromeShown)
+    {
+        self.addSampleButton.selected = YES;
+        
+        
+        [UIView animateWithDuration:0.3
+                              delay:0
+                            options:UIViewAnimationOptionAllowAnimatedContent|
+         UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState
+                         animations:^{
+                             self.inlinePickerView.center = CGPointMake(self.view.center.x,
+                                                                        self.inlinePickerView.center.y + self.inlinePickerView.frame.size.height);
+                             self.packPicker.alpha = 0;
+                             self.inlinePickerView.alpha = 0;
+                         }
+                         completion:nil];
+    }
+    else
+    {
+        self.addSampleButton.selected = NO;
+        
+        [UIView animateWithDuration:0.3
+                              delay:0
+                            options:UIViewAnimationOptionAllowAnimatedContent|
+         UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState
+                         animations:^{
+                             self.inlinePickerView.center = CGPointMake(self.view.center.x,
+                                                                        self.inlinePickerView.center.y - self.inlinePickerView.frame.size.height);
+                             self.packPicker.alpha = 1.0;
+                             self.inlinePickerView.alpha = 1;
+                         }
+                         completion:nil];
+
+    }
+    
+    [[self navigationController] setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:YES];
+    [[UIApplication sharedApplication] setStatusBarHidden:![UIApplication sharedApplication].statusBarHidden];
+    self.chromeShown = !self.chromeShown;
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -82,7 +154,11 @@
     {
         self.didAppearFromNav = NO;
         
-        for(Sample *sample in self.song.samples)
+        NSArray *orderedSamples = [self.song.samples sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"orderNumber"
+                                                                                                                 ascending:YES]]];
+        
+        
+        for(Sample *sample in orderedSamples)
         {
             NSString *name = sample.name;
             
@@ -122,8 +198,11 @@
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"sampleAdded" object:nil];
             }];
             
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"resumeMusic" object:nil];
+            //[[NSNotificationCenter defaultCenter] postNotificationName:@"resumeMusic" object:nil];
         }
+        
+        //[[Singleton sharedInstance].audioController removeChannels:[Singleton sharedInstance].audioController.channels];
+        [[Singleton sharedInstance].audioController addChannels:[Singleton sharedInstance].audioFilePlayers];
     }
 }
 
@@ -216,17 +295,26 @@
     circle.layer.shadowRadius = 3.0;
     circle.layer.shadowOffset = CGSizeMake(0, 0);
     circle.layer.shadowOpacity = 0.5;
-    circle.alpha = 0;
-    circle.transform = CGAffineTransformMakeScale(0.6, 0.6);
+    //circle.alpha = 0;
+    
+    circle.center = CGPointMake(self.inlinePickerView.center.x,
+                                self.inlinePickerView.center.y - 75);
+    
+    circle.transform = CGAffineTransformMakeScale(100/circle.frame.size.width,
+                                                  100/circle.frame.size.height);
     
     [self.circleContainerView addSubview:circle];
     
-    [UIView animateWithDuration:0.2
+    [UIView animateWithDuration:1.0
                           delay:0
                         options:0
                      animations:^{
                          circle.alpha = 1.0;
                          circle.transform = CGAffineTransformIdentity;
+                         circle.frame = CGRectMake(self.circleContainerView.bounds.size.width/2 - radius/2,
+                                                   self.circleContainerView.bounds.size.width/2 - radius/2,
+                                                   radius,
+                                                   radius);
                      }
                      completion:nil];
     
@@ -244,6 +332,7 @@
                     withRedColor:0
                   withGreenColor:0
                       withVolume:0
+                 withOrderNumber:(self.song.samples.count+1)
                           toSong:self.song
                      withContext:context];
     
@@ -392,7 +481,8 @@
 
 - (IBAction)addSamplePressed:(UIButton *)sender
 {
-    [self showMenu];
+    [self hideShowChrome];
 }
+
 
 @end

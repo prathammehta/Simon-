@@ -14,12 +14,14 @@
                  withRedColor:(float) red
                withGreenColor:(float) green
                    withVolume:(float) volume
+              withOrderNumber:(NSInteger) orderNumber
                        toSong:(Song *) song
                   withContext:(NSManagedObjectContext *)context
 {
     Sample *sample = [NSEntityDescription insertNewObjectForEntityForName:@"Sample"
                                                    inManagedObjectContext:context];
     sample.name = name;
+    sample.orderNumber = [NSNumber numberWithInteger:orderNumber];
     sample.song = song;
 }
 

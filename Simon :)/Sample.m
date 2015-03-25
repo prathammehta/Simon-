@@ -1,8 +1,8 @@
 //
 //  Sample.m
-//  Simon :)
+//  Simon
 //
-//  Created by Pratham Mehta on 22/01/15.
+//  Created by Pratham Mehta on 24/03/15.
 //  Copyright (c) 2015 Pratham Mehta. All rights reserved.
 //
 
@@ -17,6 +17,7 @@
 @dynamic name;
 @dynamic redColor;
 @dynamic volume;
+@dynamic orderNumber;
 @dynamic song;
 
 @end

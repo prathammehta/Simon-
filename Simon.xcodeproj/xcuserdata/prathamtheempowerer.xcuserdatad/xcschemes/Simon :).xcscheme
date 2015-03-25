@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4261628A1A40A34C00AC7094"
-               BuildableName = "Simon :).app"
+               BuildableName = "Simon.app"
                BlueprintName = "Simon :)"
-               ReferencedContainer = "container:Simon :).xcodeproj">
+               ReferencedContainer = "container:Simon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "426162A61A40A34C00AC7094"
                BuildableName = "Simon :)Tests.xctest"
                BlueprintName = "Simon :)Tests"
-               ReferencedContainer = "container:Simon :).xcodeproj">
+               ReferencedContainer = "container:Simon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "426162A61A40A34C00AC7094"
                BuildableName = "Simon :)Tests.xctest"
                BlueprintName = "Simon :)Tests"
-               ReferencedContainer = "container:Simon :).xcodeproj">
+               ReferencedContainer = "container:Simon.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4261628A1A40A34C00AC7094"
-            BuildableName = "Simon :).app"
+            BuildableName = "Simon.app"
             BlueprintName = "Simon :)"
-            ReferencedContainer = "container:Simon :).xcodeproj">
+            ReferencedContainer = "container:Simon.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4261628A1A40A34C00AC7094"
-            BuildableName = "Simon :).app"
+            BuildableName = "Simon.app"
             BlueprintName = "Simon :)"
-            ReferencedContainer = "container:Simon :).xcodeproj">
+            ReferencedContainer = "container:Simon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4261628A1A40A34C00AC7094"
-            BuildableName = "Simon :).app"
+            BuildableName = "Simon.app"
             BlueprintName = "Simon :)"
-            ReferencedContainer = "container:Simon :).xcodeproj">
+            ReferencedContainer = "container:Simon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

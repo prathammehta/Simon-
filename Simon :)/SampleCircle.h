@@ -21,5 +21,8 @@
 @property (nonatomic) NSInteger sampleNumber;
 @property (nonatomic, strong) NSString *audioFileName;
 
+@property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
+
+@property (nonatomic) BOOL isMuted;
 
 @end

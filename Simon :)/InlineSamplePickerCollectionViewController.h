@@ -12,4 +12,6 @@
 
 @interface InlineSamplePickerCollectionViewController : UICollectionViewController
 
+@property (nonatomic, strong) NSString *filterString;
+
 @end

@@ -64,4 +64,29 @@ static Singleton *sharedInstance = nil;
     return _audioController;
 }
 
++ (NSString *) getPackNameForNumber:(NSInteger)n
+{
+    switch(n)
+    {
+        case 0: return @"California";
+            break;
+        case 1: return @"Fonky";
+            break;
+        case 2: return @"Heavy_Rock";
+            break;
+        case 3: return @"Hiphopfora";
+            break;
+        case 4: return @"HipHop";
+            break;
+        case 5: return @"Movie";
+            break;
+        case 6: return @"Techno";
+            break;
+        case 7: return @"Trip";
+            break;
+    }
+    
+    return nil;
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "CoreDataTableViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface SongsViewTableController : CoreDataTableViewController
 

@@ -21,6 +21,22 @@
     }
 }
 
+- (UITapGestureRecognizer *)tapGestureRecognizer
+{
+    if(!_tapGestureRecognizer)
+    {
+        _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(circleTapped:)];
+    }
+    return _tapGestureRecognizer;
+}
+
+- (void) circleTapped:(UITapGestureRecognizer *) recognizer
+{
+    NSLog(@"Circle Tapped");
+    self.isMuted = !self.isMuted;
+    [self setNeedsDisplay];
+}
+
 - (void) updateValue:(EFCircularSlider *)slider
 {
     if(slider.currentValue > 1 && slider.currentValue <= 1.1)
@@ -36,7 +52,10 @@
     
     Singleton *shared = [Singleton sharedInstance];
     AEAudioFilePlayer *player = [shared.audioFilePlayers objectAtIndex:self.sampleNumber];
-    player.volume = slider.currentValue;
+    if(!self.isMuted)
+        player.volume = slider.currentValue;
+    else
+        player.volume = 0;
 }
 
 - (void)drawRect:(CGRect)rect
@@ -57,10 +76,40 @@
     
     self.path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(1, 1, self.bounds.size.width-2, self.bounds.size.height-2)];
     [self getColorForView];
-    [self.color setStroke];
-    [self.color setFill];
-    [self.path stroke];
-    [self.path fill];
+    
+    
+    if(!self.isMuted)
+    {
+        self.slider.userInteractionEnabled = YES;
+        
+        [self.color setStroke];
+        [self.color setFill];
+        [self.path stroke];
+        [self.path fill];
+        
+        Singleton *shared = [Singleton sharedInstance];
+        AEAudioFilePlayer *player = [shared.audioFilePlayers objectAtIndex:self.sampleNumber];
+        player.volume = self.slider.currentValue;
+        
+        [UIView animateWithDuration:0.5
+                         animations:^{
+                             self.slider.alpha = 1.0;
+                         }];
+    }
+    else
+    {
+        self.slider.userInteractionEnabled = NO;
+        
+        [[UIColor darkGrayColor] setStroke];
+        [[UIColor darkGrayColor] setFill];
+        [self.path stroke];
+        [self.path fill];
+
+        
+        Singleton *shared = [Singleton sharedInstance];
+        AEAudioFilePlayer *player = [shared.audioFilePlayers objectAtIndex:self.sampleNumber];
+        player.volume = 0.0;
+    }
     
     self.deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(self.bounds.size.width/2-10,
                                                                    self.bounds.size.height - 25,
@@ -80,6 +129,11 @@
     self.audioFileName = player.url.lastPathComponent;
     
     if(self.currentValue != 0) self.slider.currentValue = self.currentValue;
+    
+    if(![self.gestureRecognizers containsObject:self.tapGestureRecognizer])
+        [self addGestureRecognizer:self.tapGestureRecognizer];
+    
+    
 }
 
 - (EFCircularSlider *) slider

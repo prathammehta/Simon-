@@ -1,8 +1,8 @@
 //
 //  Sample.h
-//  Simon :)
+//  Simon
 //
-//  Created by Pratham Mehta on 22/01/15.
+//  Created by Pratham Mehta on 24/03/15.
 //  Copyright (c) 2015 Pratham Mehta. All rights reserved.
 //
 
@@ -18,6 +18,7 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * redColor;
 @property (nonatomic, retain) NSNumber * volume;
+@property (nonatomic, retain) NSNumber * orderNumber;
 @property (nonatomic, retain) Song *song;
 
 @end
