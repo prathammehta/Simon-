@@ -52,7 +52,24 @@
     {
         self.tintColor = [UIColor whiteColor];
         _imageView = [[UIImageView alloc] initWithFrame:self.circleRect];
-        _imageView.image = [[UIImage imageNamed:@"play"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];;
+        
+        if([self.name.lowercaseString containsString:@"bass"] || [self.name.lowercaseString containsString:@"guit"])
+        {
+            _imageView.image = [UIImage imageNamed:@"guitar.png"];
+        }
+        else if ([self.name.lowercaseString containsString:@"clav"])
+        {
+            _imageView.image = [UIImage imageNamed:@"saxophone.png"];
+        }
+        else if ([self.name.lowercaseString containsString:@"drum"] || [self.name.lowercaseString containsString:@"beat"])
+        {
+            _imageView.image = [UIImage imageNamed:@"drums.png"];
+        }
+        else
+        {
+            _imageView.image = [UIImage imageNamed:@"electro.png"];
+        }
+        
     }
     return _imageView;
 }
@@ -103,9 +120,9 @@
 
 - (void)drawRect:(CGRect)rect {
     
-    self.circleRect = CGRectMake(5, 1, self.bounds.size.width-10, self.bounds.size.width-10);
+    self.circleRect = CGRectMake(20, 1, self.bounds.size.width-40, self.bounds.size.width-40);
     
-    [self.color setFill];
+    [[UIColor whiteColor] setFill];
     [self.circlePath fill];
     
     NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
@@ -122,6 +139,26 @@
 //    self.label.text = self.name;
     
     [self addGestureRecognizer:self.longPressGesture];
+    
+    
+    if([self.name.lowercaseString containsString:@"bass"] || [self.name.lowercaseString containsString:@"guit"])
+    {
+        self.imageView.image = [UIImage imageNamed:@"guitar.png"];
+    }
+    else if ([self.name.lowercaseString containsString:@"clav"])
+    {
+        self.imageView.image = [UIImage imageNamed:@"saxophone.png"];
+    }
+    else if ([self.name.lowercaseString containsString:@"drum"] || [self.name.lowercaseString containsString:@"beat"])
+    {
+        self.imageView.image = [UIImage imageNamed:@"drums.png"];
+    }
+    else
+    {
+        self.imageView.image = [UIImage imageNamed:@"electro.png"];
+    }
+    
+    
     [self addSubview:self.imageView];
 //    [self addSubview:self.label];
 }

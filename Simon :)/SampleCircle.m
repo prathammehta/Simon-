@@ -141,8 +141,8 @@
     if(!_slider)
     {
         _slider = [[EFCircularSlider alloc] initWithFrame:self.bounds];
-        _slider.lineWidth = 30;
-        _slider.handleColor = [UIColor clearColor];
+        _slider.lineWidth = 10;
+        _slider.handleColor = [UIColor whiteColor];
         _slider.opaque = NO;
         _slider.filledColor = [UIColor colorWithWhite:1.0 alpha:0.5];
         _slider.unfilledColor = [UIColor clearColor];

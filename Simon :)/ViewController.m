@@ -35,7 +35,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeCircle:) name:@"deletePressed" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resumeMusic) name:@"resumeMusic" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopMusic) name:@"stopMusic" object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideShowChrome) name:@"hideShowChrome" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(insturmentCategoryTapped:)
                                                  name:@"insturmentCategoryTapped"
@@ -47,21 +47,23 @@
 
 - (NSUInteger)numberOfItemsInPickerView:(AKPickerView *)pickerView
 {
-    return 8;
+    return 4;
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setToolbarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
 }
 
 - (NSString *)pickerView:(AKPickerView *)pickerView titleForItem:(NSInteger)item
 {
     switch (item)
     {
-            case 0: return @"Modern Rock";
+            case 0: return @"Hard Rock";
             case 1: return @"Fonky";
-            case 2: return @"Heavy Rock";
-            case 3: return @"Dream Hip Hop";
-            case 4: return @"West Coast";
-            case 5: return @"Movie Mood";
-            case 6: return @"French Techno";
-            case 7: return @"Trip Hop";
+            case 2: return @"Rock";
+            case 3: return @"Trip Hop";
     }
     
     return nil;
@@ -149,6 +151,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    [self.packPicker selectItem:0 animated:NO];
     
     if(self.didAppearFromNav)
     {

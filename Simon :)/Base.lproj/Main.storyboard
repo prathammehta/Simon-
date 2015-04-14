@@ -16,17 +16,13 @@
                                 <rect key="frame" x="0.0" y="63" width="320" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qqe-vR-f7i">
-                                        <rect key="frame" x="130" y="130" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="minus.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="selected" image="AddSample.png"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" id="HG4-u3-5XW">
+                                        <rect key="frame" x="125" y="125" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <connections>
-                                            <action selector="addSamplePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CSo-q2-4jP"/>
+                                            <segue destination="tTW-nR-51b" kind="embed" id="6ow-WS-hXp"/>
                                         </connections>
-                                    </button>
+                                    </containerView>
                                 </subviews>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" id="PUm-IM-rFo">
@@ -36,18 +32,11 @@
                                     <segue destination="WS1-g2-GQX" kind="embed" id="UdL-bk-5nc"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" id="twy-zR-mbY" customClass="AKPickerView">
+                            <view opaque="NO" contentMode="scaleToFill" id="twy-zR-mbY" customClass="AKPickerView">
                                 <rect key="frame" x="16" y="409" width="288" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="HG4-u3-5XW">
-                                <rect key="frame" x="207" y="351" width="97" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="tTW-nR-51b" kind="embed" id="6ow-WS-hXp"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -55,7 +44,6 @@
                     <navigationItem key="navigationItem" id="GAj-g4-wcV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="addSampleButton" destination="qqe-vR-f7i" id="Ckj-nE-46Y"/>
                         <outlet property="circleContainerView" destination="fUp-ey-erg" id="iOK-Bw-11J"/>
                         <outlet property="inlinePickerView" destination="PUm-IM-rFo" id="CRg-IH-Dud"/>
                         <outlet property="packPicker" destination="twy-zR-mbY" id="vnU-ud-oPl"/>
@@ -259,6 +247,13 @@
                             <outlet property="delegate" destination="hBc-4D-zgs" id="0GL-qM-oda"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="About Us" id="T9S-t9-X7L">
+                            <connections>
+                                <segue destination="aTF-Ff-Z8M" kind="modal" id="77s-G8-jgJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Songs" id="WKb-Gt-HNo">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="8uT-6P-rSw">
                             <connections>
@@ -276,6 +271,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCe-3o-FLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325" y="331"/>
+        </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="b0w-bb-5lq">
+            <objects>
+                <viewController id="aTF-Ff-Z8M" customClass="AboutUsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3wk-Sy-e4i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ncj-2H-bfc">
+                                <rect key="frame" x="136" y="518" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done :)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="donePressed:" destination="aTF-Ff-Z8M" eventType="touchUpInside" id="enr-Ov-RTI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIz-HX-j07" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="1037"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r2O-aW-9Xk">
@@ -302,7 +323,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lnb-bg-Z7B">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gML-XP-QIO" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="gML-XP-QIO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ppl-ks-UrA">
@@ -310,6 +331,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="RO7-Hr-tZB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="hBc-4D-zgs" kind="relationship" relationship="rootViewController" id="4u7-ij-0VB"/>
                     </connections>
@@ -323,13 +347,13 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="tTW-nR-51b" customClass="RecorderViewController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MfH-z6-P3g">
-                        <rect key="frame" x="0.0" y="0.0" width="97" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hc3-ac-8tx">
-                                <rect key="frame" x="0.0" y="10" width="97" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hc3-ac-8tx">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Record">
+                                <state key="normal" image="minus.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -337,7 +361,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
@@ -347,8 +371,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AddSample.png" width="224" height="226"/>
-        <image name="minus.png" width="172" height="174"/>
+        <image name="minus.png" width="416" height="417"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

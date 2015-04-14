@@ -68,21 +68,13 @@ static Singleton *sharedInstance = nil;
 {
     switch(n)
     {
-        case 0: return @"California";
+        case 0: return @"HardRock";
             break;
         case 1: return @"Fonky";
             break;
-        case 2: return @"Heavy_Rock";
+        case 2: return @"Rock";
             break;
-        case 3: return @"Hiphopfora";
-            break;
-        case 4: return @"HipHop";
-            break;
-        case 5: return @"Movie";
-            break;
-        case 6: return @"Techno";
-            break;
-        case 7: return @"Trip";
+        case 3: return @"Triphop";
             break;
     }
     

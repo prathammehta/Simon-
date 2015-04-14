@@ -25,13 +25,19 @@
     [super viewDidLoad];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Song"];
-    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"dateOfCreation" ascending:YES]];
     self.context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
     
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                         managedObjectContext:self.context
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setToolbarHidden:NO animated:animated];
+    [super viewWillAppear:animated];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -78,7 +84,7 @@
     }
     
     [self.context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
-    
+    [self.context save:nil];
 //    if([self.tableView numberOfRowsInSection:0]==0)
 //    {
 //        [self.tableView setEditing:NO];
