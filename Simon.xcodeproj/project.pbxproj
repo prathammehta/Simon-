@@ -54,6 +54,7 @@
 		426162B81A40C08100AC7094 /* AddSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 426162B71A40C08100AC7094 /* AddSample.png */; };
 		4262D6091AB0A86E00950AE9 /* AKPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4262D6081AB0A86E00950AE9 /* AKPickerView.m */; };
 		426731181AA1BE1F005DD186 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426731171AA1BE1F005DD186 /* Images-2.xcassets */; };
+		4279EDF11AE3848A000F88F8 /* libmp3lame-armv7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4279EDEE1AE3848A000F88F8 /* libmp3lame-armv7.a */; };
 		4289A43F1AC7ECCC008BA92B /* drums.png in Resources */ = {isa = PBXBuildFile; fileRef = 4289A43B1AC7ECCC008BA92B /* drums.png */; };
 		4289A4401AC7ECCC008BA92B /* electro.png in Resources */ = {isa = PBXBuildFile; fileRef = 4289A43C1AC7ECCC008BA92B /* electro.png */; };
 		4289A4411AC7ECCC008BA92B /* guitar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4289A43D1AC7ECCC008BA92B /* guitar.png */; };
@@ -90,6 +91,10 @@
 		42E567A41A440C6E00DD5580 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E5678D1A440C6E00DD5580 /* TPCircularBuffer+AudioBufferList.c */; };
 		42E567A51A440C6E00DD5580 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E5678F1A440C6E00DD5580 /* TPCircularBuffer.c */; };
 		42E567A81A440C9000DD5580 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E567A71A440C9000DD5580 /* Singleton.m */; };
+		42ECE8891AE389D1005334AD /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ECE8881AE389D1005334AD /* libmp3lame.a */; };
+		42ECE88B1AE38F8F005334AD /* libmp3lame-arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ECE88A1AE38F8F005334AD /* libmp3lame-arm64.a */; };
+		42F5E6C61AE39CAA008339DD /* libmp3lame-armv7s.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F5E6C51AE39CAA008339DD /* libmp3lame-armv7s.a */; };
+		42F5E6C81AE39DD1008339DD /* libmp3lame-i686.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F5E6C71AE39DD1008339DD /* libmp3lame-i686.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +172,7 @@
 		4262D6071AB0A86E00950AE9 /* AKPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPickerView.h; sourceTree = "<group>"; };
 		4262D6081AB0A86E00950AE9 /* AKPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPickerView.m; sourceTree = "<group>"; };
 		426731171AA1BE1F005DD186 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		4279EDEE1AE3848A000F88F8 /* libmp3lame-armv7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libmp3lame-armv7.a"; sourceTree = "<group>"; };
 		4289A43B1AC7ECCC008BA92B /* drums.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drums.png; sourceTree = "<group>"; };
 		4289A43C1AC7ECCC008BA92B /* electro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = electro.png; sourceTree = "<group>"; };
 		4289A43D1AC7ECCC008BA92B /* guitar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guitar.png; sourceTree = "<group>"; };
@@ -234,6 +240,11 @@
 		42E567931A440C6E00DD5580 /* TheAmazingAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheAmazingAudioEngine.h; sourceTree = "<group>"; };
 		42E567A61A440C9000DD5580 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		42E567A71A440C9000DD5580 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		42ECE8871AE389D1005334AD /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		42ECE8881AE389D1005334AD /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		42ECE88A1AE38F8F005334AD /* libmp3lame-arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libmp3lame-arm64.a"; sourceTree = "<group>"; };
+		42F5E6C51AE39CAA008339DD /* libmp3lame-armv7s.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libmp3lame-armv7s.a"; sourceTree = "<group>"; };
+		42F5E6C71AE39DD1008339DD /* libmp3lame-i686.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libmp3lame-i686.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,9 +252,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42F5E6C81AE39DD1008339DD /* libmp3lame-i686.a in Frameworks */,
 				421B130C1ADCE18400383D38 /* AVFoundation.framework in Frameworks */,
 				421B130A1ADCE17F00383D38 /* AVKit.framework in Frameworks */,
 				421B13081ADCE14900383D38 /* AudioToolbox.framework in Frameworks */,
+				4279EDF11AE3848A000F88F8 /* libmp3lame-armv7.a in Frameworks */,
+				42F5E6C61AE39CAA008339DD /* libmp3lame-armv7s.a in Frameworks */,
+				42ECE88B1AE38F8F005334AD /* libmp3lame-arm64.a in Frameworks */,
+				42ECE8891AE389D1005334AD /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +305,7 @@
 				4223E3BE1AC194FC00E51690 /* RecorderViewController.m */,
 				421B13021ADCDF3D00383D38 /* TPAACAudioConverter.h */,
 				421B13031ADCDF3D00383D38 /* TPAACAudioConverter.m */,
+				4279EDED1AE38356000F88F8 /* LAME */,
 			);
 			name = Recording;
 			sourceTree = "<group>";
@@ -440,6 +457,19 @@
 				422ABA521A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m */,
 			);
 			name = "Inline Sample Picker";
+			sourceTree = "<group>";
+		};
+		4279EDED1AE38356000F88F8 /* LAME */ = {
+			isa = PBXGroup;
+			children = (
+				42ECE8871AE389D1005334AD /* lame.h */,
+				42ECE88A1AE38F8F005334AD /* libmp3lame-arm64.a */,
+				42ECE8881AE389D1005334AD /* libmp3lame.a */,
+				42F5E6C71AE39DD1008339DD /* libmp3lame-i686.a */,
+				4279EDEE1AE3848A000F88F8 /* libmp3lame-armv7.a */,
+				42F5E6C51AE39CAA008339DD /* libmp3lame-armv7s.a */,
+			);
+			name = LAME;
 			sourceTree = "<group>";
 		};
 		4289A43A1AC7ECCC008BA92B /* Sample Instruments */ = {
@@ -872,30 +902,46 @@
 		426162B21A40A34D00AC7094 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Simon :)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "Simon :)";
+				PRODUCT_NAME = Simon;
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
 		426162B31A40A34D00AC7094 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Simon :)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "Simon :)";
+				PRODUCT_NAME = Simon;
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
