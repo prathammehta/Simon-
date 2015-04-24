@@ -254,6 +254,9 @@
             break;
     }
     
+    Singleton *shared = [Singleton sharedInstance];
+    
+    [shared.audioController addChannels:shared.audioFilePlayers];
     
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
