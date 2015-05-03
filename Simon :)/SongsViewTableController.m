@@ -53,7 +53,9 @@
 - (IBAction)addSongPressed:(UIBarButtonItem *)sender
 {
     [Song insertSongWithName:[NSString stringWithFormat:@"Song %lu",(unsigned long)self.fetchedResultsController.fetchedObjects.count+1]
-                 withContext:self.context];
+                 withContext:self.context
+               withImageData:nil];
+    
     [self.context save:nil];
 }
 
