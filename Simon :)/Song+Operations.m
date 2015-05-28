@@ -12,13 +12,11 @@
 
 + (void) insertSongWithName:(NSString *) name
                 withContext:(NSManagedObjectContext *) context
-              withImageData:(NSData *) data
 {
     Song *song = [NSEntityDescription insertNewObjectForEntityForName:@"Song" inManagedObjectContext:context];
     song.name = name;
     song.dateOfCreation = [NSDate date];
     song.samples = nil;
-    song.imageData = data;
 }
 
 @end

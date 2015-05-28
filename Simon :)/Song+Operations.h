@@ -11,7 +11,6 @@
 @interface Song (Operations)
 
 + (void) insertSongWithName:(NSString *) name
-                withContext:(NSManagedObjectContext *) context
-              withImageData:(NSData *) data;
+                withContext:(NSManagedObjectContext *) context;
 
 @end

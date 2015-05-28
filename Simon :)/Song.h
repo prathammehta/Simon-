@@ -2,7 +2,7 @@
 //  Song.h
 //  Simon
 //
-//  Created by Pratham Mehta on 24/04/15.
+//  Created by Pratham Mehta on 14/04/15.
 //  Copyright (c) 2015 Pratham Mehta. All rights reserved.
 //
 
@@ -13,9 +13,8 @@
 
 @interface Song : NSManagedObject
 
-@property (nonatomic, retain) NSDate * dateOfCreation;
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSData * imageData;
+@property (nonatomic, retain) NSDate * dateOfCreation;
 @property (nonatomic, retain) NSSet *samples;
 @end
 

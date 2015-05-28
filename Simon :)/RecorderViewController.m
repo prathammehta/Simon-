@@ -146,8 +146,7 @@
         [picker setCcRecipients:ccRecipients];
         [picker setBccRecipients:bccRecipients];
         
-        [picker setSubject:@"♬♩ listen to my creation - created with Social Symphony"];
-        [picker setMessageBody:@"give your musical creatity wings to fly./n Get started here: http://socialsymphonyapp.com" isHTML:YES];
+        [picker setMessageBody:@"" isHTML:YES];
         [picker addAttachmentData:dataToSend mimeType:@"audio/mpeg" fileName:@"record.mp3"];
         
         [self presentViewController:picker animated:YES completion:nil];

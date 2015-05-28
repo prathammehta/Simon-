@@ -72,7 +72,7 @@ static Singleton *sharedInstance = nil;
             break;
         case 1: return @"Fonky";
             break;
-        case 2: return @"RockPack";
+        case 2: return @"Rock";
             break;
         case 3: return @"Triphop";
             break;
