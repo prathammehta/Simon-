@@ -11,11 +11,12 @@
     </entity>
     <entity name="Song" representedClassName="Song" syncable="YES">
         <attribute name="dateOfCreation" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="samples" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sample" inverseName="song" inverseEntity="Sample" syncable="YES"/>
     </entity>
     <elements>
         <element name="Sample" positionX="-54" positionY="-9" width="128" height="148"/>
-        <element name="Song" positionX="-353" positionY="17" width="128" height="90"/>
+        <element name="Song" positionX="-353" positionY="17" width="128" height="105"/>
     </elements>
 </model>

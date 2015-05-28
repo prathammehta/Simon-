@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="909-se-idk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gML-XP-QIO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Song-->
@@ -306,7 +306,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gna-S3-fwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-432" y="331"/>
+            <point key="canvasLocation" x="-542" y="331"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="b0w-bb-5lq">
@@ -334,18 +334,31 @@
                                 <rect key="frame" x="40" y="178" width="240" height="332"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">We believe that we are all creative by nature, and that anyone can create music. Being a trained musician isn't a requirenment. In keeping with this belief, we are putting together the most user friendly application to create music. 
+                                <mutableString key="text">We believe that we are all creative by nature, and that anyone can create music, being a trained musician isn’t the requirement.
+Fred, Pratham, Avirath and I thank you very much for being part of this awesome adventure.
+If you have any questions, please, feel free to contact me: steeve@socialsymphonyapp.com
+iMessage: +33 781 951 935
+Kindly,
+Steeve
+CEO and co-founder at Social Symphony
+http://socialsymphonyapp.com
 
-We hope you enjoy it.
 
-- Team SocialSymphony
+Licence Agreement 
 
-Fred - Musician
-Pratham - CTO
-Steeve - CEO
-Avirath - Operations</string>
+You are not allowed to use the songs created with Social Symphony for commercial purposes.
+All the samples used in Social Symphony are property of Fred Thomasseau.
+If you remix, transform, or build upon the samples contained in Social Symphony and/or songs created with Social Symphony, you may not distribute the modified material.
+If you have any questions, please feel free to contact us: feedback@socialsymphonyapp.com
+french: L'utilisation commerciale des musiques créées à partir de Social Symphony est strictement interdite.
+L'utilisation des samples contenu dans Social Symphony est strictement réservée à un usage personel.
+Tous les samples inclus dans Social Symphony sont la propriété exclusive de Fred Thomasseau.
+Tout reproduction, modification, distribution à usage commerciale est formellement interdite.
+En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp.com
+2015 ©Social Symphony-Fred Thomasseau</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
