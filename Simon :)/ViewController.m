@@ -319,6 +319,7 @@
                                                    self.circleContainerView.bounds.size.width/2 - radius/2,
                                                    radius,
                                                    radius);
+//                         circle.center = self.circleContainerView.center;
                      }
                      completion:nil];
     

@@ -14,6 +14,8 @@
 @property (nonatomic, strong) AEAudioFilePlayer *audioFilePlayer;
 @property (nonatomic) TPAACAudioConverter *audioConverter;
 @property (nonatomic, strong) NSString *mp3FilePath;
+@property (nonatomic, strong) NSTimer *recodingDurationLabelUpdateTimer;
+@property (nonatomic) NSInteger secondsRecorded;
 
 @end
 
@@ -22,8 +24,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.timerLabel.text = @"REC";
+    self.secondsRecorded = 0;
 }
-
 
 
 - (AEAudioController *)audioController
@@ -96,6 +99,12 @@
 //    self.recorder = nil;
 }
 
+- (void) updateTimerLabel
+{
+    self.secondsRecorded++;
+    self.timerLabel.text = [NSString stringWithFormat:@"%lds",(long)self.secondsRecorded];
+}
+
 
 - (IBAction)buttonPressed:(UIButton *)sender
 {
@@ -103,14 +112,23 @@
     
     if(!self.isRecording)
     {
-        [sender setTitle:@"Recording..." forState:UIControlStateNormal];
         [self startRecording];
+        self.timerLabel.text = @"0s";
+        self.recodingDurationLabelUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                                                 target:self
+                                                                               selector:@selector(updateTimerLabel)
+                                                                               userInfo:nil
+                                                                                repeats:YES];
     }
     else
     {
-        [self stopRecording];
+
         
-        [sender setTitle:@"Record" forState:UIControlStateNormal];
+        [self.recodingDurationLabelUpdateTimer invalidate];
+        self.timerLabel.text = @"REC";
+        self.secondsRecorded = 0;
+        
+        [self stopRecording];
         
         [self.audioController removeChannels:self.audioController.channels];
         
@@ -262,132 +280,5 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//- (void) convert
-//{
-//    if ( ![TPAACAudioConverter AACConverterAvailable] ) {
-//        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Converting audio", @"")
-//                                    message:NSLocalizedString(@"Couldn't convert audio: Not supported on this device", @"")
-//                                   delegate:nil
-//                          cancelButtonTitle:nil
-//                          otherButtonTitles:NSLocalizedString(@"OK", @""), nil] show];
-//        return;
-//    }
-//    
-//    // Register an Audio Session interruption listener, important for AAC conversion
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(audioSessionInterrupted:)
-//                                                 name:AVAudioSessionInterruptionNotification
-//                                               object:nil];
-//    
-//    // Set up an audio session compatible with AAC conversion.  Note that AAC conversion is incompatible with any session that provides mixing with other device audio.
-//    NSError *error = nil;
-//    if ( ![[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
-//                                           withOptions:0
-//                                                 error:&error] ) {
-//        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Converting audio", @"")
-//                                    message:[NSString stringWithFormat:NSLocalizedString(@"Couldn't setup audio category: %@", @""), error.localizedDescription]
-//                                   delegate:nil
-//                          cancelButtonTitle:nil
-//                          otherButtonTitles:NSLocalizedString(@"OK", @""), nil] show];
-//        [[NSNotificationCenter defaultCenter] removeObserver:self];
-//        return;
-//    }
-//    
-//    // Activate audio session
-//    if ( ![[AVAudioSession sharedInstance] setActive:YES error:NULL] ) {
-//        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Converting audio", @"")
-//                                    message:[NSString stringWithFormat:NSLocalizedString(@"Couldn't activate audio category: %@", @""), error.localizedDescription]
-//                                   delegate:nil
-//                          cancelButtonTitle:nil
-//                          otherButtonTitles:NSLocalizedString(@"OK", @""), nil] show];
-//        [[NSNotificationCenter defaultCenter] removeObserver:self];
-//        return;
-//        
-//    }
-//    
-//    NSArray *documentsFolders = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//    self.audioConverter = [[TPAACAudioConverter alloc] initWithDelegate:self
-//                                                                 source:[[NSBundle mainBundle] pathForResource:@"song" ofType:@"caf"]
-//                                                            destination:[[documentsFolders objectAtIndex:0] stringByAppendingPathComponent:@"audio.m4a"]];
-//
-//    [_audioConverter start];
-//}
-//
-//
-//#pragma mark - Audio converter delegate
-//
-//-(void)AACAudioConverter:(TPAACAudioConverter *)converter didMakeProgress:(CGFloat)progress {
-//    //self.progressView.progress = progress;
-//    NSLog(@"Progress on conversion: %f",progress);
-//}
-//
-//-(void)AACAudioConverterDidFinishConversion:(TPAACAudioConverter *)converter {
-//
-//    self.audioConverter = nil;
-//    [[NSNotificationCenter defaultCenter] removeObserver:self];
-//    
-//    NSString *documentsFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-//    NSString *path = [documentsFolder stringByAppendingPathComponent:@"audio.m4a"];
-//    
-//    
-//            NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:path];
-//            NSData *dataToSend = [[NSData alloc] initWithContentsOfURL:fileURL];
-//    
-//            MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
-//            picker.mailComposeDelegate = self;
-//    
-//            [picker setSubject:@"Recording"];
-//    
-//            // Set up recipients
-//            NSArray *toRecipients = nil;
-//            NSArray *ccRecipients = nil;
-//            NSArray *bccRecipients = nil;
-//    
-//            [picker setToRecipients:toRecipients];
-//            [picker setCcRecipients:ccRecipients];
-//            [picker setBccRecipients:bccRecipients];
-//    
-//            [picker setMessageBody:@"" isHTML:YES];
-//            [picker addAttachmentData:dataToSend mimeType:@"audio/mp4a-latm" fileName:@"audio.m4a"];
-//    
-//            [self presentViewController:picker animated:YES completion:nil];
-//}
-//
-//-(void)AACAudioConverter:(TPAACAudioConverter *)converter didFailWithError:(NSError *)error {
-//    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Converting audio", @"")
-//                                message:[NSString stringWithFormat:NSLocalizedString(@"Couldn't convert audio: %@", @""), [error localizedDescription]]
-//                               delegate:nil
-//                      cancelButtonTitle:nil
-//                      otherButtonTitles:NSLocalizedString(@"OK", @""), nil] show];
-//    self.audioConverter = nil;
-//    [[NSNotificationCenter defaultCenter] removeObserver:self];
-//}
-//
-//#pragma mark - Audio session interruption
-//
-//- (void)audioSessionInterrupted:(NSNotification*)notification {
-//    AVAudioSessionInterruptionType type = [notification.userInfo[AVAudioSessionInterruptionTypeKey] integerValue];
-//    
-//    if ( type == AVAudioSessionInterruptionTypeEnded) {
-//        [[AVAudioSession sharedInstance] setActive:YES error:NULL];
-//        if ( _audioConverter ) [_audioConverter resume];
-//    } else if ( type == AVAudioSessionInterruptionTypeBegan ) {
-//        if ( _audioConverter ) [_audioConverter interrupt];
-//    }
-//}
 
 @end

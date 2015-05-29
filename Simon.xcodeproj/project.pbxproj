@@ -43,7 +43,7 @@
 		422ABA531A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 422ABA521A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m */; };
 		422C10D61A428F7700B0A54B /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 422C10D51A428F7700B0A54B /* delete.png */; };
 		4230ACE01AED40D3000E04FB /* TriphopGuit4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4230ACDF1AED40D3000E04FB /* TriphopGuit4.mp3 */; };
-		425A470A1B17A8FC005FB79D /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425A47091B17A8FC005FB79D /* libmp3lame.a */; };
+		425F03ED1B1852A800D0190D /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425F03EC1B1852A800D0190D /* libmp3lame.a */; };
 		426162911A40A34C00AC7094 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 426162901A40A34C00AC7094 /* main.m */; };
 		426162941A40A34C00AC7094 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 426162931A40A34C00AC7094 /* AppDelegate.m */; };
 		426162971A40A34C00AC7094 /* Simon___.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 426162951A40A34C00AC7094 /* Simon___.xcdatamodeld */; };
@@ -153,7 +153,7 @@
 		422C10D51A428F7700B0A54B /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		4230ACDF1AED40D3000E04FB /* TriphopGuit4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TriphopGuit4.mp3; sourceTree = "<group>"; };
 		425A47081B17A8EC005FB79D /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
-		425A47091B17A8FC005FB79D /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		425F03EC1B1852A800D0190D /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		4261628B1A40A34C00AC7094 /* Simon :).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simon :).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4261628F1A40A34C00AC7094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		426162901A40A34C00AC7094 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -253,7 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				421B130C1ADCE18400383D38 /* AVFoundation.framework in Frameworks */,
-				425A470A1B17A8FC005FB79D /* libmp3lame.a in Frameworks */,
+				425F03ED1B1852A800D0190D /* libmp3lame.a in Frameworks */,
 				421B130A1ADCE17F00383D38 /* AVKit.framework in Frameworks */,
 				421B13081ADCE14900383D38 /* AudioToolbox.framework in Frameworks */,
 			);
@@ -461,7 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				425A47081B17A8EC005FB79D /* lame.h */,
-				425A47091B17A8FC005FB79D /* libmp3lame.a */,
+				425F03EC1B1852A800D0190D /* libmp3lame.a */,
 			);
 			name = LAME;
 			sourceTree = "<group>";
@@ -931,10 +931,13 @@
 					":)",
 					"$(PROJECT_DIR)/Simon",
 					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Simon :)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -963,10 +966,13 @@
 					":)",
 					"$(PROJECT_DIR)/Simon",
 					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Simon :)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;

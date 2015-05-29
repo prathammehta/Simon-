@@ -21,5 +21,6 @@
 
 @property (nonatomic, strong) AEAudioController *audioController;
 @property (nonatomic, strong) AERecorder *recorder;
+@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 
 @end

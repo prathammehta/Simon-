@@ -77,16 +77,17 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Delete song: %@",((Song *)[self.fetchedResultsController objectAtIndexPath:indexPath]).name);
+    
     Song *song = (Song *)[self.fetchedResultsController objectAtIndexPath:indexPath];
     
     for(Sample *sample in song.samples)
     {
         [self.context deleteObject:sample];
-        [self.context save:nil];
     }
     
     [self.context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
     [self.context save:nil];
+    
 //    if([self.tableView numberOfRowsInSection:0]==0)
 //    {
 //        [self.tableView setEditing:NO];
