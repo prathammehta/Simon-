@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreDataCollectionViewController.h"
+#import "Song+Operations.h"
 
 @interface HomeScreenCollectionViewController : CoreDataCollectionViewController
 
