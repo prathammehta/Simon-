@@ -43,7 +43,6 @@
 		422ABA531A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 422ABA521A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m */; };
 		422C10D61A428F7700B0A54B /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 422C10D51A428F7700B0A54B /* delete.png */; };
 		4230ACE01AED40D3000E04FB /* TriphopGuit4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4230ACDF1AED40D3000E04FB /* TriphopGuit4.mp3 */; };
-		425F03ED1B1852A800D0190D /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425F03EC1B1852A800D0190D /* libmp3lame.a */; };
 		426162911A40A34C00AC7094 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 426162901A40A34C00AC7094 /* main.m */; };
 		426162941A40A34C00AC7094 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 426162931A40A34C00AC7094 /* AppDelegate.m */; };
 		426162971A40A34C00AC7094 /* Simon___.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 426162951A40A34C00AC7094 /* Simon___.xcdatamodeld */; };
@@ -52,7 +51,6 @@
 		4261629F1A40A34C00AC7094 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4261629E1A40A34C00AC7094 /* Images.xcassets */; };
 		426162A21A40A34C00AC7094 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426162A01A40A34C00AC7094 /* LaunchScreen.xib */; };
 		426162AE1A40A34D00AC7094 /* Simon___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 426162AD1A40A34D00AC7094 /* Simon___Tests.m */; };
-		426162B81A40C08100AC7094 /* AddSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 426162B71A40C08100AC7094 /* AddSample.png */; };
 		4262D6091AB0A86E00950AE9 /* AKPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4262D6081AB0A86E00950AE9 /* AKPickerView.m */; };
 		426731181AA1BE1F005DD186 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426731171AA1BE1F005DD186 /* Images-2.xcassets */; };
 		4289A43F1AC7ECCC008BA92B /* drums.png in Resources */ = {isa = PBXBuildFile; fileRef = 4289A43B1AC7ECCC008BA92B /* drums.png */; };
@@ -62,6 +60,7 @@
 		428D34541AEAB0A7007BB357 /* CoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428D34531AEAB0A7007BB357 /* CoreDataCollectionViewController.m */; };
 		428D34571AEAB0BB007BB357 /* HomeScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428D34561AEAB0BB007BB357 /* HomeScreenCollectionViewController.m */; };
 		428D345C1AEAB4AB007BB357 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 428D345B1AEAB4AB007BB357 /* Song.m */; };
+		428E8E8C1B7255EA00FEE2AF /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 428E8E8B1B7255EA00FEE2AF /* libmp3lame.a */; };
 		42AE875A1A70CC4F00BD1F37 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AE87591A70CC4F00BD1F37 /* CoreDataTableViewController.m */; };
 		42AE875D1A70CC7000BD1F37 /* SongsViewTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AE875C1A70CC7000BD1F37 /* SongsViewTableController.m */; };
 		42AE87601A70CE6800BD1F37 /* Song+Operations.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AE875F1A70CE6800BD1F37 /* Song+Operations.m */; };
@@ -153,7 +152,6 @@
 		422C10D51A428F7700B0A54B /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		4230ACDF1AED40D3000E04FB /* TriphopGuit4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TriphopGuit4.mp3; sourceTree = "<group>"; };
 		425A47081B17A8EC005FB79D /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
-		425F03EC1B1852A800D0190D /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		4261628B1A40A34C00AC7094 /* Simon :).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simon :).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4261628F1A40A34C00AC7094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		426162901A40A34C00AC7094 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 		426162A71A40A34C00AC7094 /* Simon :)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simon :)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		426162AC1A40A34D00AC7094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		426162AD1A40A34D00AC7094 /* Simon___Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Simon___Tests.m"; sourceTree = "<group>"; };
-		426162B71A40C08100AC7094 /* AddSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddSample.png; sourceTree = "<group>"; };
 		4262D6071AB0A86E00950AE9 /* AKPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPickerView.h; sourceTree = "<group>"; };
 		4262D6081AB0A86E00950AE9 /* AKPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPickerView.m; sourceTree = "<group>"; };
 		426731171AA1BE1F005DD186 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
@@ -182,6 +179,7 @@
 		428D34561AEAB0BB007BB357 /* HomeScreenCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenCollectionViewController.m; sourceTree = "<group>"; };
 		428D345A1AEAB4AB007BB357 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		428D345B1AEAB4AB007BB357 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		428E8E8B1B7255EA00FEE2AF /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		42AE87581A70CC4F00BD1F37 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		42AE87591A70CC4F00BD1F37 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		42AE875B1A70CC7000BD1F37 /* SongsViewTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsViewTableController.h; sourceTree = "<group>"; };
@@ -253,7 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				421B130C1ADCE18400383D38 /* AVFoundation.framework in Frameworks */,
-				425F03ED1B1852A800D0190D /* libmp3lame.a in Frameworks */,
+				428E8E8C1B7255EA00FEE2AF /* libmp3lame.a in Frameworks */,
 				421B130A1ADCE17F00383D38 /* AVKit.framework in Frameworks */,
 				421B13081ADCE14900383D38 /* AudioToolbox.framework in Frameworks */,
 			);
@@ -422,7 +420,6 @@
 				4261629E1A40A34C00AC7094 /* Images.xcassets */,
 				426162A01A40A34C00AC7094 /* LaunchScreen.xib */,
 				422C10D51A428F7700B0A54B /* delete.png */,
-				426162B71A40C08100AC7094 /* AddSample.png */,
 				426162921A40A34C00AC7094 /* AppDelegate.h */,
 				426162931A40A34C00AC7094 /* AppDelegate.m */,
 				4261628F1A40A34C00AC7094 /* Info.plist */,
@@ -461,7 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				425A47081B17A8EC005FB79D /* lame.h */,
-				425F03EC1B1852A800D0190D /* libmp3lame.a */,
+				428E8E8B1B7255EA00FEE2AF /* libmp3lame.a */,
 			);
 			name = LAME;
 			sourceTree = "<group>";
@@ -705,7 +702,6 @@
 				4289A4401AC7ECCC008BA92B /* electro.png in Resources */,
 				4223E3EB1AC319A400E51690 /* FonkyVoices.mp3 in Resources */,
 				4223E3ED1AC319A400E51690 /* RockPackDrum.mp3 in Resources */,
-				426162B81A40C08100AC7094 /* AddSample.png in Resources */,
 				4223E3E41AC319A400E51690 /* HardRockGuit2.mp3 in Resources */,
 				421B13231ADCFEF700383D38 /* TriphopPiano.mp3 in Resources */,
 				4223E3F01AC319A400E51690 /* RockPackGuit3.mp3 in Resources */,
@@ -933,6 +929,8 @@
 					":)",
 					"$(PROJECT_DIR)/Simon",
 					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Simon :)";
@@ -956,6 +954,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Simon",
+					"$(PROJECT_DIR)/Simon",
+					":)",
 					"$(PROJECT_DIR)/Simon",
 					":)",
 					"$(PROJECT_DIR)/Simon",
