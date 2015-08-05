@@ -111,11 +111,11 @@
 		428D34541AEAB0A7007BB357 /* CoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428D34531AEAB0A7007BB357 /* CoreDataCollectionViewController.m */; };
 		428D34571AEAB0BB007BB357 /* HomeScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428D34561AEAB0BB007BB357 /* HomeScreenCollectionViewController.m */; };
 		428D345C1AEAB4AB007BB357 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 428D345B1AEAB4AB007BB357 /* Song.m */; };
+		428E8E8A1B724E7C00FEE2AF /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 428E8E891B724E7C00FEE2AF /* libmp3lame.a */; };
 		42AE875A1A70CC4F00BD1F37 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AE87591A70CC4F00BD1F37 /* CoreDataTableViewController.m */; };
 		42AE875D1A70CC7000BD1F37 /* SongsViewTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AE875C1A70CC7000BD1F37 /* SongsViewTableController.m */; };
 		42AE87601A70CE6800BD1F37 /* Song+Operations.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AE875F1A70CE6800BD1F37 /* Song+Operations.m */; };
 		42AE87631A70D0F000BD1F37 /* Sample+Operations.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AE87621A70D0F000BD1F37 /* Sample+Operations.m */; };
-		42AE98061B6CBD2E00F2FDEA /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AE98051B6CBD2E00F2FDEA /* libmp3lame.a */; };
 		42C087851A4D362000BB4BE9 /* SamplePickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C087841A4D362000BB4BE9 /* SamplePickerCollectionViewController.m */; };
 		42C087891A4D364B00BB4BE9 /* SamplePreviewSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C087881A4D364B00BB4BE9 /* SamplePreviewSelectView.m */; };
 		42C0878D1A4D45B700BB4BE9 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C0878B1A4D45B700BB4BE9 /* pause.png */; };
@@ -282,6 +282,7 @@
 		428D34561AEAB0BB007BB357 /* HomeScreenCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenCollectionViewController.m; sourceTree = "<group>"; };
 		428D345A1AEAB4AB007BB357 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		428D345B1AEAB4AB007BB357 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		428E8E891B724E7C00FEE2AF /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		42AE87581A70CC4F00BD1F37 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		42AE87591A70CC4F00BD1F37 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		42AE875B1A70CC7000BD1F37 /* SongsViewTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsViewTableController.h; sourceTree = "<group>"; };
@@ -290,7 +291,6 @@
 		42AE875F1A70CE6800BD1F37 /* Song+Operations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Song+Operations.m"; sourceTree = "<group>"; };
 		42AE87611A70D0F000BD1F37 /* Sample+Operations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample+Operations.h"; sourceTree = "<group>"; };
 		42AE87621A70D0F000BD1F37 /* Sample+Operations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Sample+Operations.m"; sourceTree = "<group>"; };
-		42AE98051B6CBD2E00F2FDEA /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		42C087831A4D362000BB4BE9 /* SamplePickerCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplePickerCollectionViewController.h; sourceTree = "<group>"; };
 		42C087841A4D362000BB4BE9 /* SamplePickerCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplePickerCollectionViewController.m; sourceTree = "<group>"; };
 		42C087871A4D364B00BB4BE9 /* SamplePreviewSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplePreviewSelectView.h; sourceTree = "<group>"; };
@@ -354,7 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				421B130C1ADCE18400383D38 /* AVFoundation.framework in Frameworks */,
-				42AE98061B6CBD2E00F2FDEA /* libmp3lame.a in Frameworks */,
+				428E8E8A1B724E7C00FEE2AF /* libmp3lame.a in Frameworks */,
 				421B130A1ADCE17F00383D38 /* AVKit.framework in Frameworks */,
 				421B13081ADCE14900383D38 /* AudioToolbox.framework in Frameworks */,
 			);
@@ -502,7 +502,7 @@
 		4279EDED1AE38356000F88F8 /* LAME */ = {
 			isa = PBXGroup;
 			children = (
-				42AE98051B6CBD2E00F2FDEA /* libmp3lame.a */,
+				428E8E891B724E7C00FEE2AF /* libmp3lame.a */,
 				425A47081B17A8EC005FB79D /* lame.h */,
 			);
 			name = LAME;
@@ -1199,6 +1199,8 @@
 					":)",
 					"$(PROJECT_DIR)/Simon",
 					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Simon;
@@ -1222,6 +1224,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Simon",
+					"$(PROJECT_DIR)/Simon",
+					":)",
 					"$(PROJECT_DIR)/Simon",
 					":)",
 					"$(PROJECT_DIR)/Simon",
