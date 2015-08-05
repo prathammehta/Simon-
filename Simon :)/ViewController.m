@@ -30,7 +30,7 @@
     [self setupShadows];
     self.chromeShown = YES;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNewCircle:) name:@"sampleAdded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNewCircle) name:@"sampleAdded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(insertSampleIntoDatabase:) name:@"sampleAdded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeCircle:) name:@"deletePressed" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resumeMusic) name:@"resumeMusic" object:nil];
@@ -41,94 +41,29 @@
                                                  name:@"insturmentCategoryTapped"
                                                object:nil];
     
+    self.packPicker.delegate = self;
+    self.packPicker.interitemSpacing = 20;
 }
 
 - (NSUInteger)numberOfItemsInPickerView:(AKPickerView *)pickerView
 {
-    return 10;
+    return 4;
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
+    [self.navigationController setToolbarHidden:YES animated:animated];
     [super viewWillAppear:animated];
-    
-    self.maxNumberOfCircles = floor((self.view.frame.size.width - 20) / 75);
-    
-    NSLog(@"Max number of circles: %ld", self.maxNumberOfCircles);
-    
-    
-    
-    if(self.didAppearFromNav)
-    {
-        self.didAppearFromNav = NO;
-        
-        NSArray *orderedSamples = [self.song.samples sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"orderNumber"
-                                                                                                                 ascending:YES]]];
-        
-        
-        for(Sample *sample in orderedSamples)
-        {
-            NSString *name = sample.name;
-            
-            name = [name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-            name = [name stringByReplacingOccurrencesOfString:@"25" withString:@""];
-            
-            NSLog(@"File required: %@",name);
-            
-            NSURL *url = [[NSBundle mainBundle] URLForResource:[name stringByDeletingPathExtension]
-                                                 withExtension:@"mp3"];
-            
-            NSLog(@"URL Required: %@",url);
-            
-            NSError *error;
-            
-            AEAudioFilePlayer *player = [AEAudioFilePlayer audioFilePlayerWithURL:url
-                                                                  audioController:[Singleton sharedInstance].audioController
-                                                                            error:&error];
-            player.loop = YES;
-            
-            if(error)
-            {
-                NSLog(@"The error is %@",error);
-            }
-            else
-            {
-                [[Singleton sharedInstance].audioFilePlayers addObject:player];
-                NSLog(@"Number of tracks playing: %ld",(long)[Singleton sharedInstance].audioFilePlayers.count);
-                [self addNewCircle:nil];
-            }
-            
-            
-            
-            //            [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
-            //                [[NSNotificationCenter defaultCenter] postNotificationName:@"sampleAdded" object:nil];
-            //            }];
-            
-            //[[NSNotificationCenter defaultCenter] postNotificationName:@"resumeMusic" object:nil];
-        }
-        
-        //[[Singleton sharedInstance].audioController removeChannels:[Singleton sharedInstance].audioController.channels];
-        [[Singleton sharedInstance].audioController addChannels:[Singleton sharedInstance].audioFilePlayers];
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"packPickerTapped"
-                                                            object:[NSNumber numberWithInteger:0]];
-    }
 }
 
 - (NSString *)pickerView:(AKPickerView *)pickerView titleForItem:(NSInteger)item
 {
     switch (item)
     {
-        case 0: return @"Fonky";
-        case 1: return @"Hard Rock";
-        case 2: return @"Rock";
-        case 3: return @"Trip Hop";
-        case 4: return @"Hip Hop Cinematic";
-        case 5: return @"Jazz Groove";
-        case 6: return @"Indian Vibe";
-        case 7: return @"Tekno Limit";
-        case 8: return @"Country Roots";
-        case 9: return @"Moon orchestra";
+            case 0: return @"Hard Rock";
+            case 1: return @"Fonky";
+            case 2: return @"Rock";
+            case 3: return @"Trip Hop";
     }
     
     return nil;
@@ -162,6 +97,11 @@
 //                                  toSong:self.song
 //                             withContext:context];
 //        }
+        
+        [Singleton sharedInstance].audioFilePlayers = nil;
+        [[[Singleton sharedInstance] audioController] removeChannels:[[Singleton sharedInstance] audioController].channels];
+        
+        [self.navigationController popViewControllerAnimated:NO];
     }
     [super viewWillDisappear:animated];
 }
@@ -203,6 +143,8 @@
 
     }
     
+    [[self navigationController] setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:YES];
+    [[UIApplication sharedApplication] setStatusBarHidden:![UIApplication sharedApplication].statusBarHidden];
     self.chromeShown = !self.chromeShown;
 }
 
@@ -210,23 +152,62 @@
 {
     [super viewDidAppear:animated];
     
-    self.maxNumberOfCircles = floor((self.view.frame.size.width - 20) / 75);
+    [self.packPicker selectItem:0 animated:NO];
     
-    NSLog(@"Max number of circles: %ld", self.maxNumberOfCircles);
-    
-    self.packPicker.delegate = self;
-    
-    self.packPicker.interitemSpacing = 20;
-    
-    [self.packPicker reloadData];
-    
-    
-    
-    
-    NSManagedObjectContext *context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
-    
-    self.song.imageData = UIImagePNGRepresentation([self screenshotOfView:self.circleContainerView]);
-    [context save:nil];
+    if(self.didAppearFromNav)
+    {
+        self.didAppearFromNav = NO;
+        
+        NSArray *orderedSamples = [self.song.samples sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"orderNumber"
+                                                                                                                 ascending:YES]]];
+        
+        
+        for(Sample *sample in orderedSamples)
+        {
+            NSString *name = sample.name;
+            
+            
+            
+            name = [name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            name = [name stringByReplacingOccurrencesOfString:@"25" withString:@""];
+            
+            NSLog(@"File required: %@",name);
+            
+            NSURL *url = [[NSBundle mainBundle] URLForResource:[name stringByDeletingPathExtension]
+                                                 withExtension:@"mp3"];
+            
+            
+            
+            NSLog(@"URL Required: %@",url);
+            
+            NSError *error;
+            
+            AEAudioFilePlayer *player = [AEAudioFilePlayer audioFilePlayerWithURL:url
+                                                                  audioController:[Singleton sharedInstance].audioController
+                                                                            error:&error];
+            player.loop = YES;
+            
+            if(error)
+            {
+                NSLog(@"The error is %@",error);
+            }
+            else
+            {
+                [[Singleton sharedInstance].audioFilePlayers addObject:player];
+                NSLog(@"Number of tracks playing: %ld",(long)[Singleton sharedInstance].audioFilePlayers.count);
+                [self addNewCircle];
+            }
+            
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"sampleAdded" object:nil];
+            }];
+            
+            //[[NSNotificationCenter defaultCenter] postNotificationName:@"resumeMusic" object:nil];
+        }
+        
+        //[[Singleton sharedInstance].audioController removeChannels:[Singleton sharedInstance].audioController.channels];
+        [[Singleton sharedInstance].audioController addChannels:[Singleton sharedInstance].audioFilePlayers];
+    }
 }
 
 - (NSMutableArray *)sampleCircles
@@ -294,9 +275,8 @@
     self.addSampleButton.layer.shadowOpacity = 0.5;
 }
 
-- (void) addNewCircle: (NSNotification *) notification
+- (void) addNewCircle
 {
-    
     SampleCircle *circle = [[SampleCircle alloc] initWithFrame:CGRectZero];
     
     [self.sampleCircles addObject:circle];
@@ -329,47 +309,25 @@
     
     [self.circleContainerView addSubview:circle];
     
-    if(notification == nil)
-    {
-        [UIView animateWithDuration:0
-                              delay:0
-                            options:0
-                         animations:^{
-                             circle.alpha = 1.0;
-                             circle.transform = CGAffineTransformIdentity;
-                             circle.frame = CGRectMake(self.circleContainerView.bounds.size.width/2 - radius/2,
-                                                       self.circleContainerView.bounds.size.width/2 - radius/2,
-                                                       radius,
-                                                       radius);
-                             //                         circle.center = self.circleContainerView.center;
-                         }
-                         completion:nil];
-    }
-    else
-    {
-        [UIView animateWithDuration:1.0
-                              delay:0
-                            options:0
-                         animations:^{
-                             circle.alpha = 1.0;
-                             circle.transform = CGAffineTransformIdentity;
-                             circle.frame = CGRectMake(self.circleContainerView.bounds.size.width/2 - radius/2,
-                                                       self.circleContainerView.bounds.size.width/2 - radius/2,
-                                                       radius,
-                                                       radius);
-                             //                         circle.center = self.circleContainerView.center;
-                         }
-                         completion:nil];
-    }
-    
-    
+    [UIView animateWithDuration:1.0
+                          delay:0
+                        options:0
+                     animations:^{
+                         circle.alpha = 1.0;
+                         circle.transform = CGAffineTransformIdentity;
+                         circle.frame = CGRectMake(self.circleContainerView.bounds.size.width/2 - radius/2,
+                                                   self.circleContainerView.bounds.size.width/2 - radius/2,
+                                                   radius,
+                                                   radius);
+//                         circle.center = self.circleContainerView.center;
+                     }
+                     completion:nil];
     
     [self.circleContainerView sendSubviewToBack:circle];
 }
 
 - (void) insertSampleIntoDatabase:(NSNotification *)notification
 {
-    
     AEAudioFilePlayer *player = notification.object;
     
     NSManagedObjectContext *context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
@@ -384,8 +342,6 @@
                      withContext:context];
     
     NSLog(@"Sample added: %@",player.url.lastPathComponent);
-    
-    self.song.imageData = UIImagePNGRepresentation([self screenshotOfView:self.circleContainerView]);
     
     [context save:nil];
 }
@@ -430,9 +386,6 @@
                      }];
     
     [self redrawSampleCircles];
-    
-    self.song.imageData = UIImagePNGRepresentation([self screenshotOfView:self.circleContainerView]);
-    [context save:nil];
 }
 
 - (void) redrawSampleCircles
@@ -479,15 +432,6 @@
 {
     Singleton *shared = [Singleton sharedInstance];
     [shared.audioController addChannels:shared.audioFilePlayers];
-}
-
-- (IBAction)backButtonPressed:(UIButton *)sender
-{
-    [Singleton sharedInstance].audioFilePlayers = nil;
-    [[[Singleton sharedInstance] audioController] removeChannels:[[Singleton sharedInstance] audioController].channels];
-
-    
-    [self.presentingViewController dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void) removeMenu
@@ -545,14 +489,5 @@
     [self hideShowChrome];
 }
 
-- (UIImage *) screenshotOfView: (UIView *) view
-{
-    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0.0f);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [view.layer renderInContext:context];
-    UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return snapshotImage;
-}
 
 @end

@@ -23,7 +23,6 @@
 @property (nonatomic) BOOL didAppearFromNav;
 @property (weak, nonatomic) IBOutlet UIView *inlinePickerView;
 @property (weak, nonatomic) IBOutlet AKPickerView *packPicker;
-@property (nonatomic) NSUInteger maxNumberOfCircles;
 
 @end
 

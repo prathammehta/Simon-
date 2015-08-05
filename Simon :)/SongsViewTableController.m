@@ -50,6 +50,15 @@
     return cell;
 }
 
+- (IBAction)addSongPressed:(UIBarButtonItem *)sender
+{
+    [Song insertSongWithName:[NSString stringWithFormat:@"Song %lu",(unsigned long)self.fetchedResultsController.fetchedObjects.count+1]
+                 withContext:self.context
+               withImageData:nil];
+    
+    [self.context save:nil];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"songSelected"])
@@ -91,12 +100,6 @@
     [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL response){
         NSLog(@"Recording permission: %d",response);
     }];
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [[NSUserDefaults standardUserDefaults] setObject:[tableView cellForRowAtIndexPath:indexPath].textLabel.text
-                                              forKey:@"currentSongName"];
 }
 
 - (IBAction)editPressed:(UIBarButtonItem *)sender
