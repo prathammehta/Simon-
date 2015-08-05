@@ -152,6 +152,26 @@ static NSString * const reuseIdentifier = @"inlineSampleCell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    Singleton *shared = [Singleton sharedInstance];
+
+    if(shared.audioFilePlayers.count >= floor((self.view.frame.size.width - 20) / 75))
+    {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Max number of tracks Exceeded"
+                                                                                 message:@"Sorry! You can't add more music to this song"
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"Okay"
+                                                              style:UIAlertActionStyleCancel
+                                                            handler:nil];
+        [alertController addAction:alertAction];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        return;
+    }
+    
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"stopMusic" object:nil];
     
     [collectionView scrollToItemAtIndexPath:indexPath
@@ -160,7 +180,6 @@ static NSString * const reuseIdentifier = @"inlineSampleCell";
     
     
     
-    Singleton *shared = [Singleton sharedInstance];
     
     [shared.audioController removeChannels:shared.audioController.channels];
     
