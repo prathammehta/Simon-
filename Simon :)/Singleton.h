@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "TheAmazingAudioEngine.h"
 
 @interface Singleton : NSObject
@@ -14,11 +15,13 @@
 + (Singleton *) sharedInstance;
 
 + (NSString *) getPackNameForNumber:(NSInteger)n;
++ (UIColor *) getColorForSample:(NSString *)name;
 
 @property (nonatomic, strong) AEAudioController *audioController;
 @property (nonatomic, strong) NSMutableArray *audioFilePlayers;
 
 @property (nonatomic) NSInteger counterForPickerNames;
 - (NSString *) getNameForPicker;
+
 
 @end

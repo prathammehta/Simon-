@@ -12,4 +12,8 @@
 
 @interface HomeScreenCollectionViewController : CoreDataCollectionViewController
 
+- (void) selectLastCell;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
+@property (nonatomic) BOOL editingModeActive;
 @end

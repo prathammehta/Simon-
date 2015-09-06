@@ -21,6 +21,7 @@
 		4223E3BF1AC194FC00E51690 /* RecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4223E3BE1AC194FC00E51690 /* RecorderViewController.m */; };
 		422ABA531A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 422ABA521A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m */; };
 		422C10D61A428F7700B0A54B /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 422C10D51A428F7700B0A54B /* delete.png */; };
+		425A7E8C1B9C90AB003B5BA7 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425A7E8B1B9C90AB003B5BA7 /* libmp3lame.a */; };
 		426162911A40A34C00AC7094 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 426162901A40A34C00AC7094 /* main.m */; };
 		426162941A40A34C00AC7094 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 426162931A40A34C00AC7094 /* AppDelegate.m */; };
 		426162971A40A34C00AC7094 /* Simon___.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 426162951A40A34C00AC7094 /* Simon___.xcdatamodeld */; };
@@ -32,6 +33,7 @@
 		426162B81A40C08100AC7094 /* AddSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 426162B71A40C08100AC7094 /* AddSample.png */; };
 		4262D6091AB0A86E00950AE9 /* AKPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4262D6081AB0A86E00950AE9 /* AKPickerView.m */; };
 		426731181AA1BE1F005DD186 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426731171AA1BE1F005DD186 /* Images-2.xcassets */; };
+		4271CB601B7DF207008C888A /* deleteCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 4271CB5F1B7DF207008C888A /* deleteCell.png */; };
 		42819F9A1B6B75A00091A59F /* CRootsBanjo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42819F461B6B75A00091A59F /* CRootsBanjo.mp3 */; };
 		42819F9B1B6B75A00091A59F /* CRootsBass.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42819F471B6B75A00091A59F /* CRootsBass.mp3 */; };
 		42819F9C1B6B75A00091A59F /* CRootsChoir.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42819F481B6B75A00091A59F /* CRootsChoir.mp3 */; };
@@ -115,7 +117,6 @@
 		42AE875D1A70CC7000BD1F37 /* SongsViewTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AE875C1A70CC7000BD1F37 /* SongsViewTableController.m */; };
 		42AE87601A70CE6800BD1F37 /* Song+Operations.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AE875F1A70CE6800BD1F37 /* Song+Operations.m */; };
 		42AE87631A70D0F000BD1F37 /* Sample+Operations.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AE87621A70D0F000BD1F37 /* Sample+Operations.m */; };
-		42AE98061B6CBD2E00F2FDEA /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AE98051B6CBD2E00F2FDEA /* libmp3lame.a */; };
 		42C087851A4D362000BB4BE9 /* SamplePickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C087841A4D362000BB4BE9 /* SamplePickerCollectionViewController.m */; };
 		42C087891A4D364B00BB4BE9 /* SamplePreviewSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C087881A4D364B00BB4BE9 /* SamplePreviewSelectView.m */; };
 		42C0878D1A4D45B700BB4BE9 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C0878B1A4D45B700BB4BE9 /* pause.png */; };
@@ -181,6 +182,7 @@
 		422ABA521A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InlineSamplePickerCollectionViewController.m; sourceTree = "<group>"; };
 		422C10D51A428F7700B0A54B /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		425A47081B17A8EC005FB79D /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		425A7E8B1B9C90AB003B5BA7 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		4261628B1A40A34C00AC7094 /* Simon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4261628F1A40A34C00AC7094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		426162901A40A34C00AC7094 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		4262D6071AB0A86E00950AE9 /* AKPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPickerView.h; sourceTree = "<group>"; };
 		4262D6081AB0A86E00950AE9 /* AKPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPickerView.m; sourceTree = "<group>"; };
 		426731171AA1BE1F005DD186 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		4271CB5F1B7DF207008C888A /* deleteCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deleteCell.png; sourceTree = "<group>"; };
 		42819F461B6B75A00091A59F /* CRootsBanjo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CRootsBanjo.mp3; sourceTree = "<group>"; };
 		42819F471B6B75A00091A59F /* CRootsBass.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CRootsBass.mp3; sourceTree = "<group>"; };
 		42819F481B6B75A00091A59F /* CRootsChoir.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CRootsChoir.mp3; sourceTree = "<group>"; };
@@ -290,7 +293,6 @@
 		42AE875F1A70CE6800BD1F37 /* Song+Operations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Song+Operations.m"; sourceTree = "<group>"; };
 		42AE87611A70D0F000BD1F37 /* Sample+Operations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample+Operations.h"; sourceTree = "<group>"; };
 		42AE87621A70D0F000BD1F37 /* Sample+Operations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Sample+Operations.m"; sourceTree = "<group>"; };
-		42AE98051B6CBD2E00F2FDEA /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		42C087831A4D362000BB4BE9 /* SamplePickerCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplePickerCollectionViewController.h; sourceTree = "<group>"; };
 		42C087841A4D362000BB4BE9 /* SamplePickerCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplePickerCollectionViewController.m; sourceTree = "<group>"; };
 		42C087871A4D364B00BB4BE9 /* SamplePreviewSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplePreviewSelectView.h; sourceTree = "<group>"; };
@@ -354,7 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				421B130C1ADCE18400383D38 /* AVFoundation.framework in Frameworks */,
-				42AE98061B6CBD2E00F2FDEA /* libmp3lame.a in Frameworks */,
+				425A7E8C1B9C90AB003B5BA7 /* libmp3lame.a in Frameworks */,
 				421B130A1ADCE17F00383D38 /* AVKit.framework in Frameworks */,
 				421B13081ADCE14900383D38 /* AudioToolbox.framework in Frameworks */,
 			);
@@ -386,8 +388,7 @@
 			children = (
 				4223E3BD1AC194FC00E51690 /* RecorderViewController.h */,
 				4223E3BE1AC194FC00E51690 /* RecorderViewController.m */,
-				421B13021ADCDF3D00383D38 /* TPAACAudioConverter.h */,
-				421B13031ADCDF3D00383D38 /* TPAACAudioConverter.m */,
+				42FBEA4D1B96F76900687AAE /* File conversion */,
 				4279EDED1AE38356000F88F8 /* LAME */,
 			);
 			name = Recording;
@@ -447,6 +448,7 @@
 		4261628E1A40A34C00AC7094 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4271CB5F1B7DF207008C888A /* deleteCell.png */,
 				42819FE61B6CAE390091A59F /* newSong.png */,
 				42819F441B6B75A00091A59F /* Loops */,
 				421B13131ADCFC6300383D38 /* Logo.JPG */,
@@ -502,7 +504,7 @@
 		4279EDED1AE38356000F88F8 /* LAME */ = {
 			isa = PBXGroup;
 			children = (
-				42AE98051B6CBD2E00F2FDEA /* libmp3lame.a */,
+				425A7E8B1B9C90AB003B5BA7 /* libmp3lame.a */,
 				425A47081B17A8EC005FB79D /* lame.h */,
 			);
 			name = LAME;
@@ -805,6 +807,15 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		42FBEA4D1B96F76900687AAE /* File conversion */ = {
+			isa = PBXGroup;
+			children = (
+				421B13021ADCDF3D00383D38 /* TPAACAudioConverter.h */,
+				421B13031ADCDF3D00383D38 /* TPAACAudioConverter.m */,
+			);
+			name = "File conversion";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -854,7 +865,7 @@
 				TargetAttributes = {
 					4261628A1A40A34C00AC7094 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = RV68FXHFU7;
+						DevelopmentTeam = W5UTYLAN9X;
 					};
 					426162A61A40A34C00AC7094 = {
 						CreatedOnToolsVersion = 6.2;
@@ -887,6 +898,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4271CB601B7DF207008C888A /* deleteCell.png in Resources */,
 				42819FC41B6B75A00091A59F /* MoonOrchCtrBass.mp3 in Resources */,
 				42819FDF1B6B75A00091A59F /* TriphopEPiano.mp3 in Resources */,
 				42819FAD1B6B75A00091A59F /* HHCineBass.mp3 in Resources */,
@@ -1164,6 +1176,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "Simon :)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1171,6 +1184,36 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Simon",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
 					"$(PROJECT_DIR)/Simon",
 					":)",
 					"$(PROJECT_DIR)/Simon",
@@ -1222,6 +1265,36 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Simon",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
+					"$(PROJECT_DIR)/Simon",
+					":)",
 					"$(PROJECT_DIR)/Simon",
 					":)",
 					"$(PROJECT_DIR)/Simon",

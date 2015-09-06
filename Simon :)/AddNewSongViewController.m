@@ -9,6 +9,7 @@
 #import "AddNewSongViewController.h"
 #import "Song+Operations.h"
 #import "AppDelegate.h"
+#import "HomeScreenCollectionViewController.h"
 
 @interface AddNewSongViewController ()
 
@@ -16,6 +17,11 @@
 
 @implementation AddNewSongViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+        self.view.backgroundColor = [UIColor colorWithRed:0.19 green:0.19 blue:0.19 alpha:1];
+}
 
 
 - (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender
@@ -32,7 +38,13 @@
                  withContext:context
                withImageData:nil];
     
-    [self.presentingViewController dismissViewControllerAnimated:YES
-                                                      completion:nil];
+    [context save:nil];
+    
+    
+    [self.presentingViewController dismissViewControllerAnimated:NO
+                                                      completion:^{
+                                                          [[NSNotificationCenter defaultCenter] postNotificationName:@"selectLastCell"
+                                                                                                              object:nil];
+                                                      }];
 }
 @end

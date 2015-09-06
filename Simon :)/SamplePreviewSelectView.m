@@ -48,29 +48,35 @@
 
 - (UIImageView *)imageView
 {
+    
     if(!_imageView)
     {
-        self.tintColor = [UIColor whiteColor];
         _imageView = [[UIImageView alloc] initWithFrame:self.circleRect];
-        
-        if([self.name.lowercaseString containsString:@"bass"] || [self.name.lowercaseString containsString:@"guit"])
-        {
-            _imageView.image = [UIImage imageNamed:@"guitar.png"];
-        }
-        else if ([self.name.lowercaseString containsString:@"clav"])
-        {
-            _imageView.image = [UIImage imageNamed:@"saxophone.png"];
-        }
-        else if ([self.name.lowercaseString containsString:@"drum"] || [self.name.lowercaseString containsString:@"beat"])
-        {
-            _imageView.image = [UIImage imageNamed:@"drums.png"];
-        }
-        else
-        {
-            _imageView.image = [UIImage imageNamed:@"electro.png"];
-        }
-        
     }
+    
+    self.tintColor = [UIColor whiteColor];
+    
+    
+    if([self.name.lowercaseString containsString:@"bass"] || [self.name.lowercaseString containsString:@"guit"])
+    {
+        _imageView.image = [[UIImage imageNamed:@"guitar.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    }
+    else if ([self.name.lowercaseString containsString:@"clav"])
+    {
+        _imageView.image = [[UIImage imageNamed:@"saxophone.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    }
+    else if ([self.name.lowercaseString containsString:@"drum"] || [self.name.lowercaseString containsString:@"beat"])
+    {
+        _imageView.image = [[UIImage imageNamed:@"drums.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    }
+    else
+    {
+        _imageView.image = [[UIImage imageNamed:@"electro.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    }
+    
+    _imageView.tintColor = [Singleton getColorForSample:self.name];
+    NSLog(@"sample name in item: %@",self.name);
+    
     return _imageView;
 }
 
@@ -114,7 +120,7 @@
         
         [shared.audioController removeChannels:@[self.testPlayer]];
     }
-
+    
     [self addGestureRecognizer:self.longPressGesture];
 }
 
@@ -131,36 +137,39 @@
     /// Set text alignment
     paragraphStyle.alignment = NSTextAlignmentCenter;
     
-    [self.name drawInRect:CGRectMake(0, rect.size.height-30, rect.size.width, 30)
-           withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12],
-                            NSParagraphStyleAttributeName:paragraphStyle,
-                            NSForegroundColorAttributeName:[UIColor blackColor]}];
+    NSString *displayName = [self.name.lowercaseString stringByReplacingOccurrencesOfString:self.packName.lowercaseString
+                                                                                 withString:@""];
     
-//    self.label.text = self.name;
+    [displayName drawInRect:CGRectMake(0, rect.size.height-30, rect.size.width, 30)
+             withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12],
+                              NSParagraphStyleAttributeName:paragraphStyle,
+                              NSForegroundColorAttributeName:[UIColor lightGrayColor]}];
+    
+    //    self.label.text = self.name;
     
     [self addGestureRecognizer:self.longPressGesture];
     
     
-    if([self.name.lowercaseString containsString:@"bass"] || [self.name.lowercaseString containsString:@"guit"])
-    {
-        self.imageView.image = [UIImage imageNamed:@"guitar.png"];
-    }
-    else if ([self.name.lowercaseString containsString:@"clav"])
-    {
-        self.imageView.image = [UIImage imageNamed:@"saxophone.png"];
-    }
-    else if ([self.name.lowercaseString containsString:@"drum"] || [self.name.lowercaseString containsString:@"beat"])
-    {
-        self.imageView.image = [UIImage imageNamed:@"drums.png"];
-    }
-    else
-    {
-        self.imageView.image = [UIImage imageNamed:@"electro.png"];
-    }
-    
+    //    if([self.name.lowercaseString containsString:@"bass"] || [self.name.lowercaseString containsString:@"guit"])
+    //    {
+    //        self.imageView.image = [UIImage imageNamed:@"guitar.png"];
+    //    }
+    //    else if ([self.name.lowercaseString containsString:@"clav"])
+    //    {
+    //        self.imageView.image = [UIImage imageNamed:@"saxophone.png"];
+    //    }
+    //    else if ([self.name.lowercaseString containsString:@"drum"] || [self.name.lowercaseString containsString:@"beat"])
+    //    {
+    //        self.imageView.image = [UIImage imageNamed:@"drums.png"];
+    //    }
+    //    else
+    //    {
+    //        self.imageView.image = [UIImage imageNamed:@"electro.png"];
+    //    }
     
     [self addSubview:self.imageView];
-//    [self addSubview:self.label];
+
+    //    [self addSubview:self.label];
 }
 
 

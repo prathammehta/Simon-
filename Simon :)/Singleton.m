@@ -92,4 +92,51 @@ static Singleton *sharedInstance = nil;
     return nil;
 }
 
++ (UIColor *) getColorForSample:(NSString *)name
+{
+    
+    if([name containsString:@"Fonky"])
+    {
+        return [UIColor colorWithRed:0.96 green:0.63 blue:0 alpha:1];
+    }
+    else if([name containsString:@"HardRock"])
+    {
+        return [UIColor colorWithRed:226.0/255.0 green:11/255.0 blue:5/255.0 alpha:1];
+    }
+    else if([name containsString:@"RockPack"])
+    {
+        return [UIColor colorWithRed:52/255.0 green:103/255.0 blue:122/255.0 alpha:1];
+    }
+    else if([name containsString:@"Triphop"])
+    {
+        return [UIColor colorWithRed:24/255.0 green:142/255.0 blue:54/255.0 alpha:1];
+    }
+    else if([name containsString:@"HHCine"])
+    {
+        return [UIColor colorWithRed:250/255.0 green:232/255.0 blue:5/255.0 alpha:1];
+    }
+    else if([name containsString:@"JazzGrooTrans"])
+    {
+        return [UIColor colorWithRed:0/255.0 green:102/255.0 blue:204/255.0 alpha:1];
+    }
+    else if([name containsString:@"India"])
+    {
+        return [UIColor colorWithRed:148/255.0 green:0/255.0 blue:212/255.0 alpha:1];
+    }
+    else if([name containsString:@"Tekno"])
+    {
+        return [UIColor colorWithRed:2/255.0 green:255/255.0 blue:2/255.0 alpha:1];
+    }
+    else if([name containsString:@"CRoots"])
+    {
+        return [UIColor colorWithRed:153/255.0 green:51/255.0 blue:0/255.0 alpha:1];
+    }
+    else if([name containsString:@"MoonOrch"])
+    {
+        return [UIColor colorWithRed:102/255.0 green:153/255.0 blue:255/255.0 alpha:1];
+    }
+    
+    return [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+}
+
 @end

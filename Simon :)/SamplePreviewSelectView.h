@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UIBezierPath *circlePath;
 @property (nonatomic) CGRect circleRect;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *packName;
 @property (nonatomic, strong) UIColor *color;
 
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPressGesture;

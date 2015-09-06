@@ -8,6 +8,7 @@
 
 #import "RecorderViewController.h"
 
+
 @interface RecorderViewController () <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic) BOOL isRecording;
@@ -31,9 +32,8 @@
     self.secondsRecorded = 0;
     self.activityIndicator.hidesWhenStopped = YES;
     self.activityIndicator.hidden = YES;
-    self.activityIndicator.color = [UIColor darkGrayColor];
+    self.activityIndicator.color = [UIColor whiteColor];
 }
-
 
 - (AEAudioController *)audioController
 {
@@ -111,7 +111,6 @@
     self.timerLabel.text = [NSString stringWithFormat:@"%lds",(long)self.secondsRecorded];
 }
 
-
 - (IBAction)buttonPressed:(UIButton *)sender
 {
     
@@ -163,12 +162,12 @@
                 NSString *cafFilePath = [docsDir stringByAppendingPathComponent:@"song.caf"];
                 
                 
-                [self cafToMp3:cafFilePath];
+                //[self cafToMp3:cafFilePath];
                 
                 [self performSelectorOnMainThread:@selector(prepareForConvertedFile) withObject:nil waitUntilDone:NO];
             });
             
-//            [[NSNotificationCenter defaultCenter] postNotificationName:@"hideShowChrome" object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"hideShowChrome" object:nil];
             
             
             
@@ -222,6 +221,8 @@
     
     NSString *songName = [((NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"currentSongName"]) stringByAppendingString:@".mp3"];
     
+    songName = @"song.caf";
+    
     NSString *documentsFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *path = [documentsFolder stringByAppendingPathComponent:songName];
     
@@ -229,6 +230,9 @@
     
     UIActivityViewController *activityViewOCntroller = [[UIActivityViewController alloc] initWithActivityItems:@[fileURL]
                                                                                          applicationActivities:nil];
+
+    activityViewOCntroller.popoverPresentationController.sourceView = self.recordButton;
+    
     [self presentViewController:activityViewOCntroller animated:YES completion:nil];
     
     activityViewOCntroller.completionWithItemsHandler = ^(NSString *activityType,
@@ -269,7 +273,6 @@
     
     
 }
-
 
 - (void)cafToMp3:(NSString*)cafFileName
 {
@@ -325,7 +328,6 @@
     }
 }
 
-
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
     switch (result)
@@ -345,6 +347,20 @@
         default:
             break;
     }
+}
+
+- (void)startConverting:(NSString *) cafFilePath
+{
+    NSArray *dirPaths;
+    NSString *docsDir;
+    
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    
+    NSString *songName = [((NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"currentSongName"]) stringByAppendingString:@".mp3"];
+    
+    _mp3FilePath = [docsDir stringByAppendingPathComponent:songName];
+    
 }
 
 

@@ -125,8 +125,11 @@ static NSString * const reuseIdentifier = @"inlineSampleCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    
     SamplePreviewSelectView *view = (SamplePreviewSelectView *)[cell.contentView viewWithTag:1];
     view.name = [[self.audioSamples objectAtIndex:indexPath.row] stringByDeletingPathExtension];
+    view.packName = self.filterString;
     view.color = [UIColor colorWithRed:0.82 green:0.40 blue:0.24 alpha:1.0];
     [view setNeedsDisplay];
     

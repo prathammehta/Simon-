@@ -20,6 +20,7 @@
 @property (nonatomic) float currentValue;
 @property (nonatomic) NSInteger sampleNumber;
 @property (nonatomic, strong) NSString *audioFileName;
+@property (nonatomic, strong) UIImageView *imageView;
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 

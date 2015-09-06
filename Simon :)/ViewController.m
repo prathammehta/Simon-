@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UIImageView *blurredView;
 @property (nonatomic, strong) UIButton *dismissMenuButton;
 @property (nonatomic) BOOL chromeShown;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 @end
 
@@ -29,6 +30,8 @@
     [super viewDidLoad];
     [self setupShadows];
     self.chromeShown = YES;
+    
+    self.view.backgroundColor = [UIColor colorWithRed:0.19 green:0.19 blue:0.19 alpha:1];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNewCircle:) name:@"sampleAdded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(insertSampleIntoDatabase:) name:@"sampleAdded" object:nil];
@@ -41,7 +44,12 @@
                                                  name:@"insturmentCategoryTapped"
                                                object:nil];
     
+    
+    [[NSUserDefaults standardUserDefaults] setObject:self.song.name forKey:@"currentSongName"];
+    
 }
+
+
 
 - (NSUInteger)numberOfItemsInPickerView:(AKPickerView *)pickerView
 {
@@ -49,14 +57,10 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated
-{
+{   
     [super viewWillAppear:animated];
     
     self.maxNumberOfCircles = floor((self.view.frame.size.width - 20) / 75);
-    
-    NSLog(@"Max number of circles: %ld", self.maxNumberOfCircles);
-    
-    
     
     if(self.didAppearFromNav)
     {
@@ -112,6 +116,8 @@
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"packPickerTapped"
                                                             object:[NSNumber numberWithInteger:0]];
+    
+        [self redrawSampleCircles];
     }
 }
 
@@ -182,6 +188,8 @@
                                                                         self.inlinePickerView.center.y + self.inlinePickerView.frame.size.height);
                              self.packPicker.alpha = 0;
                              self.inlinePickerView.alpha = 0;
+                             self.backButton.alpha = 0;
+                             self.backButton.hidden = YES;
                          }
                          completion:nil];
     }
@@ -198,6 +206,9 @@
                                                                         self.inlinePickerView.center.y - self.inlinePickerView.frame.size.height);
                              self.packPicker.alpha = 1.0;
                              self.inlinePickerView.alpha = 1;
+                             
+                             self.backButton.alpha = 1;
+                             self.backButton.hidden = NO;
                          }
                          completion:nil];
 
@@ -212,12 +223,11 @@
     
     self.maxNumberOfCircles = floor((self.view.frame.size.width - 20) / 75);
     
-    NSLog(@"Max number of circles: %ld", self.maxNumberOfCircles);
     
     self.packPicker.delegate = self;
-    
     self.packPicker.interitemSpacing = 20;
-    
+    self.packPicker.textColor = [UIColor whiteColor];
+    self.packPicker.highlightedTextColor = [UIColor whiteColor];
     [self.packPicker reloadData];
     
     
@@ -305,6 +315,8 @@
     
     NSInteger radius = 60+60*self.sampleCircles.count;
     
+
+    
     circle.frame = CGRectMake(self.circleContainerView.bounds.size.width/2 - radius/2,
                               self.circleContainerView.bounds.size.width/2 - radius/2,
                               radius,
@@ -321,32 +333,27 @@
     circle.layer.shadowOpacity = 0.5;
     //circle.alpha = 0;
     
-    circle.center = CGPointMake(self.inlinePickerView.center.x,
-                                self.inlinePickerView.center.y - 75);
     
-    circle.transform = CGAffineTransformMakeScale(100/circle.frame.size.width,
-                                                  100/circle.frame.size.height);
-    
-    [self.circleContainerView addSubview:circle];
     
     if(notification == nil)
     {
-        [UIView animateWithDuration:0
-                              delay:0
-                            options:0
-                         animations:^{
-                             circle.alpha = 1.0;
-                             circle.transform = CGAffineTransformIdentity;
-                             circle.frame = CGRectMake(self.circleContainerView.bounds.size.width/2 - radius/2,
-                                                       self.circleContainerView.bounds.size.width/2 - radius/2,
-                                                       radius,
-                                                       radius);
-                             //                         circle.center = self.circleContainerView.center;
-                         }
-                         completion:nil];
+        circle.alpha = 1.0;
+        [self.circleContainerView addSubview:circle];
+        circle.frame = CGRectMake(self.circleContainerView.bounds.size.width/2 - radius/2,
+                                  self.circleContainerView.bounds.size.width/2 - radius/2,
+                                  radius,
+                                  radius);
     }
     else
     {
+        circle.center = CGPointMake(self.inlinePickerView.center.x,
+                                    self.inlinePickerView.center.y - 75);
+        
+        circle.transform = CGAffineTransformMakeScale(100/circle.frame.size.width,
+                                                      100/circle.frame.size.height);
+        
+        [self.circleContainerView addSubview:circle];
+        
         [UIView animateWithDuration:1.0
                               delay:0
                             options:0
@@ -357,7 +364,7 @@
                                                        self.circleContainerView.bounds.size.width/2 - radius/2,
                                                        radius,
                                                        radius);
-                             //                         circle.center = self.circleContainerView.center;
+//                             circle.center = self.circleContainerView.center;
                          }
                          completion:nil];
     }

@@ -22,6 +22,10 @@ static NSString * const reuseIdentifier = @"songCell";
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
+    self.collectionView.backgroundColor = [UIColor colorWithRed:0.19 green:0.19 blue:0.19 alpha:1];
+    
     self.context = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
     
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Song"];
@@ -31,8 +35,23 @@ static NSString * const reuseIdentifier = @"songCell";
                                                                         managedObjectContext:self.context
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(selectLastCell)
+                                                 name:@"selectLastCell"
+                                               object:nil];
     
-    [super viewDidLoad];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
+    layout.sectionInset = UIEdgeInsetsMake(0,
+                                           self.collectionView.frame.size.width/2 - 65,
+                                           0,
+                                           self.collectionView.frame.size.width/2 - 65);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -57,7 +76,17 @@ static NSString * const reuseIdentifier = @"songCell";
     UILabel *label = (UILabel *)[cell.contentView viewWithTag:2];
     
     label.text = song.name;
-    label.alpha = 0;
+    label.hidden = NO;
+    
+    UIButton *deleteButton = (UIButton *)[cell.contentView viewWithTag:3];
+    if(self.editingModeActive)
+    {
+        deleteButton.hidden = NO;
+    }
+    else
+    {
+        deleteButton.hidden = YES;
+    }
     
     cell.clipsToBounds = NO;
     cell.layer.masksToBounds = NO;
@@ -73,7 +102,6 @@ static NSString * const reuseIdentifier = @"songCell";
         UICollectionViewCell *cell = [visibleCells objectAtIndex:i];
         
         UIButton *button = (UIButton *)[cell.contentView viewWithTag:1];
-        UILabel *label = (UILabel *)[cell.contentView viewWithTag:2];
         
         UICollectionViewLayoutAttributes *attributes = [self.collectionView layoutAttributesForItemAtIndexPath:[self.collectionView indexPathForCell:cell]];
         
@@ -89,7 +117,7 @@ static NSString * const reuseIdentifier = @"songCell";
             button.transform = CGAffineTransformMakeScale(1.0 + ((100.0-distanceFromCenter)/100.0),
                                                           1.0 + ((100.0-distanceFromCenter)/100.0));
             
-            label.alpha = ((100.0-distanceFromCenter)/100.0) + 0.25;
+
             
         }
         else
@@ -126,9 +154,7 @@ static NSString * const reuseIdentifier = @"songCell";
         for(int i=0; i<visibleCells.count; i++)
         {
             if(![[collectionView indexPathForCell:((UICollectionViewCell *)visibleCells[i])] isEqual:indexPath])
-            {
-                ((UICollectionViewCell *)visibleCells[i]).alpha = 0;
-            }
+            {}
             else
             {
                 [cell viewWithTag:2].hidden = YES;
@@ -149,4 +175,39 @@ static NSString * const reuseIdentifier = @"songCell";
                      }];
 }
 
+- (void) selectLastCell
+{
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.collectionView numberOfItemsInSection:0] - 1
+                                                inSection:0];
+    
+    [self.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:0];
+    
+    [self performSegueWithIdentifier:@"showSimon" sender:self];
+}
+- (IBAction)deleteButtonPressed:(UIButton *)sender
+{
+    UIView *contentView = sender.superview;
+    UICollectionViewCell *cell = (UICollectionViewCell *)contentView.superview;
+    
+    [self.context deleteObject:[self.fetchedResultsController objectAtIndexPath:[self.collectionView indexPathForCell:cell]]];
+    
+    [self.context save:nil];
+}
+
+- (IBAction)editButtonPressed:(UIBarButtonItem *)sender
+{
+    if([sender.title isEqualToString:@"Edit"])
+    {
+        self.editingModeActive = YES;
+        [self.collectionView reloadItemsAtIndexPaths:[self.collectionView indexPathsForVisibleItems]];
+        [sender setTitle:@"Done"];
+    }
+    else
+    {
+        self.editingModeActive = NO;
+        [self.collectionView reloadItemsAtIndexPaths:[self.collectionView indexPathsForVisibleItems]];
+        [sender setTitle:@"Edit"];
+    }
+}
 @end

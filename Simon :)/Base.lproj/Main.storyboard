@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUp-ey-erg" userLabel="Circle Container View">
-                                <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                <rect key="frame" x="0.0" y="74" width="320" height="320"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HG4-u3-5XW">
                                         <rect key="frame" x="125" y="125" width="70" height="70"/>
@@ -58,6 +58,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soq-5Q-tSp">
                                 <rect key="frame" x="16" y="20" width="35" height="30"/>
                                 <state key="normal" title="Back">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -75,7 +76,7 @@
                             <constraint firstItem="PUm-IM-rFo" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottomMargin" constant="6" id="phu-Sf-fTp"/>
                             <constraint firstItem="PUm-IM-rFo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="qDs-YG-tk4"/>
                             <constraint firstAttribute="centerX" secondItem="fUp-ey-erg" secondAttribute="centerX" id="u6J-5X-KmI"/>
-                            <constraint firstAttribute="centerY" secondItem="fUp-ey-erg" secondAttribute="centerY" id="wa9-im-Ng4"/>
+                            <constraint firstAttribute="centerY" secondItem="fUp-ey-erg" secondAttribute="centerY" constant="50" id="wa9-im-Ng4"/>
                             <constraint firstItem="fUp-ey-erg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="xD5-VZ-yjz"/>
                         </constraints>
                     </view>
@@ -83,6 +84,7 @@
                     <navigationItem key="navigationItem" id="GAj-g4-wcV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="backButton" destination="soq-5Q-tSp" id="tVM-Nr-2hJ"/>
                         <outlet property="circleContainerView" destination="fUp-ey-erg" id="iOK-Bw-11J"/>
                         <outlet property="inlinePickerView" destination="PUm-IM-rFo" id="CRg-IH-Dud"/>
                         <outlet property="packPicker" destination="twy-zR-mbY" id="vnU-ud-oPl"/>
@@ -318,7 +320,7 @@
                             <size key="itemSize" width="130" height="420"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="95" minY="0.0" maxX="95" maxY="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="songCell" id="wp3-3r-LgP">
@@ -338,9 +340,20 @@
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC0-ug-5zi">
                                             <rect key="frame" x="8" y="280" width="114" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbY-o3-Lpb">
+                                            <rect key="frame" x="42" y="312" width="46" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <state key="normal" title="Delete">
+                                                <color key="titleColor" red="1" green="0.1805731656" blue="0.25746253520000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="deleteButtonPressed:" destination="909-se-idk" eventType="touchUpInside" id="Vdh-FY-9nc"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -353,14 +366,30 @@
                             <outlet property="delegate" destination="909-se-idk" id="mff-zu-amj"/>
                         </connections>
                     </collectionView>
+                    <toolbarItems>
+                        <barButtonItem title="About Us" id="qPi-0S-13c">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="aTF-Ff-Z8M" kind="modal" id="i1i-oM-hqG"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="SocialSymphony" id="IQC-Sg-JaX">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" style="plain" id="Ovm-kn-1Of">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="editButtonPressed:" destination="909-se-idk" id="xMS-H7-WZu"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MVD-Cg-BM7">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="wUs-UQ-n1E" kind="modal" id="2m9-Zm-FUk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="Ovm-kn-1Of" id="z2h-HO-ar2"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="showSimon" animates="NO" id="BN2-J2-FZN"/>
                     </connections>
                 </collectionViewController>
@@ -412,6 +441,7 @@ Tous les samples inclus dans Social Symphony sont la propriété exclusive de Fr
 Tout reproduction, modification, distribution à usage commerciale est formellement interdite.
 En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp.com
 2015 ©Social Symphony-Fred Thomasseau</string>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
@@ -445,7 +475,7 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIz-HX-j07" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="383" y="1647"/>
+            <point key="canvasLocation" x="389" y="1095"/>
         </scene>
         <!--Add a new Song-->
         <scene sceneID="r73-6V-FOD">
@@ -459,18 +489,8 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the name of the new song you wish to create" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg8-rB-Ye3">
-                                <rect key="frame" x="49" y="166" width="222" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="222" id="FtK-a9-zvg"/>
-                                    <constraint firstAttribute="height" constant="53" id="Sb1-xN-Itk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG5-rG-p6L">
-                                <rect key="frame" x="135" y="265" width="50" height="30"/>
+                                <rect key="frame" x="135" y="182" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Eye-f5-QLu"/>
                                     <constraint firstAttribute="width" constant="50" id="RZZ-Ys-4dl"/>
@@ -483,7 +503,7 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jhi-PL-Ab8">
-                                <rect key="frame" x="64" y="227" width="192" height="30"/>
+                                <rect key="frame" x="64" y="144" width="192" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="192" id="UVK-w6-fyZ"/>
                                     <constraint firstAttribute="height" constant="30" id="hGL-th-SEA"/>
@@ -491,10 +511,20 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the name of the new song you wish to create" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg8-rB-Ye3">
+                                <rect key="frame" x="49" y="83" width="222" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="222" id="FtK-a9-zvg"/>
+                                    <constraint firstAttribute="height" constant="53" id="Sb1-xN-Itk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yg8-rB-Ye3" firstAttribute="top" secondItem="9Oh-Rh-dCJ" secondAttribute="bottom" constant="102" id="VfV-hX-8vu"/>
+                            <constraint firstItem="yg8-rB-Ye3" firstAttribute="top" secondItem="9Oh-Rh-dCJ" secondAttribute="bottom" constant="19" id="VfV-hX-8vu"/>
                             <constraint firstAttribute="centerX" secondItem="aG5-rG-p6L" secondAttribute="centerX" id="Xwp-4s-o7N"/>
                             <constraint firstItem="Jhi-PL-Ab8" firstAttribute="top" secondItem="yg8-rB-Ye3" secondAttribute="bottom" constant="8" id="Zg6-Pq-TIe"/>
                             <constraint firstItem="aG5-rG-p6L" firstAttribute="top" secondItem="Jhi-PL-Ab8" secondAttribute="bottom" constant="8" id="aUI-ZU-wjP"/>
@@ -515,7 +545,7 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GOj-8h-DhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="-311"/>
+            <point key="canvasLocation" x="794" y="-356"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r2O-aW-9Xk">
@@ -537,7 +567,7 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQP-R9-AzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1246" y="-305"/>
+            <point key="canvasLocation" x="1233" y="-356"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lnb-bg-Z7B">
@@ -585,7 +615,7 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XY-2P-WpH">
                                 <rect key="frame" x="0.0" y="24" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.1805731656" blue="0.25746253520000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-gU-vGU">
@@ -634,13 +664,17 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
         <!--Navigation Controller-->
         <scene sceneID="JUq-Xh-ubs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qQH-oQ-q4Z" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="qQH-oQ-q4Z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tyq-1j-naM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yRY-kE-2s2">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </toolbar>
                     <connections>
                         <segue destination="909-se-idk" kind="relationship" relationship="rootViewController" id="V9t-DL-zLv"/>
                     </connections>
@@ -651,7 +685,7 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
         </scene>
     </scenes>
     <resources>
-        <image name="AddSample.png" width="471" height="470"/>
+        <image name="AddSample.png" width="353" height="353"/>
         <image name="Logo.JPG" width="1024" height="1024"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -659,4 +693,7 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="i1i-oM-hqG"/>
+    </inferredMetricsTieBreakers>
 </document>

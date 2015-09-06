@@ -10,19 +10,6 @@
 
 @implementation SampleCircle
 
-- (void) getColorForView
-{
-    if(!self.color)
-    {
-//        CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
-//        CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
-//        CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
-        
-        self.color = [UIColor colorWithHue:0.5 saturation:0.75 brightness:0.75 alpha:0.3];        
-        
-    }
-}
-
 - (UITapGestureRecognizer *)tapGestureRecognizer
 {
     if(!_tapGestureRecognizer)
@@ -37,6 +24,34 @@
     NSLog(@"Circle Tapped");
     self.isMuted = !self.isMuted;
     [self setNeedsDisplay];
+}
+
+- (UIImageView *)imageView
+{
+    if(!_imageView)
+    {
+        self.tintColor = [UIColor whiteColor];
+        _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+        
+        if([self.audioFileName.lowercaseString containsString:@"bass"] || [self.audioFileName.lowercaseString containsString:@"guit"])
+        {
+            _imageView.image = [[UIImage imageNamed:@"guitar.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        }
+        else if ([self.audioFileName.lowercaseString containsString:@"clav"])
+        {
+            _imageView.image = [[UIImage imageNamed:@"saxophone.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        }
+        else if ([self.audioFileName.lowercaseString containsString:@"drum"] || [self.audioFileName.lowercaseString containsString:@"beat"])
+        {
+            _imageView.image = [[UIImage imageNamed:@"drums.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        }
+        else
+        {
+            _imageView.image = [[UIImage imageNamed:@"electro.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        }
+        _imageView.alpha = 0.5;
+    }
+    return _imageView;
 }
 
 - (void) updateValue:(EFCircularSlider *)slider
@@ -62,7 +77,6 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    
     for(UIView *view in self.subviews)
     {
         [view removeFromSuperview];
@@ -77,8 +91,13 @@
     }
     
     self.path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(1, 1, self.bounds.size.width-2, self.bounds.size.height-2)];
-    [self getColorForView];
     
+    Singleton *shared = [Singleton sharedInstance];
+    AEAudioFilePlayer *player = [shared.audioFilePlayers objectAtIndex:self.sampleNumber];
+    
+    self.audioFileName = player.url.lastPathComponent;
+    
+    self.color = [Singleton getColorForSample:self.audioFileName];
     
     if(!self.isMuted)
     {
@@ -125,16 +144,18 @@
     [self addSubview:self.slider];
     [self addSubview:self.deleteButton];
     
-    Singleton *shared = [Singleton sharedInstance];
-    AEAudioFilePlayer *player = [shared.audioFilePlayers objectAtIndex:self.sampleNumber];
     
-    self.audioFileName = player.url.lastPathComponent;
+    
     
     if(self.currentValue != 0) self.slider.currentValue = self.currentValue;
     
     if(![self.gestureRecognizers containsObject:self.tapGestureRecognizer])
         [self addGestureRecognizer:self.tapGestureRecognizer];
     
+    NSLog(@"File name: %@",self.audioFileName);
+    
+    [self.imageView setFrame:CGRectMake((self.bounds.size.width/2)-8, 12, 16, 16)];
+    [self addSubview:self.imageView];
     
 }
 
