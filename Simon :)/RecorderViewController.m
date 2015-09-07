@@ -102,7 +102,63 @@
     [self.audioController removeOutputReceiver:self.recorder];
     [self.recorder finishRecording];
     self.isRecording = NO;
-//    self.recorder = nil;
+    
+    float vocalStartMarker = 0.0f;
+    float vocalEndMarker = 5.0f;
+    
+    NSArray *documentsFolders = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *path = [documentsFolders[0] stringByAppendingPathComponent:@"song.caf"];
+    
+    NSURL *audioFileInput = [NSURL fileURLWithPath:path]; // give your audio file path
+    
+    NSString *docsDirs;
+    NSArray *dirPath;
+    dirPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDirs = [dirPath objectAtIndex:0];
+    NSString *destinationURLs = [docsDirs stringByAppendingPathComponent:@"trim.caf"];
+    NSURL *audioFileOutput = [NSURL fileURLWithPath:destinationURLs];
+    
+    if (!audioFileInput || !audioFileOutput)
+    {
+        NSLog(@"Trimming failed. Couldn't find some file");
+    }
+    
+    
+    [[NSFileManager defaultManager] removeItemAtURL:audioFileOutput error:NULL];
+    AVAsset *asset = [AVURLAsset URLAssetWithURL:audioFileInput options:nil];
+    AVAssetExportSession *exportSession = [AVAssetExportSession exportSessionWithAsset:asset
+                                                                            presetName:AVAssetExportPresetAppleM4A];
+    if (exportSession == nil)
+    {
+        NSLog(@"Couldn't create export session");
+    }
+    
+    CMTime startTime = CMTimeMake((int)(floor(vocalStartMarker * 100)), 100);
+    CMTime stopTime = CMTimeMake((int)(ceil(vocalEndMarker * 100)), 100);
+    CMTimeRange exportTimeRange = CMTimeRangeFromTimeToTime(startTime, stopTime);
+    exportSession.outputURL = audioFileOutput;
+    
+    NSLog(@"File types: %@",exportSession.supportedFileTypes);
+    
+    exportSession.timeRange = exportTimeRange;
+    exportSession.outputFileType = exportSession.supportedFileTypes.firstObject;
+    
+    [exportSession exportAsynchronouslyWithCompletionHandler:^
+     {
+         if (AVAssetExportSessionStatusCompleted == exportSession.status)
+         {
+             // It worked!
+             NSLog(@"[DONE TRIMMING.....");
+             NSLog(@"ouput audio trim file %@",audioFileOutput);
+         }
+         else if (AVAssetExportSessionStatusFailed == exportSession.status)
+         {
+             // It failed...
+             
+             NSLog(@"FAILED TRIMMING..... Error: %@",exportSession.error);
+         }
+     }];
 }
 
 - (void) updateTimerLabel
