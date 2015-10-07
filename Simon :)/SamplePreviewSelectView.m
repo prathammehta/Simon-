@@ -57,15 +57,25 @@
     self.tintColor = [UIColor whiteColor];
     
     
-    if([self.name.lowercaseString containsString:@"bass"] || [self.name.lowercaseString containsString:@"guit"])
+    if([self.name.lowercaseString containsString:@"bass"] ||
+       [self.name.lowercaseString containsString:@"guit"] ||
+       [self.name.lowercaseString containsString:@"sarod"] ||
+       [self.name.lowercaseString containsString:@"subahar"] ||
+       [self.name.lowercaseString containsString:@"banjo"] ||
+       [self.name.lowercaseString containsString:@"folk"] ||
+       [self.name.lowercaseString containsString:@"mandolin"])
     {
         _imageView.image = [[UIImage imageNamed:@"guitar.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     }
-    else if ([self.name.lowercaseString containsString:@"clav"])
-    {
-        _imageView.image = [[UIImage imageNamed:@"saxophone.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    }
-    else if ([self.name.lowercaseString containsString:@"drum"] || [self.name.lowercaseString containsString:@"beat"])
+   
+    else if ([self.name.lowercaseString containsString:@"drum"] ||
+             [self.name.lowercaseString containsString:@"beat"] ||
+             [self.name.lowercaseString containsString:@"conga"] ||
+             [self.name.lowercaseString containsString:@"persantar"] ||
+             [self.name.lowercaseString containsString:@"tambourine"] ||
+             [self.name.lowercaseString containsString:@"maracas"] ||
+             [self.name.lowercaseString containsString:@"natkick"] ||
+             [self.name.lowercaseString containsString:@"synth"])
     {
         _imageView.image = [[UIImage imageNamed:@"drums.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     }
@@ -137,8 +147,10 @@
     /// Set text alignment
     paragraphStyle.alignment = NSTextAlignmentCenter;
     
-    NSString *displayName = [self.name.lowercaseString stringByReplacingOccurrencesOfString:self.packName.lowercaseString
-                                                                                 withString:@""];
+    NSString *displayName = [self.name stringByReplacingOccurrencesOfString:self.packName
+                                                                 withString:@""];
+    displayName = [displayName stringByReplacingOccurrencesOfString:@"ZZZ"
+                                                         withString:@""];
     
     [displayName drawInRect:CGRectMake(0, rect.size.height-30, rect.size.width, 30)
              withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12],

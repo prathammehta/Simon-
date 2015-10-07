@@ -20,9 +20,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        self.view.backgroundColor = [UIColor colorWithRed:0.19 green:0.19 blue:0.19 alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:0.19 green:0.19 blue:0.19 alpha:1];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.view.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.textField becomeFirstResponder];
+}
 
 - (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender
 {

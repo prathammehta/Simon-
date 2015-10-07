@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qQH-oQ-q4Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qQH-oQ-q4Z">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -23,6 +24,7 @@
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HG4-u3-5XW">
                                         <rect key="frame" x="125" y="125" width="70" height="70"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="Sz0-Na-lfE"/>
                                             <constraint firstAttribute="width" constant="70" id="rNw-u4-JXA"/>
@@ -32,6 +34,7 @@
                                         </connections>
                                     </containerView>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="HG4-u3-5XW" secondAttribute="centerX" id="CeX-az-chj"/>
@@ -41,6 +44,7 @@
                             </view>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twy-zR-mbY" customClass="AKPickerView">
                                 <rect key="frame" x="16" y="433" width="288" height="28"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="XxB-fP-AgY"/>
@@ -48,6 +52,7 @@
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUm-IM-rFo">
                                 <rect key="frame" x="0.0" y="461" width="320" height="113"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="113" id="FKV-k3-bQo"/>
                                 </constraints>
@@ -57,8 +62,9 @@
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soq-5Q-tSp">
                                 <rect key="frame" x="16" y="20" width="35" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -66,6 +72,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="PUm-IM-rFo" secondAttribute="trailing" constant="-16" id="04M-hJ-8Dl"/>
@@ -103,6 +110,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9gP-7p-CG2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -111,7 +119,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycU-ag-K1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2058" y="-311"/>
+            <point key="canvasLocation" x="2048" y="-362"/>
         </scene>
         <!--Pick a Sample-->
         <scene sceneID="G8s-SH-Nfy">
@@ -120,6 +128,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="aHm-WR-ajR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jGC-vj-Hn6">
                             <size key="itemSize" width="50" height="50"/>
@@ -137,11 +146,14 @@
                                     <subviews>
                                         <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-Ld-RX3" customClass="SamplePreviewSelectView">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
+                                    <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.1805731656" blue="0.25746253520000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="customSize" width="80" height="100"/>
                             </collectionViewCell>
@@ -168,7 +180,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugQ-gk-MaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657" y="-305"/>
+            <point key="canvasLocation" x="1647" y="-356"/>
         </scene>
         <!--Inline Sample Picker Collection View Controller-->
         <scene sceneID="2gh-TH-hyW">
@@ -177,6 +189,7 @@
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HBR-wu-4o4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="Lny-55-msi">
                             <size key="itemSize" width="100" height="100"/>
@@ -186,7 +199,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="inlineSampleCell" id="7Cp-sc-j8y">
-                                <rect key="frame" x="110" y="34" width="100" height="100"/>
+                                <rect key="frame" x="110" y="7" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -194,11 +207,14 @@
                                     <subviews>
                                         <view opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQq-L1-ngb" customClass="SamplePreviewSelectView">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
+                                    <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </collectionViewCell>
                         </cells>
@@ -221,6 +237,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="I03-K8-6Lw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="sampleCell" textLabel="zW4-RU-KTW" detailTextLabel="R7h-I9-BsJ" style="IBUITableViewCellStyleValue1" id="Vl1-4G-9cW">
@@ -231,19 +248,25 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sample 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zW4-RU-KTW">
+                                            <rect key="frame" x="15" y="12" width="68" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Already Added" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R7h-I9-BsJ">
+                                            <rect key="frame" x="166" y="12" width="107" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <animations/>
                                 </tableViewCellContentView>
+                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -262,7 +285,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ze2-9u-bHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2438" y="-311"/>
+            <point key="canvasLocation" x="2428" y="-362"/>
         </scene>
         <!--Songs-->
         <scene sceneID="Shb-nt-DI8">
@@ -271,6 +294,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mqQ-Zd-dsb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="songCell" id="Oxt-CQ-6aI">
@@ -279,7 +303,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oxt-CQ-6aI" id="grm-Yk-BlS">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
                                 </tableViewCellContentView>
+                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -315,6 +341,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Tbg-pX-Jqb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fyi-Lo-iil">
                             <size key="itemSize" width="130" height="420"/>
@@ -324,7 +351,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="songCell" id="wp3-3r-LgP">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <rect key="frame" x="0.0" y="44" width="130" height="500"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="130" height="500"/>
@@ -332,6 +359,7 @@
                                     <subviews>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwr-V6-oah">
                                             <rect key="frame" x="15" y="141" width="100" height="100"/>
+                                            <animations/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -339,12 +367,14 @@
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC0-ug-5zi">
                                             <rect key="frame" x="8" y="280" width="114" height="21"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbY-o3-Lpb">
                                             <rect key="frame" x="42" y="312" width="46" height="30"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <state key="normal" title="Delete">
                                                 <color key="titleColor" red="1" green="0.1805731656" blue="0.25746253520000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -355,8 +385,10 @@
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="customSize" width="130" height="500"/>
                             </collectionViewCell>
@@ -409,48 +441,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="cRw-xV-u2Z">
-                                <rect key="frame" x="85" y="20" width="150" height="150"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eOP-dr-7ah">
+                                <rect key="frame" x="0.0" y="206" width="320" height="174"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Msm-jD-1Xr"/>
-                                    <constraint firstAttribute="height" constant="150" id="ivW-Pb-QJI"/>
+                                    <constraint firstAttribute="height" constant="174" id="fHH-ZD-r8q"/>
                                 </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOP-dr-7ah">
-                                <rect key="frame" x="40" y="178" width="240" height="332"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">We believe that we are all creative by nature, and that anyone can create music, being a trained musician isn’t the requirement.
-Fred, Pratham, Avirath and I thank you very much for being part of this awesome adventure.
-If you have any questions, please, feel free to contact me: steeve@socialsymphonyapp.com
+                                <string key="text">We believe that we are all creative by nature, and that anyone can create music,
+being a trained musician is not the requirement.
+
+Fred, Pratham and I thank you very much for being part of this awesome adventure.
+
+If you have any questions, please, feel free to contact me:
+steeve@socialsymphonyapp.com
 iMessage: +33 781 951 935
+
 Kindly,
 Steeve
 CEO and co-founder at Social Symphony
-http://socialsymphonyapp.com
-
-
-Licence Agreement 
-
-You are not allowed to use the songs created with Social Symphony for commercial purposes.
-All the samples used in Social Symphony are property of Fred Thomasseau.
-If you remix, transform, or build upon the samples contained in Social Symphony and/or songs created with Social Symphony, you may not distribute the modified material.
-If you have any questions, please feel free to contact us: feedback@socialsymphonyapp.com
-french: L'utilisation commerciale des musiques créées à partir de Social Symphony est strictement interdite.
-L'utilisation des samples contenu dans Social Symphony est strictement réservée à un usage personel.
-Tous les samples inclus dans Social Symphony sont la propriété exclusive de Fred Thomasseau.
-Tout reproduction, modification, distribution à usage commerciale est formellement interdite.
-En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp.com
-2015 ©Social Symphony-Fred Thomasseau</string>
+http://socialsymphonyapp.com</string>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncj-2H-bfc">
-                                <rect key="frame" x="143" y="518" width="35" height="30"/>
+                                <rect key="frame" x="16" y="20" width="35" height="30"/>
+                                <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="HYc-Fb-izW"/>
-                                    <constraint firstAttribute="height" constant="30" id="vSJ-3s-E9d"/>
+                                    <constraint firstAttribute="width" constant="35" id="yGJ-sm-EBU"/>
+                                    <constraint firstAttribute="height" constant="30" id="yZi-NC-f6y"/>
                                 </constraints>
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -459,17 +480,85 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                                     <action selector="donePressed:" destination="aTF-Ff-Z8M" eventType="touchUpInside" id="enr-Ov-RTI"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Prathamnb.png" translatesAutoresizingMaskIntoConstraints="NO" id="oaN-9g-3rM">
+                                <rect key="frame" x="30" y="117" width="70" height="70"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="NqT-lU-aPB"/>
+                                    <constraint firstAttribute="width" constant="70" id="hQE-4g-CvC"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="steeve.png" translatesAutoresizingMaskIntoConstraints="NO" id="hfk-ED-yKX">
+                                <rect key="frame" x="125" y="117" width="70" height="70"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="e77-dR-bW3"/>
+                                    <constraint firstAttribute="height" constant="70" id="pDp-lg-9qP"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FredNBOK.png" translatesAutoresizingMaskIntoConstraints="NO" id="aVl-0h-BN7">
+                                <rect key="frame" x="220" y="117" width="70" height="70"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="juO-M4-6iA"/>
+                                    <constraint firstAttribute="height" constant="70" id="r8q-J4-QG9"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yy-xi-tRA">
+                                <rect key="frame" x="0.0" y="423" width="320" height="137"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="aFj-CP-arV"/>
+                                </constraints>
+                                <string key="text">Licence Agreement
+English:
+You are not allowed to use the songs created with Social Symphony for commercial purposes.
+All the samples used in Social Symphony are property of Fred Thomasseau.
+If you remix, transform, or build upon the samples contained in Social Symphony and/or songs created with Social Symphony, you may not distribute the modified material.
+If you have any questions, please feel free to contact us: feedback@socialsymphonyapp.com
+
+french:
+L’utilisation commerciale des musiques crייes א partir de Social Symphony est strictement interdite.
+L’utilisation des samples contenu dans Social Symphony est strictement rיservיe a un usage personel.
+Tous les samples inclus dans Social Symphony sont la propriיtי exclusive de Fred Thomasseau.
+Tout reproduction, modification, distribution א usage commerciale est formellement interdite.
+En cas de besoin particulier merci de nous contacter par email: feedback@socialsymphonyapp.com
+
+
+2015 ©Social Symphony/Frederic Thomasseau</string>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cRw-xV-u2Z">
+                                <rect key="frame" x="116" y="20" width="89" height="89"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="3Xg-2c-tT2"/>
+                                    <constraint firstAttribute="height" constant="89" id="eEM-Gg-4L4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.18979483195211777" green="0.18979483195211777" blue="0.18979483195211777" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Ncj-2H-bfc" firstAttribute="top" secondItem="eOP-dr-7ah" secondAttribute="bottom" constant="8" id="KMc-HZ-7lf"/>
-                            <constraint firstItem="eOP-dr-7ah" firstAttribute="leading" secondItem="3wk-Sy-e4i" secondAttribute="leadingMargin" constant="24" id="LdC-kl-mYW"/>
-                            <constraint firstAttribute="centerX" secondItem="cRw-xV-u2Z" secondAttribute="centerX" id="Umb-Ry-gNc"/>
-                            <constraint firstAttribute="centerX" secondItem="Ncj-2H-bfc" secondAttribute="centerX" id="dA7-aR-IzG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eOP-dr-7ah" secondAttribute="trailing" constant="24" id="dXV-HO-hed"/>
-                            <constraint firstItem="kyu-J9-R6Z" firstAttribute="top" secondItem="Ncj-2H-bfc" secondAttribute="bottom" constant="20" id="nyF-Zl-bzb"/>
-                            <constraint firstItem="eOP-dr-7ah" firstAttribute="top" secondItem="cRw-xV-u2Z" secondAttribute="bottom" constant="8" id="r4S-KR-OOW"/>
-                            <constraint firstItem="cRw-xV-u2Z" firstAttribute="top" secondItem="3wk-Sy-e4i" secondAttribute="topMargin" constant="20" id="t7n-HP-w0q"/>
+                            <constraint firstItem="Ncj-2H-bfc" firstAttribute="leading" secondItem="3wk-Sy-e4i" secondAttribute="leadingMargin" id="8BZ-gv-Ena"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3yy-xi-tRA" secondAttribute="trailing" constant="-16" id="8lX-Lh-Zgx"/>
+                            <constraint firstAttribute="centerX" secondItem="hfk-ED-yKX" secondAttribute="centerX" id="HTc-iu-pJR"/>
+                            <constraint firstItem="Ncj-2H-bfc" firstAttribute="top" secondItem="R8n-Nx-i3J" secondAttribute="bottom" id="OPS-8K-77C"/>
+                            <constraint firstItem="hfk-ED-yKX" firstAttribute="leading" secondItem="oaN-9g-3rM" secondAttribute="trailing" constant="25" id="S1l-tc-ePp"/>
+                            <constraint firstItem="oaN-9g-3rM" firstAttribute="top" secondItem="Ncj-2H-bfc" secondAttribute="bottom" constant="67" id="V1b-NZ-107"/>
+                            <constraint firstAttribute="centerX" secondItem="cRw-xV-u2Z" secondAttribute="centerX" id="WoY-SQ-o5B"/>
+                            <constraint firstItem="aVl-0h-BN7" firstAttribute="leading" secondItem="hfk-ED-yKX" secondAttribute="trailing" constant="25" id="XM0-Ik-QDT"/>
+                            <constraint firstItem="cRw-xV-u2Z" firstAttribute="top" secondItem="R8n-Nx-i3J" secondAttribute="bottom" id="Zx3-91-NBc"/>
+                            <constraint firstItem="aVl-0h-BN7" firstAttribute="top" secondItem="R8n-Nx-i3J" secondAttribute="bottom" constant="97" id="cZq-NK-pOX"/>
+                            <constraint firstItem="hfk-ED-yKX" firstAttribute="top" secondItem="cRw-xV-u2Z" secondAttribute="bottom" constant="8" id="eBP-uC-q7Q"/>
+                            <constraint firstItem="3yy-xi-tRA" firstAttribute="leading" secondItem="3wk-Sy-e4i" secondAttribute="leadingMargin" constant="-16" id="gHU-lG-xcL"/>
+                            <constraint firstItem="kyu-J9-R6Z" firstAttribute="top" secondItem="3yy-xi-tRA" secondAttribute="bottom" constant="8" id="hOM-Qq-FRm"/>
+                            <constraint firstItem="eOP-dr-7ah" firstAttribute="top" secondItem="aVl-0h-BN7" secondAttribute="bottom" constant="19" id="hQk-nu-xzm"/>
+                            <constraint firstItem="eOP-dr-7ah" firstAttribute="leading" secondItem="3wk-Sy-e4i" secondAttribute="leadingMargin" constant="-16" id="rHm-qr-ebL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eOP-dr-7ah" secondAttribute="trailing" constant="-16" id="ybs-17-IhD"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -489,21 +578,9 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG5-rG-p6L">
-                                <rect key="frame" x="135" y="182" width="50" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Eye-f5-QLu"/>
-                                    <constraint firstAttribute="width" constant="50" id="RZZ-Ys-4dl"/>
-                                </constraints>
-                                <state key="normal" title="Create!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="creatButtonPressed:" destination="xPF-2F-rCI" eventType="touchUpInside" id="f08-JM-954"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jhi-PL-Ab8">
                                 <rect key="frame" x="64" y="144" width="192" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="192" id="UVK-w6-fyZ"/>
                                     <constraint firstAttribute="height" constant="30" id="hGL-th-SEA"/>
@@ -513,15 +590,31 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the name of the new song you wish to create" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg8-rB-Ye3">
                                 <rect key="frame" x="49" y="83" width="222" height="53"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="222" id="FtK-a9-zvg"/>
                                     <constraint firstAttribute="height" constant="53" id="Sb1-xN-Itk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG5-rG-p6L">
+                                <rect key="frame" x="92" y="182" width="136" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Eye-f5-QLu"/>
+                                    <constraint firstAttribute="width" constant="136" id="RZZ-Ys-4dl"/>
+                                </constraints>
+                                <state key="normal" title="Create!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="creatButtonPressed:" destination="xPF-2F-rCI" eventType="touchUpInside" id="f08-JM-954"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yg8-rB-Ye3" firstAttribute="top" secondItem="9Oh-Rh-dCJ" secondAttribute="bottom" constant="19" id="VfV-hX-8vu"/>
@@ -556,10 +649,13 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1AF-ue-5Fz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="d1V-AM-on7">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </toolbar>
                     <connections>
                         <segue destination="nXw-7q-SnB" kind="relationship" relationship="rootViewController" id="ewo-bq-j6A"/>
@@ -578,10 +674,13 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ppl-ks-UrA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="RO7-Hr-tZB">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </toolbar>
                     <connections>
                         <segue destination="hBc-4D-zgs" kind="relationship" relationship="rootViewController" id="4u7-ij-0VB"/>
@@ -605,6 +704,7 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hc3-ac-8tx">
                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                <animations/>
                                 <state key="normal" image="AddSample.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -614,18 +714,21 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XY-2P-WpH">
                                 <rect key="frame" x="0.0" y="24" width="70" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-gU-vGU">
                                 <rect key="frame" x="25" y="25" width="20" height="20"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="1hF-RN-rB9"/>
                                     <constraint firstAttribute="width" constant="20" id="rH7-KE-j6J"/>
                                 </constraints>
                             </activityIndicatorView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="NmJ-gU-vGU" secondAttribute="centerY" id="8b3-wK-sfW"/>
@@ -651,6 +754,7 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0ng-oQ-4Iq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -669,11 +773,14 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tyq-1j-naM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yRY-kE-2s2">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <animations/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </toolbar>
                     <connections>
                         <segue destination="909-se-idk" kind="relationship" relationship="rootViewController" id="V9t-DL-zLv"/>
@@ -686,13 +793,11 @@ En cas de besoin particulier merci de nous contacter: feedback@socialsymphonyapp
     </scenes>
     <resources>
         <image name="AddSample.png" width="353" height="353"/>
-        <image name="Logo.JPG" width="1024" height="1024"/>
+        <image name="FredNBOK.png" width="257" height="257"/>
+        <image name="Prathamnb.png" width="257" height="257"/>
+        <image name="aboutlogo.png" width="1024" height="1024"/>
+        <image name="steeve.png" width="257" height="257"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="i1i-oM-hqG"/>
     </inferredMetricsTieBreakers>

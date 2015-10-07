@@ -15,7 +15,6 @@
 #import "AERecorder.h"
 #import "Singleton.h"
 #import "TPAACAudioConverter.h"
-#import "lame.h"
 
 @interface RecorderViewController : UIViewController
 

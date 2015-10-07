@@ -104,7 +104,7 @@
     self.isRecording = NO;
     
     float vocalStartMarker = 0.0f;
-    float vocalEndMarker = 5.0f;
+    float vocalEndMarker = self.timerLabel.text.floatValue;
     
     NSArray *documentsFolders = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     
@@ -116,7 +116,7 @@
     NSArray *dirPath;
     dirPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     docsDirs = [dirPath objectAtIndex:0];
-    NSString *destinationURLs = [docsDirs stringByAppendingPathComponent:@"trim.caf"];
+    NSString *destinationURLs = [docsDirs stringByAppendingPathComponent:[((NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"currentSongName"]) stringByAppendingString:@".m4a"]];
     NSURL *audioFileOutput = [NSURL fileURLWithPath:destinationURLs];
     
     if (!audioFileInput || !audioFileOutput)
@@ -151,6 +151,7 @@
              // It worked!
              NSLog(@"[DONE TRIMMING.....");
              NSLog(@"ouput audio trim file %@",audioFileOutput);
+             
          }
          else if (AVAssetExportSessionStatusFailed == exportSession.status)
          {
@@ -179,6 +180,18 @@
         if(!self.isRecording)
         {
             [[NSNotificationCenter defaultCenter] postNotificationName:@"hideShowChrome" object:nil];
+            
+            [[Singleton sharedInstance].audioController removeChannels:[Singleton sharedInstance].audioController.channels];
+
+            for(AEAudioFilePlayer *player in [Singleton sharedInstance].audioController.channels)
+            {
+                player.currentTime = 1;
+            }
+            
+            [[Singleton sharedInstance].audioController addChannels:[Singleton sharedInstance].audioFilePlayers];
+  
+            
+            
             [self startRecording];
             self.timerLabel.text = @"0s";
             self.recodingDurationLabelUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:1
@@ -205,23 +218,9 @@
 
             
             self.title = @"Working...";
-            
-            
-            dispatch_async(dispatch_queue_create("mp3Queue", NULL), ^{
+
                 
-                NSArray *dirPaths;
-                NSString *docsDir;
-                
-                
-                dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-                docsDir = [dirPaths objectAtIndex:0];
-                NSString *cafFilePath = [docsDir stringByAppendingPathComponent:@"song.caf"];
-                
-                
-                //[self cafToMp3:cafFilePath];
-                
-                [self performSelectorOnMainThread:@selector(prepareForConvertedFile) withObject:nil waitUntilDone:NO];
-            });
+            [self prepareForConvertedFile];
             
             [[NSNotificationCenter defaultCenter] postNotificationName:@"hideShowChrome" object:nil];
             
@@ -275,9 +274,8 @@
 - (void) sendEmail
 {
     
-    NSString *songName = [((NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"currentSongName"]) stringByAppendingString:@".mp3"];
+    NSString *songName = [((NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"currentSongName"]) stringByAppendingString:@".m4a"];
     
-    songName = @"song.caf";
     
     NSString *documentsFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *path = [documentsFolder stringByAppendingPathComponent:songName];
@@ -330,59 +328,59 @@
     
 }
 
-- (void)cafToMp3:(NSString*)cafFileName
-{
-    NSArray *dirPaths;
-    NSString *docsDir;
-    
-    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    docsDir = [dirPaths objectAtIndex:0];
-    
-    NSString *songName = [((NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"currentSongName"]) stringByAppendingString:@".mp3"];
-    
-    _mp3FilePath = [docsDir stringByAppendingPathComponent:songName];
-    
-    @try {
-        int read, write;
-        FILE *pcm = fopen([cafFileName cStringUsingEncoding:1], "rb");
-        FILE *mp3 = fopen([_mp3FilePath cStringUsingEncoding:1], "wb");
-        const int PCM_SIZE = 8192;
-        const int MP3_SIZE = 8192;
-        short int pcm_buffer[PCM_SIZE*2];
-        unsigned char mp3_buffer[MP3_SIZE];
-        
-        lame_t lame = lame_init();
-        lame_set_in_samplerate(lame, 44100);
-        lame_set_VBR(lame, vbr_default);
-        lame_init_params(lame);
-        
-        do {
-            read = fread(pcm_buffer, 2*sizeof(short int), PCM_SIZE, pcm);
-            if (read == 0)
-                write = lame_encode_flush(lame, mp3_buffer, MP3_SIZE);
-            else
-                write = lame_encode_buffer_interleaved(lame, pcm_buffer, read, mp3_buffer, MP3_SIZE);
-            
-            fwrite(mp3_buffer, write, 1, mp3);
-            
-        } while (read != 0);
-        
-        lame_close(lame);
-        fclose(mp3);
-        fclose(pcm);
-    }
-    @catch (NSException *exception) {
-        NSLog(@"%@",[exception description]);
-    }
-    @finally {
-        //Detrming the size of mp3 file
-        NSFileManager *fileManger = [NSFileManager defaultManager];
-        NSData *data = [fileManger contentsAtPath:_mp3FilePath];
-        NSString* str = [NSString stringWithFormat:@"%lu K",[data length]/1024];
-        NSLog(@"size of mp3=%@",str);
-        
-    }
-}
+//- (void)cafToMp3:(NSString*)cafFileName
+//{
+//    NSArray *dirPaths;
+//    NSString *docsDir;
+//    
+//    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    docsDir = [dirPaths objectAtIndex:0];
+//    
+//    NSString *songName = [((NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"currentSongName"]) stringByAppendingString:@".mp3"];
+//    
+//    _mp3FilePath = [docsDir stringByAppendingPathComponent:songName];
+//    
+//    @try {
+//        int read, write;
+//        FILE *pcm = fopen([cafFileName cStringUsingEncoding:1], "rb");
+//        FILE *mp3 = fopen([_mp3FilePath cStringUsingEncoding:1], "wb");
+//        const int PCM_SIZE = 8192;
+//        const int MP3_SIZE = 8192;
+//        short int pcm_buffer[PCM_SIZE*2];
+//        unsigned char mp3_buffer[MP3_SIZE];
+//        
+//        lame_t lame = lame_init();
+//        lame_set_in_samplerate(lame, 44100);
+//        lame_set_VBR(lame, vbr_default);
+//        lame_init_params(lame);
+//        
+//        do {
+//            read = fread(pcm_buffer, 2*sizeof(short int), PCM_SIZE, pcm);
+//            if (read == 0)
+//                write = lame_encode_flush(lame, mp3_buffer, MP3_SIZE);
+//            else
+//                write = lame_encode_buffer_interleaved(lame, pcm_buffer, read, mp3_buffer, MP3_SIZE);
+//            
+//            fwrite(mp3_buffer, write, 1, mp3);
+//            
+//        } while (read != 0);
+//        
+//        lame_close(lame);
+//        fclose(mp3);
+//        fclose(pcm);
+//    }
+//    @catch (NSException *exception) {
+//        NSLog(@"%@",[exception description]);
+//    }
+//    @finally {
+//        //Detrming the size of mp3 file
+//        NSFileManager *fileManger = [NSFileManager defaultManager];
+//        NSData *data = [fileManger contentsAtPath:_mp3FilePath];
+//        NSString* str = [NSString stringWithFormat:@"%lu K",[data length]/1024];
+//        NSLog(@"size of mp3=%@",str);
+//        
+//    }
+//}
 
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {

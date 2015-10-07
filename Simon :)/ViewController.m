@@ -112,6 +112,7 @@
         }
         
         //[[Singleton sharedInstance].audioController removeChannels:[Singleton sharedInstance].audioController.channels];
+        
         [[Singleton sharedInstance].audioController addChannels:[Singleton sharedInstance].audioFilePlayers];
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"packPickerTapped"
@@ -134,7 +135,7 @@
         case 6: return @"Indian Vibe";
         case 7: return @"Tekno Limit";
         case 8: return @"Country Roots";
-        case 9: return @"Moon orchestra";
+        case 9: return @"Moon Orchestra";
     }
     
     return nil;
@@ -184,8 +185,8 @@
                             options:UIViewAnimationOptionAllowAnimatedContent|
          UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState
                          animations:^{
-                             self.inlinePickerView.center = CGPointMake(self.view.center.x,
-                                                                        self.inlinePickerView.center.y + self.inlinePickerView.frame.size.height);
+//                             self.inlinePickerView.center = CGPointMake(self.view.center.x,
+//                                                                        self.inlinePickerView.center.y + self.inlinePickerView.frame.size.height);
                              self.packPicker.alpha = 0;
                              self.inlinePickerView.alpha = 0;
                              self.backButton.alpha = 0;
@@ -202,8 +203,8 @@
                             options:UIViewAnimationOptionAllowAnimatedContent|
          UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState
                          animations:^{
-                             self.inlinePickerView.center = CGPointMake(self.view.center.x,
-                                                                        self.inlinePickerView.center.y - self.inlinePickerView.frame.size.height);
+//                             self.inlinePickerView.center = CGPointMake(self.view.center.x,
+//                                                                        self.inlinePickerView.center.y - self.inlinePickerView.frame.size.height);
                              self.packPicker.alpha = 1.0;
                              self.inlinePickerView.alpha = 1;
                              

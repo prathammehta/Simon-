@@ -80,7 +80,7 @@ static Singleton *sharedInstance = nil;
             break;
         case 5: return @"JazzGrooTrans";
             break;
-        case 6: return @"India";
+        case 6: return @"IndiaVibe";
             break;
         case 7: return @"Tekno";
             break;
@@ -109,7 +109,7 @@ static Singleton *sharedInstance = nil;
     }
     else if([name containsString:@"Triphop"])
     {
-        return [UIColor colorWithRed:24/255.0 green:142/255.0 blue:54/255.0 alpha:1];
+        return [UIColor colorWithRed:81/255.0 green:242/255.0 blue:77/255.0 alpha:1];
     }
     else if([name containsString:@"HHCine"])
     {
@@ -129,7 +129,7 @@ static Singleton *sharedInstance = nil;
     }
     else if([name containsString:@"CRoots"])
     {
-        return [UIColor colorWithRed:153/255.0 green:51/255.0 blue:0/255.0 alpha:1];
+        return [UIColor colorWithRed:242/255.0 green:79/255.0 blue:0/255.0 alpha:1];
     }
     else if([name containsString:@"MoonOrch"])
     {
