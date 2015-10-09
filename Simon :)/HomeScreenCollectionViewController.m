@@ -9,8 +9,10 @@
 #import "HomeScreenCollectionViewController.h"
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "ICETutorialController.h"
 
 @interface HomeScreenCollectionViewController ()
+
 
 @property (nonatomic, strong) NSManagedObjectContext *context;
 
@@ -46,6 +48,29 @@ static NSString * const reuseIdentifier = @"songCell";
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    if(!((NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"firstTimeLaunchFinished"]).boolValue)
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"firstTimeLaunchFinished"];
+        
+        ICETutorialPage *page1 = [[ICETutorialPage alloc] initWithTitle:nil subTitle:nil pictureName:@"screen1.jpg" duration:5];
+        ICETutorialPage *page2 = [[ICETutorialPage alloc] initWithTitle:nil subTitle:nil pictureName:@"screen2.jpg" duration:5];
+        ICETutorialPage *page3 = [[ICETutorialPage alloc] initWithTitle:nil subTitle:nil pictureName:@"screen3.jpg" duration:5];
+        ICETutorialPage *page4 = [[ICETutorialPage alloc] initWithTitle:nil subTitle:nil pictureName:@"screen4.jpg" duration:5];
+        ICETutorialPage *page5 = [[ICETutorialPage alloc] initWithTitle:nil subTitle:nil pictureName:@"screen5.jpg" duration:5];
+        ICETutorialPage *page6 = [[ICETutorialPage alloc] initWithTitle:nil subTitle:nil pictureName:@"screen6.jpg" duration:5];
+        ICETutorialPage *page7 = [[ICETutorialPage alloc] initWithTitle:nil subTitle:nil pictureName:@"screen7.jpg" duration:5];
+        
+        NSArray *pages = @[page1,page2,page3,page4,page5,page6,page7];
+        
+        ICETutorialController *tutorialController = [[ICETutorialController alloc] initWithPages:pages];
+
+        
+        [self presentViewController:tutorialController animated:NO completion:nil];
+        
+    }
+    
+    
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
     layout.sectionInset = UIEdgeInsetsMake(0,

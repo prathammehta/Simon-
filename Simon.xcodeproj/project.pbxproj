@@ -32,6 +32,17 @@
 		426162B81A40C08100AC7094 /* AddSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 426162B71A40C08100AC7094 /* AddSample.png */; };
 		4262D6091AB0A86E00950AE9 /* AKPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4262D6081AB0A86E00950AE9 /* AKPickerView.m */; };
 		426731181AA1BE1F005DD186 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426731171AA1BE1F005DD186 /* Images-2.xcassets */; };
+		426B38DE1BC511D100121E5C /* screen1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426B38D61BC511D100121E5C /* screen1.jpg */; settings = {ASSET_TAGS = (); }; };
+		426B38DF1BC511D100121E5C /* screen2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426B38D71BC511D100121E5C /* screen2.jpg */; settings = {ASSET_TAGS = (); }; };
+		426B38E01BC511D100121E5C /* screen3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426B38D81BC511D100121E5C /* screen3.jpg */; settings = {ASSET_TAGS = (); }; };
+		426B38E11BC511D100121E5C /* screen4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426B38D91BC511D100121E5C /* screen4.jpg */; settings = {ASSET_TAGS = (); }; };
+		426B38E21BC511D100121E5C /* screen5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426B38DA1BC511D100121E5C /* screen5.jpg */; settings = {ASSET_TAGS = (); }; };
+		426B38E31BC511D100121E5C /* screen6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426B38DB1BC511D100121E5C /* screen6.jpg */; settings = {ASSET_TAGS = (); }; };
+		426B38E41BC511D100121E5C /* screen7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426B38DC1BC511D100121E5C /* screen7.jpg */; settings = {ASSET_TAGS = (); }; };
+		426B38E51BC511D100121E5C /* screen8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426B38DD1BC511D100121E5C /* screen8.jpg */; settings = {ASSET_TAGS = (); }; };
+		426B38ED1BC5122400121E5C /* ICETutorialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426B38E81BC5122400121E5C /* ICETutorialController.m */; settings = {ASSET_TAGS = (); }; };
+		426B38EE1BC5122400121E5C /* ICETutorialPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 426B38EA1BC5122400121E5C /* ICETutorialPage.m */; settings = {ASSET_TAGS = (); }; };
+		426B38EF1BC5122400121E5C /* ICETutorialStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 426B38EC1BC5122400121E5C /* ICETutorialStyle.m */; settings = {ASSET_TAGS = (); }; };
 		4271CB601B7DF207008C888A /* deleteCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 4271CB5F1B7DF207008C888A /* deleteCell.png */; };
 		42819F9A1B6B75A00091A59F /* CRootsBanjo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42819F461B6B75A00091A59F /* CRootsBanjo.mp3 */; };
 		42819F9B1B6B75A00091A59F /* CRootsBass.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42819F471B6B75A00091A59F /* CRootsBass.mp3 */; };
@@ -222,6 +233,20 @@
 		4262D6071AB0A86E00950AE9 /* AKPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPickerView.h; sourceTree = "<group>"; };
 		4262D6081AB0A86E00950AE9 /* AKPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPickerView.m; sourceTree = "<group>"; };
 		426731171AA1BE1F005DD186 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		426B38D61BC511D100121E5C /* screen1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen1.jpg; sourceTree = "<group>"; };
+		426B38D71BC511D100121E5C /* screen2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen2.jpg; sourceTree = "<group>"; };
+		426B38D81BC511D100121E5C /* screen3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen3.jpg; sourceTree = "<group>"; };
+		426B38D91BC511D100121E5C /* screen4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen4.jpg; sourceTree = "<group>"; };
+		426B38DA1BC511D100121E5C /* screen5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen5.jpg; sourceTree = "<group>"; };
+		426B38DB1BC511D100121E5C /* screen6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen6.jpg; sourceTree = "<group>"; };
+		426B38DC1BC511D100121E5C /* screen7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen7.jpg; sourceTree = "<group>"; };
+		426B38DD1BC511D100121E5C /* screen8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen8.jpg; sourceTree = "<group>"; };
+		426B38E71BC5122400121E5C /* ICETutorialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICETutorialController.h; sourceTree = "<group>"; };
+		426B38E81BC5122400121E5C /* ICETutorialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICETutorialController.m; sourceTree = "<group>"; };
+		426B38E91BC5122400121E5C /* ICETutorialPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICETutorialPage.h; sourceTree = "<group>"; };
+		426B38EA1BC5122400121E5C /* ICETutorialPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICETutorialPage.m; sourceTree = "<group>"; };
+		426B38EB1BC5122400121E5C /* ICETutorialStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICETutorialStyle.h; sourceTree = "<group>"; };
+		426B38EC1BC5122400121E5C /* ICETutorialStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICETutorialStyle.m; sourceTree = "<group>"; };
 		4271CB5F1B7DF207008C888A /* deleteCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deleteCell.png; sourceTree = "<group>"; };
 		42819F461B6B75A00091A59F /* CRootsBanjo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CRootsBanjo.mp3; sourceTree = "<group>"; };
 		42819F471B6B75A00091A59F /* CRootsBass.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CRootsBass.mp3; sourceTree = "<group>"; };
@@ -481,6 +506,7 @@
 				42C0878A1A4D366500BB4BE9 /* Sample Picker Table View */,
 				42DBA4331A4BCBF1004870F8 /* New Instrument */,
 				42E5676A1A440C6E00DD5580 /* TheAmazingAudioEngine */,
+				426B38E61BC5122400121E5C /* ICETutorial */,
 				421593BE1A4318B900197E20 /* EFCircularSlider */,
 				426731171AA1BE1F005DD186 /* Images-2.xcassets */,
 				4261628E1A40A34C00AC7094 /* Supporting Files */,
@@ -491,6 +517,7 @@
 		4261628E1A40A34C00AC7094 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				426B38D51BC511D100121E5C /* Tutorial */,
 				42FE54211BC04AF3003269C3 /* aboutlogo.png */,
 				42AF4E101BBFABBB00AE676A /* Founders */,
 				42AF4DE11BBF047C00AE676A /* About Us */,
@@ -536,6 +563,34 @@
 				426162AC1A40A34D00AC7094 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		426B38D51BC511D100121E5C /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				426B38D61BC511D100121E5C /* screen1.jpg */,
+				426B38D71BC511D100121E5C /* screen2.jpg */,
+				426B38D81BC511D100121E5C /* screen3.jpg */,
+				426B38D91BC511D100121E5C /* screen4.jpg */,
+				426B38DA1BC511D100121E5C /* screen5.jpg */,
+				426B38DB1BC511D100121E5C /* screen6.jpg */,
+				426B38DC1BC511D100121E5C /* screen7.jpg */,
+				426B38DD1BC511D100121E5C /* screen8.jpg */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		426B38E61BC5122400121E5C /* ICETutorial */ = {
+			isa = PBXGroup;
+			children = (
+				426B38E71BC5122400121E5C /* ICETutorialController.h */,
+				426B38E81BC5122400121E5C /* ICETutorialController.m */,
+				426B38E91BC5122400121E5C /* ICETutorialPage.h */,
+				426B38EA1BC5122400121E5C /* ICETutorialPage.m */,
+				426B38EB1BC5122400121E5C /* ICETutorialStyle.h */,
+				426B38EC1BC5122400121E5C /* ICETutorialStyle.m */,
+			);
+			path = ICETutorial;
 			sourceTree = "<group>";
 		};
 		4270115E1A86123F007387C6 /* Inline Sample Picker */ = {
@@ -988,6 +1043,7 @@
 				42AF4E161BBFABC400AE676A /* Prathamnb.png in Resources */,
 				42819FBF1B6B75A00091A59F /* JazzGrooTransPersanTar.mp3 in Resources */,
 				42AF4DF51BBF047C00AE676A /* Prathamnb.jpg in Resources */,
+				426B38E51BC511D100121E5C /* screen8.jpg in Resources */,
 				42819FB61B6B75A00091A59F /* IndiaVibeSubahar.mp3 in Resources */,
 				42819F9F1B6B75A00091A59F /* CRootsFolk.mp3 in Resources */,
 				42819FC61B6B75A00091A59F /* MoonOrchDrumCymb.mp3 in Resources */,
@@ -1000,6 +1056,7 @@
 				42819FDD1B6B75A00091A59F /* TriphopBass.mp3 in Resources */,
 				42AF4DF41BBF047C00AE676A /* Logo2.png in Resources */,
 				42AF4DF31BBF047C00AE676A /* Logo.png in Resources */,
+				426B38DE1BC511D100121E5C /* screen1.jpg in Resources */,
 				42819FC01B6B75A00091A59F /* JazzGrooTransPipe.mp3 in Resources */,
 				42819FA61B6B75A00091A59F /* FonkyGuitar.mp3 in Resources */,
 				42819FBE1B6B75A00091A59F /* JazzGrooTransGuit.mp3 in Resources */,
@@ -1023,6 +1080,7 @@
 				42819FE21B6B75A00091A59F /* TriphopGuit3.mp3 in Resources */,
 				421B13141ADCFC6300383D38 /* Logo.JPG in Resources */,
 				42819FE71B6CAE390091A59F /* newSong.png in Resources */,
+				426B38E11BC511D100121E5C /* screen4.jpg in Resources */,
 				42C26FC51A976013002F494D /* minus.png in Resources */,
 				42819FD71B6B75A00091A59F /* TeknoGuitRiff.mp3 in Resources */,
 				42819FB51B6B75A00091A59F /* IndiaVibeRajahSarod.mp3 in Resources */,
@@ -1031,6 +1089,7 @@
 				42AF4E0B1BBFA90A00AE676A /* RockPackZZZAll-Tracks.mp3 in Resources */,
 				42819FC21B6B75A00091A59F /* MoonOrchAlto.mp3 in Resources */,
 				42819FD21B6B75A00091A59F /* guitar.png in Resources */,
+				426B38DF1BC511D100121E5C /* screen2.jpg in Resources */,
 				42819FD31B6B75A00091A59F /* saxophone.png in Resources */,
 				42819FD11B6B75A00091A59F /* electro.png in Resources */,
 				42AF4DFF1BBFA8A400AE676A /* FonkyZZZAll-Tracks.mp3 in Resources */,
@@ -1041,9 +1100,11 @@
 				42819FA51B6B75A00091A59F /* FonkyClav.mp3 in Resources */,
 				42819F9D1B6B75A00091A59F /* CRootsDrum.mp3 in Resources */,
 				42AF4E011BBFA8AE00AE676A /* HardRockZZZAll-Tracks.mp3 in Resources */,
+				426B38E31BC511D100121E5C /* screen6.jpg in Resources */,
 				42819FB31B6B75A00091A59F /* HHCineSynth.mp3 in Resources */,
 				42AF4DF81BBF047C00AE676A /* steeve2.jpg in Resources */,
 				42819FDB1B6B75A00091A59F /* TeknoSynth.mp3 in Resources */,
+				426B38E41BC511D100121E5C /* screen7.jpg in Resources */,
 				42819FCF1B6B75A00091A59F /* RockPackGuit3.mp3 in Resources */,
 				42819FA31B6B75A00091A59F /* FonkyBass.mp3 in Resources */,
 				4261629F1A40A34C00AC7094 /* Images.xcassets in Resources */,
@@ -1055,6 +1116,7 @@
 				42819FAC1B6B75A00091A59F /* HardRockGuitar3.mp3 in Resources */,
 				42AF4DF91BBF047C00AE676A /* Text about us.txt in Resources */,
 				42819F9B1B6B75A00091A59F /* CRootsBass.mp3 in Resources */,
+				426B38E01BC511D100121E5C /* screen3.jpg in Resources */,
 				42819F9A1B6B75A00091A59F /* CRootsBanjo.mp3 in Resources */,
 				42AF4DF11BBF047C00AE676A /* FredNBOK.jpg in Resources */,
 				42819FCA1B6B75A00091A59F /* MoonOrchViolon2.mp3 in Resources */,
@@ -1072,6 +1134,7 @@
 				42819FA91B6B75A00091A59F /* HardRockBass.mp3 in Resources */,
 				42819FE31B6B75A00091A59F /* TriphopPiano.mp3 in Resources */,
 				42819FAE1B6B75A00091A59F /* HHCineCello.mp3 in Resources */,
+				426B38E21BC511D100121E5C /* screen5.jpg in Resources */,
 				42C0878E1A4D45B700BB4BE9 /* play.png in Resources */,
 				42AF4E0D1BBFA91400AE676A /* TeknoZZZAll-Tracks.mp3 in Resources */,
 				42AF4DEE1BBF047C00AE676A /* aboutus.jpg in Resources */,
@@ -1102,6 +1165,7 @@
 				4262D6091AB0A86E00950AE9 /* AKPickerView.m in Sources */,
 				426162941A40A34C00AC7094 /* AppDelegate.m in Sources */,
 				428D34541AEAB0A7007BB357 /* CoreDataCollectionViewController.m in Sources */,
+				426B38EE1BC5122400121E5C /* ICETutorialPage.m in Sources */,
 				42AE875A1A70CC4F00BD1F37 /* CoreDataTableViewController.m in Sources */,
 				421593C41A4318B900197E20 /* EFCircularTrig.m in Sources */,
 				42E5679A1A440C6E00DD5580 /* AEAudioUnitFilter.m in Sources */,
@@ -1121,11 +1185,13 @@
 				421593C31A4318B900197E20 /* EFCircularSlider.m in Sources */,
 				42E567A41A440C6E00DD5580 /* TPCircularBuffer+AudioBufferList.c in Sources */,
 				42E567951A440C6E00DD5580 /* AEAudioController.m in Sources */,
+				426B38EF1BC5122400121E5C /* ICETutorialStyle.m in Sources */,
 				42E567A81A440C9000DD5580 /* Singleton.m in Sources */,
 				42E567A31A440C6E00DD5580 /* README.markdown in Sources */,
 				4223E3BC1AC129EC00E51690 /* Sample.m in Sources */,
 				42E567941A440C6E00DD5580 /* AEAudioController+Audiobus.m in Sources */,
 				42E5679B1A440C6E00DD5580 /* AEBlockAudioReceiver.m in Sources */,
+				426B38ED1BC5122400121E5C /* ICETutorialController.m in Sources */,
 				422ABA531A7FB446004BEBFB /* InlineSamplePickerCollectionViewController.m in Sources */,
 				428D345C1AEAB4AB007BB357 /* Song.m in Sources */,
 				42E567961A440C6E00DD5580 /* AEAudioFileLoaderOperation.m in Sources */,
